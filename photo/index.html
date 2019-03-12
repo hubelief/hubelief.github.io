@@ -84,15 +84,18 @@
 
 
 
+<meta name="description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.styl">
 <meta property="og:type" content="website">
 <meta property="og:title" content="photo">
 <meta property="og:url" content="http://yoursite.com/photo/index.html">
 <meta property="og:site_name" content="hu&#39;s BlOG">
+<meta property="og:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.styl">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pnxnx3wn9.bkt.clouddn.com/programmer.JPG">
 <meta property="og:updated_time" content="2019-03-12T08:47:26.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="photo">
+<meta name="twitter:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.styl">
 <meta name="twitter:image" content="http://pnxnx3wn9.bkt.clouddn.com/programmer.JPG">
 
 
@@ -308,7 +311,25 @@
         
         
           <p><img src="http://pnxnx3wn9.bkt.clouddn.com/programmer.JPG" alt="0" title="programmer"></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
         
       </div>
       
@@ -461,7 +482,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">48</span>
+    <span title="Site words total count">102</span>
   
 </div>
 
