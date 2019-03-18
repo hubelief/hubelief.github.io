@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="Spring,SpringMVC,">
+  <meta name="keywords" content="Spring,SprigMVC,">
 
 
 
@@ -85,7 +85,7 @@
 
 
 <meta name="description" content="&amp;#x524D;&amp;#x9762;&amp;#x4E00;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x8BB2;&amp;#x5230;&amp;#xFF0C;&amp;#x5728;Spring&amp;#x6846;&amp;#x67B6;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6211;&amp;#x4EEC;SpringMVC&amp;#x7684;&amp;#x52A0;&amp;#x8F7D;&amp;#x662F;&amp;#x901A;&amp;#x8FC7;S">
-<meta name="keywords" content="Spring,SpringMVC">
+<meta name="keywords" content="Spring,SprigMVC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringMVC核心（二）：根据启动日志学原理">
 <meta property="og:url" content="http://yoursite.com/SpringMVC核心（二）：根据启动日志学原理/index.html">
@@ -93,7 +93,7 @@
 <meta property="og:description" content="&amp;#x524D;&amp;#x9762;&amp;#x4E00;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x8BB2;&amp;#x5230;&amp;#xFF0C;&amp;#x5728;Spring&amp;#x6846;&amp;#x67B6;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6211;&amp;#x4EEC;SpringMVC&amp;#x7684;&amp;#x52A0;&amp;#x8F7D;&amp;#x662F;&amp;#x901A;&amp;#x8FC7;S">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pnxnx3wn9.bkt.clouddn.com/SpringMVC_ExtendsRelationship.png">
-<meta property="og:updated_time" content="2019-03-18T14:13:49.587Z">
+<meta property="og:updated_time" content="2019-03-18T14:18:16.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringMVC核心（二）：根据启动日志学原理">
 <meta name="twitter:description" content="&amp;#x524D;&amp;#x9762;&amp;#x4E00;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x8BB2;&amp;#x5230;&amp;#xFF0C;&amp;#x5728;Spring&amp;#x6846;&amp;#x67B6;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6211;&amp;#x4EEC;SpringMVC&amp;#x7684;&amp;#x52A0;&amp;#x8F7D;&amp;#x662F;&amp;#x901A;&amp;#x8FC7;S">
@@ -519,7 +519,7 @@
 </tr>
 <tr>
 <td style="text-align:center">servlet-mapping</td>
-<td style="text-align:left">&#x670D;&#x52A1;&#x5668;&#x4E00;&#x822C;&#x4E3A;servlet&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x7F3A;&#x7701;&#x7684;URL&#xFF1A;<a href="http://host/webAppPrefix/servlet/ServletName&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5E38;&#x5E38;&#x4F1A;&#x66F4;&#x6539;&#x8FD9;&#x4E2A;URL&#xFF0C;&#x4EE5;&#x4FBF;servlet&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;&#x6216;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x5904;&#x7406;&#x76F8;&#x5BF9;URL&#x3002;&#x5728;&#x66F4;&#x6539;&#x7F3A;&#x7701;URL&#x65F6;&#xFF0C;&#x4F7F;&#x7528;servlet-mapping&#x5143;&#x7D20;&#x3002;" target="_blank" rel="noopener">http://host/webAppPrefix/servlet/ServletName&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5E38;&#x5E38;&#x4F1A;&#x66F4;&#x6539;&#x8FD9;&#x4E2A;URL&#xFF0C;&#x4EE5;&#x4FBF;servlet&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;&#x6216;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x5904;&#x7406;&#x76F8;&#x5BF9;URL&#x3002;&#x5728;&#x66F4;&#x6539;&#x7F3A;&#x7701;URL&#x65F6;&#xFF0C;&#x4F7F;&#x7528;servlet-mapping&#x5143;&#x7D20;&#x3002;</a></td>
+<td style="text-align:left">&#x670D;&#x52A1;&#x5668;&#x4E00;&#x822C;&#x4E3A;servlet&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x7F3A;&#x7701;&#x7684;URL&#xFF1A;<code>http://host/webAppPrefix/servlet/ServletName</code>&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5E38;&#x5E38;&#x4F1A;&#x66F4;&#x6539;&#x8FD9;&#x4E2A;URL&#xFF0C;&#x4EE5;&#x4FBF;servlet&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;&#x6216;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x5904;&#x7406;&#x76F8;&#x5BF9;URL&#x3002;&#x5728;&#x66F4;&#x6539;&#x7F3A;&#x7701;URL&#x65F6;&#xFF0C;&#x4F7F;&#x7528;servlet-mapping&#x5143;&#x7D20;&#x3002;</td>
 </tr>
 <tr>
 <td style="text-align:center">session-config</td>
@@ -584,7 +584,7 @@
           
             <a href="/tags/Spring/" rel="tag"># Spring</a>
           
-            <a href="/tags/SpringMVC/" rel="tag"># SpringMVC</a>
+            <a href="/tags/SprigMVC/" rel="tag"># SprigMVC</a>
           
         </div>
       
@@ -693,7 +693,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -706,7 +706,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -806,7 +806,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.3k</span>
+    <span title="Site words total count">6.2k</span>
   
 </div>
 
