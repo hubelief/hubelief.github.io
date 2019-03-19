@@ -93,7 +93,7 @@
 <meta property="og:description" content="&amp;#x524D;&amp;#x9762;&amp;#x4E00;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x8BB2;&amp;#x5230;&amp;#xFF0C;&amp;#x5728;Spring&amp;#x6846;&amp;#x67B6;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6211;&amp;#x4EEC;SpringMVC&amp;#x7684;&amp;#x52A0;&amp;#x8F7D;&amp;#x662F;&amp;#x901A;&amp;#x8FC7;S">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pnxnx3wn9.bkt.clouddn.com/SpringMVC_ExtendsRelationship.png">
-<meta property="og:updated_time" content="2019-03-19T12:22:32.640Z">
+<meta property="og:updated_time" content="2019-03-19T13:35:23.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringMVC核心（二）：根据启动日志学原理">
 <meta name="twitter:description" content="&amp;#x524D;&amp;#x9762;&amp;#x4E00;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x8BB2;&amp;#x5230;&amp;#xFF0C;&amp;#x5728;Spring&amp;#x6846;&amp;#x67B6;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6211;&amp;#x4EEC;SpringMVC&amp;#x7684;&amp;#x52A0;&amp;#x8F7D;&amp;#x662F;&amp;#x901A;&amp;#x8FC7;S">
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.4k
+                  2.5k
                 </span>
               
 
@@ -495,7 +495,7 @@
 <li>&#x8FD9;&#x91CC;&#x52A0;&#x8F7D;&#x4E86;web.xml&#x4E2D;&#x7684;CharacterEncodingFilter&#x4E71;&#x7801;&#x8FC7;&#x6EE4;&#x5668;&#x3002;</li>
 </ul>
 <h1 id="DispatcherServlet"><a href="#DispatcherServlet" class="headerlink" title="DispatcherServlet"></a>DispatcherServlet</h1><p>&#x63A5;&#x4E0B;&#x6765;&#x662F;&#x6839;&#x636E;Web.xml&#x6765;&#x521D;&#x59CB;&#x5316;DispatcherServlet&#x3002;<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DEBUG (org.springframework.web.servlet.DispatcherServlet:118) - Initializing servlet &apos;DispatcherServlet&apos;</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:109) - Adding [servletConfigInitParams] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:109) - Adding [servletContextInitParams] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:109) - Adding [jndiProperties] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:109) - Adding [systemProperties] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:109) - Adding [systemEnvironment] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:124) - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>&#x9996;&#x5148;&#x4ECE;Spring&#x7236;&#x5BB9;&#x5668;&#x4E2D;&#x62FF;&#x5230;spring&#x5DF2;&#x7ECF;&#x521D;&#x59CB;&#x5316;&#x597D;&#x7684;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x53CA;&#x53C2;&#x6570;&#x3002;<br>DispatcherServlet&#x4F5C;&#x4E3A;SpringMVC&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x5176;&#x4E2D;&#x5F88;&#x591A;&#x7684;&#x4E1C;&#x897F;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x6765;&#x6162;&#x6162;&#x63A8;&#x6572;&#x3002;<br>&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;<a href="http://www.hushaohui.site/SpringMVC&#x62D3;&#x5C55;&#xFF08;&#x4E00;&#xFF09;&#xFF1A;&#x4E5D;&#x5927;&#x7EC4;&#x4EF6;/" target="_blank" rel="noopener">DispatcherServlet&#x7684;&#x4E5D;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF08;&#x4E5F;&#x662F;&#x5B83;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF09;</a>&#xFF0C;&#x8FD9;&#x91CC;&#x63D0;&#x4E00;&#x4E0B;Spring&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x2014;&gt;<code>BeanFactory</code>&#x3002;</p>
+<p>&#x9996;&#x5148;&#x4ECE;Spring&#x7236;&#x5BB9;&#x5668;&#x4E2D;&#x62FF;&#x5230;spring&#x5DF2;&#x7ECF;&#x521D;&#x59CB;&#x5316;&#x597D;&#x7684;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x53CA;&#x53C2;&#x6570;&#x3002;<br>DispatcherServlet&#x4F5C;&#x4E3A;SpringMVC&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x5176;&#x4E2D;&#x5F88;&#x591A;&#x7684;&#x4E1C;&#x897F;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x6765;&#x6162;&#x6162;&#x63A8;&#x6572;&#x3002;<br>&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;<a href="http://www.hushaohui.site/SpringMVC&#x62D3;&#x5C55;&#xFF08;&#x4E00;&#xFF09;&#xFF1A;&#x4E5D;&#x5927;&#x7EC4;&#x4EF6;/" target="_blank" rel="noopener">DispatcherServlet&#x7684;&#x4E5D;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF08;&#x4E5F;&#x662F;&#x5B83;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF09;</a>&#xFF0C;&#x8FD9;&#x91CC;&#x63D0;&#x4E00;&#x4E0B;Spring&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x2014;&gt;<code>BeanFactory</code>&#x3002;<br>&#x5269;&#x4E0B;&#x5173;&#x4E8E;&#x65E5;&#x5FD7;&#x8DDF;&#x8E2A;&#x7684;&#x6D41;&#x7A0B;&#x5DF2;&#x7ECF;&#x5728;&#x672C;&#x4EBA;&#x7684;<a href="https://blog.csdn.net/hu_belif/article/details/88625867" target="_blank" rel="noopener">CSDN</a>&#x4E2D;&#x52A0;&#x4E0A;&#x6CE8;&#x89E3;&#xFF0C;&#x5927;&#x5BB6;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x81EA;&#x5DF1;&#x53EF;&#x4EE5;&#x770B;&#x770B;&#x3002;</p>
 <hr>
 <p><img src="http://pnxnx3wn9.bkt.clouddn.com/SpringMVC_ExtendsRelationship.png" alt="SpringMVC-Dispatcherservlet&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x56FE;" title="Dispatcherservlet&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x56FE;"></p>
 <p>&#x6211;&#x4EEC;&#x6839;&#x636E;&#x542F;&#x52A8;&#x65E5;&#x5FD7;&#x548C;Dispatcherservlet&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x56FE;&#x7EE7;&#x7EED;&#x6765;&#x7814;&#x7A76;SpringMVC&#x7684;&#x539F;&#x7406;&#x3002;&#xFF08;&#x540E;&#x9762;&#x4F1A;&#x7EE7;&#x7EED;&#x66F4;&#x65B0;Dispacherservlet&#xFF09;</p>
@@ -822,7 +822,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.4k</span>
+    <span title="Site words total count">6.5k</span>
   
 </div>
 
