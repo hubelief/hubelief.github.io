@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="Spring,SpringMVC,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -84,20 +84,17 @@
 
 
 
-<meta name="description" content="SpringMVC&amp;#x7B80;&amp;#x4ECB;Spring MVC &amp;#x878D;&amp;#x5408;&amp;#x5728; Spring Web Flow &amp;#x91CC;&amp;#x9762;&amp;#x3002; &amp;#x4F7F;&amp;#x7528; Spring &amp;#x53EF;&amp;#x63D2;&amp;#x5165;&amp;#x7684; MVC &amp;#x67B6;&amp;#x6784;&amp;#xFF0C;&amp;#x53EF;&amp;#x4E">
-<meta name="keywords" content="Spring,SpringMVC">
-<meta property="og:type" content="article">
-<meta property="og:title" content="SpringMVC核心（一）：核心业务流程">
-<meta property="og:url" content="http://yoursite.com/SpringMVC核心（一）：核心业务流程/index.html">
+<meta name="description" content="&amp;#x5173;&amp;#x4E8E;&amp;#x4F5C;&amp;#x8005;&amp;#x770B;&amp;#x7F51;&amp;#x7AD9;&amp;#x62AC;&amp;#x5934;&amp;#xFF0C;&amp;#x4E0D;&amp;#x96BE;&amp;#x731C;&amp;#x51FA;&amp;#x6765;&amp;#x4F5C;&amp;#x8005;&amp;#x59D3;&amp;#x6C0F;&amp;#xFF0C;&amp;#x1F604;&amp;#x4F5C;&amp;#x8005;&amp;#x7684;&amp;#x6BCD">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="hu&#39;s BlOG">
-<meta property="og:description" content="SpringMVC&amp;#x7B80;&amp;#x4ECB;Spring MVC &amp;#x878D;&amp;#x5408;&amp;#x5728; Spring Web Flow &amp;#x91CC;&amp;#x9762;&amp;#x3002; &amp;#x4F7F;&amp;#x7528; Spring &amp;#x53EF;&amp;#x63D2;&amp;#x5165;&amp;#x7684; MVC &amp;#x67B6;&amp;#x6784;&amp;#xFF0C;&amp;#x53EF;&amp;#x4E">
+<meta property="og:description" content="&amp;#x5173;&amp;#x4E8E;&amp;#x4F5C;&amp;#x8005;&amp;#x770B;&amp;#x7F51;&amp;#x7AD9;&amp;#x62AC;&amp;#x5934;&amp;#xFF0C;&amp;#x4E0D;&amp;#x96BE;&amp;#x731C;&amp;#x51FA;&amp;#x6765;&amp;#x4F5C;&amp;#x8005;&amp;#x59D3;&amp;#x6C0F;&amp;#xFF0C;&amp;#x1F604;&amp;#x4F5C;&amp;#x8005;&amp;#x7684;&amp;#x6BCD">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pnxnx3wn9.bkt.clouddn.com/SpringMVC%E6%A0%B8%E5%BF%83%E6%B5%81%E7%A8%8B.jpg">
-<meta property="og:updated_time" content="2019-03-22T03:15:07.592Z">
+<meta property="og:updated_time" content="2019-03-19T00:37:52.631Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringMVC核心（一）：核心业务流程">
-<meta name="twitter:description" content="SpringMVC&amp;#x7B80;&amp;#x4ECB;Spring MVC &amp;#x878D;&amp;#x5408;&amp;#x5728; Spring Web Flow &amp;#x91CC;&amp;#x9762;&amp;#x3002; &amp;#x4F7F;&amp;#x7528; Spring &amp;#x53EF;&amp;#x63D2;&amp;#x5165;&amp;#x7684; MVC &amp;#x67B6;&amp;#x6784;&amp;#xFF0C;&amp;#x53EF;&amp;#x4E">
-<meta name="twitter:image" content="http://pnxnx3wn9.bkt.clouddn.com/SpringMVC%E6%A0%B8%E5%BF%83%E6%B5%81%E7%A8%8B.jpg">
+<meta name="twitter:title" content="关于">
+<meta name="twitter:description" content="&amp;#x5173;&amp;#x4E8E;&amp;#x4F5C;&amp;#x8005;&amp;#x770B;&amp;#x7F51;&amp;#x7AD9;&amp;#x62AC;&amp;#x5934;&amp;#xFF0C;&amp;#x4E0D;&amp;#x96BE;&amp;#x731C;&amp;#x51FA;&amp;#x6765;&amp;#x4F5C;&amp;#x8005;&amp;#x59D3;&amp;#x6C0F;&amp;#xFF0C;&amp;#x1F604;&amp;#x4F5C;&amp;#x8005;&amp;#x7684;&amp;#x6BCD">
 
 
 
@@ -129,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/SpringMVC核心（一）：核心业务流程/">
+  <link rel="canonical" href="http://yoursite.com/about/">
 
 
 
 
 
-  <title>SpringMVC核心（一）：核心业务流程 | hu's BlOG</title>
+  <title>关于 | hu's BlOG</title>
   
 
 
@@ -294,181 +291,30 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/SpringMVC核心（一）：核心业务流程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="hu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://pnxnx3wn9.bkt.clouddn.com/head_portrait.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hu's BlOG">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">SpringMVC核心（一）：核心业务流程</h1>
-        
+	<h1 class="post-title" itemprop="name headline">关于</h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-10T20:18:01+08:00">
-                2019-03-10
-              </time>
-            
 
-            
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
-            </span>
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.3k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  8
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
       
-
       
-        <h1 id="SpringMVC&#x7B80;&#x4ECB;"><a href="#SpringMVC&#x7B80;&#x4ECB;" class="headerlink" title="SpringMVC&#x7B80;&#x4ECB;"></a>SpringMVC&#x7B80;&#x4ECB;</h1><p>Spring MVC &#x878D;&#x5408;&#x5728; Spring Web Flow &#x91CC;&#x9762;&#x3002; &#x4F7F;&#x7528; Spring &#x53EF;&#x63D2;&#x5165;&#x7684; <code>MVC</code> &#x67B6;&#x6784;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x662F;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7684; Spring Web &#x6846;&#x67B6;&#x8FD8;&#x662F; Struts &#x8FD9;&#x6837;&#x7684; Web&#x6846;&#x67B6;&#xFF0C;MVC &#x5DF2;&#x7ECF;&#x662F;&#x73B0;&#x4EE3;Web&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x90E8;&#x5206;&#x3002;&#x4E0E;&#x8BB8;&#x591A;&#x5176;&#x4ED6;Web&#x6846;&#x67B6;&#x4E00;&#x6837;&#xFF0C;Spring MVC&#x56F4;&#x7ED5;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x6A21;&#x5F0F;&#x8BBE;&#x8BA1;&#xFF0C;&#x5176;&#x4E2D;&#x4E2D;&#x592E; Servlet DispatcherServlet &#x4E3A;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x63D0;&#x4F9B;&#x5171;&#x4EAB;&#x7B97;&#x6CD5;&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x7531;&#x53EF;&#x914D;&#x7F6E;&#x59D4;&#x6258;&#x7EC4;&#x4EF6;&#x6267;&#x884C;&#x3002;&#x8BE5;&#x6A21;&#x578B;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x3002;<br>Spring+SpringMVC&#x5F00;&#x53D1;&#x7684;&#x65F6;&#x5019;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E00;&#x822C;&#x6709; <code>web.xml</code>&#xFF08;&#x5FC5;&#x987B;&#xFF09;<br>&#x5FC5;&#x987B;&#x7684;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF1A;&#x914D;&#x7F6E;<code>contexLoadListener</code>&#xFF0C;&#x914D;&#x7F6E;<code>DispatcherServlet</code>&#x62E6;&#x622A;&#x8BF7;&#x6C42; </p>
-<p><strong> &#x89E3;&#x6790;&#xFF1A;</strong></p>
-<ol>
-<li><p>MVC&#x67B6;&#x6784;&#x6A21;&#x5F0F;&#x7684;&#x601D;&#x60F3;&#xFF1A;&#x5C06;Web&#x5C42;&#x8FDB;&#x884C;&#x6307;&#x8D23;&#x89E3;&#x8026;</p>
-</li>
-<li><p>&#x57FA;&#x4E8E;&#x8BF7;&#x6C42;&#x9A71;&#x52A8;&#xFF1A;&#x8BF7;&#x6C42;-&#x76F8;&#x5E94;&#x6A21;&#x578B;</p>
-</li>
-<li><p>&#x6846;&#x67B6;&#x7684;&#x76EE;&#x7684;&#xFF1A;&#x7B80;&#x5316;&#x5F00;&#x53D1;</p>
-</li>
-</ol>
-<p><strong>SpringMVC&#x7684;&#x75DB;&#x75D2;&#x70B9;&#x6709;&#x4E09;&#x4E2A;:</strong></p>
-<p>&#xFF08;1&#xFF09;&#x5C06;Web&#x9875;&#x9762;&#x7684;&#x8BF7;&#x6C42;&#x4F20;&#x7ED9;&#x670D;&#x52A1;&#x5668; </p>
-<p>&#xFF08;2&#xFF09;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7684;&#x903B;&#x8F91;&#x9875;&#x9762; </p>
-<p>&#xFF08;3&#xFF09;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x5E76;&#x8DF3;&#x8F6C;&#x9875;&#x9762; </p>
-<h1 id="springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;"><a href="#springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;" class="headerlink" title="springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;"></a>springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;</h1><p>&#x4E0A;&#x9762;&#x8BF4;&#x7684;<code>&#x5176;&#x4E2D;&#x4E2D;&#x592E;Servlet DispatcherServlet&#x4E3A;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x63D0;&#x4F9B;&#x5171;&#x4EAB;&#x7B97;&#x6CD5;&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x7531;&#x53EF;&#x914D;&#x7F6E;&#x59D4;&#x6258;&#x7EC4;&#x4EF6;&#x6267;&#x884C;</code> &#x6211;&#x4EEC;&#x6765;&#x7528;&#x56FE;&#x4F8B;&#x770B;&#x4E00;&#x4E0B;&#xFF1A;</p>
-<p><img src="http://pnxnx3wn9.bkt.clouddn.com/SpringMVC%E6%A0%B8%E5%BF%83%E6%B5%81%E7%A8%8B.jpg" alt="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;" title="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;"></p>
-<p><strong>&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#xFF1A;</strong></p>
-<ol>
-<li><p>&#x9996;&#x5148;&#x7528;&#x6237;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x2014;&gt;DispatcherServlet&#xFF0C;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#x81EA;&#x5DF1;&#x4E0D;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x662F;&#x59D4;&#x6258;&#x7ED9;&#x5176;&#x4ED6;&#x7684;&#x89E3;&#x6790;&#x5668;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x4F5C;&#x4E3A;&#x7EDF;&#x4E00;&#x8BBF;&#x95EE;&#x70B9;&#xFF0C;&#x8FDB;&#x884C;&#x5168;&#x5C40;&#x7684;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#xFF1B;</p>
-</li>
-<li><p>DispatcherServlet&#x2014;&gt;HandlerMapping&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x8BF7;&#x6C42;&#x6620;&#x5C04;&#x4E3A; HandlerExecutionChain &#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x542B;&#x4E00;&#x4E2A; Handler &#x5904;&#x7406;&#x5668;&#xFF08;&#x9875;&#x9762;&#x63A7;&#x5236;&#x5668;&#xFF09;&#x5BF9;&#x8C61;&#x3001;&#x591A;&#x4E2A; HandlerInterceptor &#x62E6;&#x622A;&#x5668;&#xFF09;&#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x6620;&#x5C04;&#x7B56;&#x7565;&#xFF1B;</p>
-</li>
-<li><p>DispatcherServlet&#x2014;&gt;HandlerAdapter&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x5904;&#x7406;&#x5668;&#x5305;&#x88C5;&#x4E3A;&#x9002;&#x914D;&#x5668;&#xFF0C;&#x4ECE;&#x800C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x5373;<code>&#x9002;&#x914D;&#x5668;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</code>&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4ECE;&#x800C;&#x5F88;&#x5BB9;&#x6613;&#x652F;&#x6301;&#x5F88;&#x591A;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF1B;</p>
-</li>
-<li><p>HandlerAdapter&#x2014;&gt;&#x5904;&#x7406;&#x5668;&#x529F;&#x80FD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x6839;&#x636E;&#x9002;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x8C03;&#x7528;&#x771F;&#x6B63;&#x7684;&#x5904;&#x7406;&#x5668;&#x7684;&#x529F;&#x80FD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x5B8C;&#x6210;&#x529F;&#x80FD;&#x5904;&#x7406;&#xFF08;&#x5904;&#x7406;&#x5668;&#x5728;&#x8FD9;&#x91CC;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#x5668;&#x7684;&#x5904;&#x7406;&#x3001;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x5668;&#x7684;&#x5904;&#x7406;&#x7B49;&#x7B49;&#xFF09;&#xFF1B;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; ModelAndView &#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x542B;&#x6A21;&#x578B;&#x6570;&#x636E;&#x3001;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#xFF09;&#xFF1B;</p>
-</li>
-<li><p>ModelAndView &#x7684;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#x2014;&gt; ViewResolver&#xFF0C; &#x5B83;&#x5C06;&#x628A;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#x89E3;&#x6790;&#x4E3A;&#x5177;&#x4F53;&#x7684; View&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x66F4;&#x6362;&#x5176;&#x4ED6;&#x89C6;&#x56FE;&#x6280;&#x672F;&#xFF1B;</p>
-</li>
-<li><p>View&#x2014;&gt;&#x6E32;&#x67D3;&#xFF0C;&#x5B83;&#x4F1A;&#x6839;&#x636E;&#x4F20;&#x8FDB;&#x6765;&#x7684; Model &#x6A21;&#x578B;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#xFF0C;&#x6B64;&#x5904;&#x7684; Model &#x5B9E;&#x9645;&#x662F;&#x4E00;&#x4E2A; Map &#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x56E0;&#x6B64;&#x5F88;&#x5BB9;&#x6613;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x89C6;&#x56FE;&#x6280;&#x672F;&#xFF1B;</p>
-</li>
-<li><p>&#x8FD4;&#x56DE;&#x63A7;&#x5236;&#x6743;&#x7ED9; DispatcherServlet&#xFF0C;&#x7531; DispatcherServlet &#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x7ED9;&#x7528;&#x6237;&#xFF0C;&#x5230;&#x6B64;&#x4E00;&#x4E2A;&#x6D41;&#x7A0B;&#x7ED3;&#x675F;&#x3002;&#xFF08;&#x58F0;&#x660E;:&#x56FE;&#x4E2D;&#x7684;View&#x6307;&#x5411;&#x7528;&#x6237;&#x53EA;&#x662F;&#x5355;&#x7EAF;&#x65B9;&#x4FBF;&#x7406;&#x89E3;&#xFF09;</p>
-</li>
-</ol>
-<hr>
-<h1 id="&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><a href="#&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;" class="headerlink" title="&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"></a>&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;</h1><ol>
-<li>DispatcherServlet: &#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;</li>
-</ol>
-<p>&#x7B49;&#x540C;&#x4E8E;&#x4EE5;&#x524D;&#x7684;Controller&#xFF0C; &#x662F;&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x7684;&#x4E2D;&#x5FC3;&#xFF0C; &#x8D1F;&#x8D23;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x3002;<br>&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#xFF08;DispatcherServlet&#xFF09;&#xFF1A;&#x8FD9;&#x4E2A;&#x662F; SpringMVC&#x7684;&#x5165;&#x53E3;&#xFF08;&#x5B9E;&#x9645;&#x4E0A;&#x5462;&#x5C31;&#x662F;&#x4E00;&#x4E2A;Servlet&#x5BF9;&#x8C61;&#xFF09;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x8981;&#x901A;&#x8FC7;&#x5B83;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x4E2A;Servlet&#x6240;&#x4EE5;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x7684;&#x4F60;&#x8981;&#x5728;web.xml&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
-<ol start="2">
-<li>HandlerMapping&#xFF1A; &#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;</li>
-</ol>
-<p>&#x8D1F;&#x8D23;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x627E;&#x5230;Handler&#xFF08;&#x5904;&#x7406;&#x5668;&#xFF09;&#xFF0C;springMVC&#x4E2D;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x6620;&#x5C04;&#x5668;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x6620;&#x5C04;&#xFF0C;&#x6BD4;&#x5982; xml&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF0C;&#x6CE8;&#x89E3;&#x65B9;&#x5F0F;&#xFF0C;&#x63A5;&#x53E3;&#x65B9;&#x5F0F;&#x7B49;&#x3002;<br>&#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;(HandlerMapper)&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x627E;&#x5230;&#x5904;&#x7406;&#x5668;&#xFF08;Handler&#xFF09;&#xFF0C;&#x5B83;&#x652F;&#x6301;&#x7684;&#x6709;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5F62;&#x5F0F;&#xFF0C;&#x63A5;&#x53E3;&#x5F62;&#x5F0F;&#xFF0C;&#x6CE8;&#x89E3;&#x5F62;&#x5F0F;&#x7B49;&#x7B49;&#x3002;</p>
-<ol start="3">
-<li>HandlerAdapter&#xFF1A;&#x5904;&#x7406;&#x5668;&#x9002;&#x914D;&#x5668;</li>
-</ol>
-<p>&#x5904;&#x7406;Handler&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#x8FDB;&#x884C;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x662F;&#x5BF9;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x7684;&#x5E94;&#x7528;&#x4F53;&#x73B0;&#x3002;<br>&#x5904;&#x7406;&#x5668;&#x9002;&#x914D;&#x5668;&#xFF08;HandlAdapter&#xFF09;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x5206;&#x6790;&#x5904;&#x7406;&#x5668;&#x662F;&#x90A3;&#x79CD;&#x65B9;&#x5F0F;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF08;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x63A5;&#x53E3;&#x3001;&#x6CE8;&#x89E3;&#x7B49;&#x5F62;&#x5F0F;&#xFF09;&#x7136;&#x540E;&#x6267;&#x884C;Handler&#x3002;</p>
-<ol start="4">
-<li>Handler&#xFF1A;&#x540E;&#x7AEF;&#x63A7;&#x5236;&#x5668;</li>
-</ol>
-<p>&#x5728;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x7684;&#x63A7;&#x5236;&#x4E0B;&#x5BF9;&#x5177;&#x4F53;&#x7684;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x8FDB;&#x884C;&#x6839;&#x636E;&#x9700;&#x6C42;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x3002;</p>
-<ol start="5">
-<li>ViewResolver: &#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;</li>
-</ol>
-<p>&#x8D1F;&#x8D23;&#x5C06;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x751F;&#x6210;view&#x89C6;&#x56FE;&#x3001;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x5F00;&#x53D1;view;SpringMVC&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x89C6;&#x56FE;&#xFF0C;&#x6BD4;&#x5982;jstlView&#x3001;freemarkerView&#x3001;pdfView&#xFF08;<code>&#x540E;&#x9762;&#x66F4;&#x65B0;</code>&#xFF09;&#x7B49;&#x3002;</p>
-<blockquote>
-<p>SpringMVC&#x4E2D;&#x7684;&#x4E09;&#x5927;&#x7EC4;&#x4EF6;&#x5206;&#x522B;&#x662F;&#xFF1A;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;&#xFF0C;&#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;&#xFF1B;&#x7528;&#x6237;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x7684;&#x90E8;&#x4EF6;&#x662F;&#xFF1A;Handler&#x548C;view</p>
-</blockquote>
-<blockquote>
-<p>ModelAndView &#x5C01;&#x88C5;&#x4E86;&#x6570;&#x636E;&#x548C;&#x89C6;&#x56FE;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x8FD9;&#x4E2A;&#x662F;&#x8FDB;&#x884C;&#x4F20;&#x8F93;&#xFF0C;&#x6570;&#x636E;&#x7684;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x662F;Request&#x57DF;&#x3002;</p>
-</blockquote>
+      <div class="post-body">
+        
+        
+          <h2 id="&#x5173;&#x4E8E;&#x4F5C;&#x8005;"><a href="#&#x5173;&#x4E8E;&#x4F5C;&#x8005;" class="headerlink" title="&#x5173;&#x4E8E;&#x4F5C;&#x8005;"></a>&#x5173;&#x4E8E;&#x4F5C;&#x8005;</h2><p>&#x770B;&#x7F51;&#x7AD9;&#x62AC;&#x5934;&#xFF0C;&#x4E0D;&#x96BE;&#x731C;&#x51FA;&#x6765;&#x4F5C;&#x8005;&#x59D3;&#x6C0F;&#xFF0C;<span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png?v8">&#x1F604;</span>&#x4F5C;&#x8005;&#x7684;&#x6BCD;&#x8BED;&#x662F;&#x4E2D;&#x6587;&#x548C;Java&#xFF08;C&#x4E0D;&#x80FD;&#x7B97;&#xFF09;&#x3002;&#x4E00;&#x4E2A;&#x7ACB;&#x5FD7;&#x6210;&#x4E3A;<code>&#x6280;&#x672F;&#x5927;&#x4F6C;</code>de&#x7A0B;&#x5E8F;&#x5458;&#xFF08;&#x6240;&#x8C13;&#x5FD7;&#x4E0D;&#x7ACB;&#x4F55;&#x4EE5;&#x5F97;&#x5929;&#x4E0B;&#xFF09;&#x3002;&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#x78D5;&#x78D5;&#x7ECA;&#x7ECA;&#x7684;&#x6210;&#x957F;&#x2014;-&#x5F53;&#x7136;&#x662F;&#x66F4;&#x5E0C;&#x671B;&#x80FD;&#x6CA1;&#x6709;bug&#x3002;&#x672C;&#x4EBA;&#x559C;&#x6B22;&#x94BB;&#x7814;&#x8BBE;&#x8BA1;&#x601D;&#x60F3;&#x4E0E;&#x5E95;&#x5C42;&#x8BBE;&#x8BA1;&#xFF08;&#x5E0C;&#x671B;&#x9047;&#x5230;&#x5927;&#x4F6C;&#x591A;&#x591A;&#x6307;&#x6559;&#xFF09;&#x3002;</p>
+<h2 id="&#x5173;&#x4E8E;&#x672C;&#x7AD9;"><a href="#&#x5173;&#x4E8E;&#x672C;&#x7AD9;" class="headerlink" title="&#x5173;&#x4E8E;&#x672C;&#x7AD9;"></a>&#x5173;&#x4E8E;&#x672C;&#x7AD9;</h2><p>&#x672C;&#x7AD9;&#x7684;&#x76EE;&#x7684;&#x4E3B;&#x8981;&#x662F;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x65B9;&#x9762;&#xFF1A;</p>
+<p>1&#xFF0C;&#x5B66;&#x4E60;&#x8BB0;&#x5F55;&#x81EA;&#x5DF1;&#x7684;&#x6280;&#x672F;&#x6210;&#x957F;&#x70B9;&#x6EF4;(&#x4EE3;&#x7801;&#x4ED3;&#x5E93;+&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;)&#x3002;</p>
+<p>2&#xFF0C;&#x5206;&#x4EAB;&#x603B;&#x7ED3;&#x81EA;&#x5DF1;&#x9047;&#x5230;&#x7684;&#x6280;&#x672F;&#x96BE;&#x9898;&#x3002;</p>
+<p>3&#xFF0C;&#x4E3A;&#x4E86;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x77E5;&#x8BC6;&#x4F53;&#x7CFB;&#x7684;&#x5EFA;&#x7ACB;&#x8D2E;&#x5907;&#x8D44;&#x6E90;&#x3002;</p>
+<p>4&#xFF0C;&#x5E0C;&#x671B;&#x7ED3;&#x4EA4;&#x66F4;&#x591A;&#x7684;&#x6280;&#x672F;&#x5927;&#x6D41;&#x2026;(&#x9644;&#x5C0F;&#x83DC;&#x7559;&#x8A00;&#xFF1A;&#x611F;&#x8C22;&#x60A8;&#x7684;&#x4E0D;&#x541D;&#x8D50;&#x6559;~)</p>
+<p><code>&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x662F;&#x81EA;&#x5DF1;&#x7684;&#x4E0A;&#x5E1D;&#x3002;&#x5982;&#x679C;&#x4F60;&#x81EA;&#x5DF1;&#x90FD;&#x653E;&#x5F03;&#x81EA;&#x5DF1;&#x4E86;&#xFF0C;&#x8FD8;&#x6709;&#x8C01;&#x4F1A;&#x6551;&#x4F60;&#xFF1F;------&#x300A;&#x8096;&#x7533;&#x514B;&#x7684;&#x6551;&#x8D4E;&#x300B;</code></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -488,69 +334,15 @@
             document.body.appendChild(img);
           });
       </script>
+        
+      </div>
+      
+      
       
     </div>
     
     
     
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Spring/" rel="tag"># Spring</a>
-          
-            <a href="/tags/SpringMVC/" rel="tag"># SpringMVC</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/SpringMVC核心（二）：根据启动日志学原理/" rel="prev" title="SpringMVC核心（二）：根据启动日志学原理">
-                SpringMVC核心（二）：根据启动日志学原理 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -559,15 +351,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzAyMS8xOTU2Nw=="></div>
-    </div>
-
-  
-
-
 
         </div>
         
@@ -689,7 +472,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringMVC简介"><span class="nav-number">1.</span> <span class="nav-text">SpringMVC简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#springMVC核心业务流程"><span class="nav-number">2.</span> <span class="nav-text">springMVC核心业务流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组件名词解释"><span class="nav-number">3.</span> <span class="nav-text">组件名词解释</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于作者"><span class="nav-number">1.</span> <span class="nav-text">关于作者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于本站"><span class="nav-number">2.</span> <span class="nav-text">关于本站</span></a></li></ol></div>
             
 
           </div>
@@ -905,17 +688,6 @@
 
 
 
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
   
 
 
