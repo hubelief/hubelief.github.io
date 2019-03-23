@@ -88,7 +88,7 @@
 <meta name="keywords" content="Spring,SpringMVC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringMVC核心（二）：根据启动日志学原理">
-<meta property="og:url" content="http://yoursite.com/SpringMVC核心（二）：根据启动日志学原理/index.html">
+<meta property="og:url" content="http://www.hushaohui.site/SpringMVC核心（二）：根据启动日志学原理/index.html">
 <meta property="og:site_name" content="hu&#39;s BlOG">
 <meta property="og:description" content="&amp;#x524D;&amp;#x9762;&amp;#x4E00;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x8BB2;&amp;#x5230;&amp;#xFF0C;&amp;#x5728;Spring&amp;#x6846;&amp;#x67B6;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6211;&amp;#x4EEC;SpringMVC&amp;#x7684;&amp;#x52A0;&amp;#x8F7D;&amp;#x662F;&amp;#x901A;&amp;#x8FC7;S">
 <meta property="og:locale" content="zh-Hans">
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/SpringMVC核心（二）：根据启动日志学原理/">
+  <link rel="canonical" href="http://www.hushaohui.site/SpringMVC核心（二）：根据启动日志学原理/">
 
 
 
@@ -306,7 +306,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/SpringMVC核心（二）：根据启动日志学原理/">
+    <link itemprop="mainEntityOfPage" href="http://www.hushaohui.site/SpringMVC核心（二）：根据启动日志学原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hu">
@@ -495,7 +495,7 @@
 <li>&#x8FD9;&#x91CC;&#x52A0;&#x8F7D;&#x4E86;web.xml&#x4E2D;&#x7684;CharacterEncodingFilter&#x4E71;&#x7801;&#x8FC7;&#x6EE4;&#x5668;&#x3002;</li>
 </ul>
 <h1 id="DispatcherServlet"><a href="#DispatcherServlet" class="headerlink" title="DispatcherServlet"></a>DispatcherServlet</h1><p>&#x63A5;&#x4E0B;&#x6765;&#x662F;&#x6839;&#x636E;Web.xml&#x6765;&#x521D;&#x59CB;&#x5316;DispatcherServlet&#x3002;<br></p><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DEBUG (org.springframework.web.servlet.DispatcherServlet:<span class="number">118</span>) - Initializing servlet <span class="string">&apos;DispatcherServlet&apos;</span></span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [servletConfigInitParams] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [servletContextInitParams] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [jndiProperties] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [systemProperties] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [systemEnvironment] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">124</span>) - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>&#x9996;&#x5148;&#x4ECE;Spring&#x7236;&#x5BB9;&#x5668;&#x4E2D;&#x62FF;&#x5230;spring&#x5DF2;&#x7ECF;&#x521D;&#x59CB;&#x5316;&#x597D;&#x7684;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x53CA;&#x53C2;&#x6570;&#x3002;<br>DispatcherServlet&#x4F5C;&#x4E3A;SpringMVC&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x5176;&#x4E2D;&#x5F88;&#x591A;&#x7684;&#x4E1C;&#x897F;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x6765;&#x6162;&#x6162;&#x63A8;&#x6572;&#x3002;<br>&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;<a href="http://www.hushaohui.site/SpringMVC&#x62D3;&#x5C55;&#xFF08;&#x4E00;&#xFF09;&#xFF1A;&#x4E5D;&#x5927;&#x7EC4;&#x4EF6;/" target="_blank" rel="noopener">DispatcherServlet&#x7684;&#x4E5D;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF08;&#x4E5F;&#x662F;&#x5B83;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF09;</a>&#xFF0C;&#x8FD9;&#x91CC;&#x63D0;&#x4E00;&#x4E0B;Spring&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x2014;&gt;<code>BeanFactory</code>&#x3002;<br>&#x5269;&#x4E0B;&#x5173;&#x4E8E;&#x65E5;&#x5FD7;&#x8DDF;&#x8E2A;&#x7684;&#x6D41;&#x7A0B;&#x5DF2;&#x7ECF;&#x5728;&#x672C;&#x4EBA;&#x7684;<a href="https://blog.csdn.net/hu_belif/article/details/88625867" target="_blank" rel="noopener">CSDN</a>&#x4E2D;&#x52A0;&#x4E0A;&#x6CE8;&#x89E3;&#xFF0C;&#x5927;&#x5BB6;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x81EA;&#x5DF1;&#x53EF;&#x4EE5;&#x770B;&#x770B;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x4ECE;Spring&#x7236;&#x5BB9;&#x5668;&#x4E2D;&#x62FF;&#x5230;spring&#x5DF2;&#x7ECF;&#x521D;&#x59CB;&#x5316;&#x597D;&#x7684;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x53CA;&#x53C2;&#x6570;&#x3002;<br>DispatcherServlet&#x4F5C;&#x4E3A;SpringMVC&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x5176;&#x4E2D;&#x5F88;&#x591A;&#x7684;&#x4E1C;&#x897F;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x6765;&#x6162;&#x6162;&#x63A8;&#x6572;&#x3002;<br>&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;<a href="http://www.hushaohui.site/SpringMVC&#x62D3;&#x5C55;&#xFF08;&#x4E00;&#xFF09;&#xFF1A;&#x4E5D;&#x5927;&#x7EC4;&#x4EF6;/">DispatcherServlet&#x7684;&#x4E5D;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF08;&#x4E5F;&#x662F;&#x5B83;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF09;</a>&#xFF0C;&#x8FD9;&#x91CC;&#x63D0;&#x4E00;&#x4E0B;Spring&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x2014;&gt;<code>BeanFactory</code>&#x3002;<br>&#x5269;&#x4E0B;&#x5173;&#x4E8E;&#x65E5;&#x5FD7;&#x8DDF;&#x8E2A;&#x7684;&#x6D41;&#x7A0B;&#x5DF2;&#x7ECF;&#x5728;&#x672C;&#x4EBA;&#x7684;<a href="https://blog.csdn.net/hu_belif/article/details/88625867" target="_blank" rel="noopener">CSDN</a>&#x4E2D;&#x52A0;&#x4E0A;&#x6CE8;&#x89E3;&#xFF0C;&#x5927;&#x5BB6;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x81EA;&#x5DF1;&#x53EF;&#x4EE5;&#x770B;&#x770B;&#x3002;</p>
 <hr>
 <p><img src="http://pnxnx3wn9.bkt.clouddn.com/SpringMVC_ExtendsRelationship.png" alt="SpringMVC-Dispatcherservlet&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x56FE;" title="Dispatcherservlet&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x56FE;"></p>
 <p>&#x6211;&#x4EEC;&#x6839;&#x636E;&#x542F;&#x52A8;&#x65E5;&#x5FD7;&#x548C;Dispatcherservlet&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x56FE;&#x7EE7;&#x7EED;&#x6765;&#x7814;&#x7A76;SpringMVC&#x7684;&#x539F;&#x7406;&#x3002;&#xFF08;&#x540E;&#x9762;&#x4F1A;&#x7EE7;&#x7EED;&#x66F4;&#x65B0;Dispacherservlet&#xFF09;</p>
@@ -569,7 +569,7 @@
 <ol start="3">
 <li>&#x9500;&#x6BC1;&#x9636;&#x6BB5; &#x2013;destory()<br>&#x8C03;&#x7528;servlet&#x5BB9;&#x5668;&#x7684;<code>destory()</code>&#x65B9;&#x6CD5;&#x4E4B;&#x540E;&#x518D;&#x9500;&#x6BC1;servlet&#x5BF9;&#x8C61;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E9B;servlet&#x5360;&#x7528;&#x7684;&#x8D44;&#x6E90;&#x7684;&#x91CA;&#x653E; &#x653E;&#x5728;destroy()&#x65B9;&#x6CD5;&#x4E2D;&#x5B9E;&#x73B0;&#x4EE5;&#x4F18;&#x5316;&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x51CF;&#x5C11;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x3002;</li>
 </ol>
-<p>&#x4E0B;&#x4E00;&#x7BC7;&#xFF1A;<a href="http://www.hushaohui.site/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%B8%89%EF%BC%89-DispatcherServlet/" target="_blank" rel="noopener">DispatcherServlet</a><br><code>&#x672C;&#x6587;&#x82E5;&#x6709;&#x4EFB;&#x4F55;&#x9519;&#x8BEF;&#x8A00;&#x8BBA;&#xFF0C;&#x8BF7;&#x5927;&#x795E;&#x4E0D;&#x541D;&#x8D50;&#x6559;&#x7ED9;&#x4E88;&#x7EA0;&#x6B63;&#xFF0C;&#x907F;&#x514D;&#x8BEF;&#x5BFC;&#x4ED6;&#x4EBA;</code></p>
+<p>&#x4E0B;&#x4E00;&#x7BC7;&#xFF1A;<a href="http://www.hushaohui.site/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%B8%89%EF%BC%89-DispatcherServlet/">DispatcherServlet</a><br><code>&#x672C;&#x6587;&#x82E5;&#x6709;&#x4EFB;&#x4F55;&#x9519;&#x8BEF;&#x8A00;&#x8BBA;&#xFF0C;&#x8BF7;&#x5927;&#x795E;&#x4E0D;&#x541D;&#x8D50;&#x6559;&#x7ED9;&#x4E88;&#x7EA0;&#x6B63;&#xFF0C;&#x907F;&#x514D;&#x8BEF;&#x5BFC;&#x4ED6;&#x4EBA;</code></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
