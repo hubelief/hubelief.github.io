@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.hushaohui.site/404.html</loc>
+    
+    <lastmod>2019-04-01T10:27:49.663Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.hushaohui.site/hello-world/</loc>
     
     <lastmod>2019-04-01T08:22:22.964Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://www.hushaohui.site/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E6%A0%B9%E6%8D%AE%E5%90%AF%E5%8A%A8%E6%97%A5%E5%BF%97%E5%AD%A6%E5%8E%9F%E7%90%86/</loc>
     
     <lastmod>2019-03-28T07:36:11.977Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.hushaohui.site/404.html</loc>
-    
-    <lastmod>2019-03-24T12:30:31.488Z</lastmod>
     
   </url>
   
