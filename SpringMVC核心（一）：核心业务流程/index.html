@@ -92,12 +92,12 @@
 <meta property="og:site_name" content="hu&#39;s BlOG">
 <meta property="og:description" content="SpringMVC&amp;#x7B80;&amp;#x4ECB;Spring MVC &amp;#x878D;&amp;#x5408;&amp;#x5728; Spring Web Flow &amp;#x91CC;&amp;#x9762;&amp;#x3002; &amp;#x4F7F;&amp;#x7528; Spring &amp;#x53EF;&amp;#x63D2;&amp;#x5165;&amp;#x7684; MVC &amp;#x67B6;&amp;#x6784;&amp;#xFF0C;&amp;#x53EF;&amp;#x4E">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ra7kbkh6f.bkt.clouddn.com/SpringMVC%E6%A0%B8%E5%BF%83%E6%B5%81%E7%A8%8B.jpg">
-<meta property="og:updated_time" content="2022-04-14T06:28:38.172Z">
+<meta property="og:image" content="http://www.hushaohui.site/uploads/SpringMVC核心/SpringMVC核心流程.jpg">
+<meta property="og:updated_time" content="2022-05-17T06:21:44.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringMVC核心（一）：核心业务流程">
 <meta name="twitter:description" content="SpringMVC&amp;#x7B80;&amp;#x4ECB;Spring MVC &amp;#x878D;&amp;#x5408;&amp;#x5728; Spring Web Flow &amp;#x91CC;&amp;#x9762;&amp;#x3002; &amp;#x4F7F;&amp;#x7528; Spring &amp;#x53EF;&amp;#x63D2;&amp;#x5165;&amp;#x7684; MVC &amp;#x67B6;&amp;#x6784;&amp;#xFF0C;&amp;#x53EF;&amp;#x4E">
-<meta name="twitter:image" content="http://ra7kbkh6f.bkt.clouddn.com/SpringMVC%E6%A0%B8%E5%BF%83%E6%B5%81%E7%A8%8B.jpg">
+<meta name="twitter:image" content="http://www.hushaohui.site/uploads/SpringMVC核心/SpringMVC核心流程.jpg">
 
 
 
@@ -320,7 +320,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ShaoHui">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="http://ra7kbkh6f.bkt.clouddn.com/head_portrait.jpeg">
+      <meta itemprop="image" content="/uploads/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -433,7 +433,7 @@
 <p>&#xFF08;2&#xFF09;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7684;&#x903B;&#x8F91;&#x9875;&#x9762; </p>
 <p>&#xFF08;3&#xFF09;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x5E76;&#x8DF3;&#x8F6C;&#x9875;&#x9762; </p>
 <h1 id="springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;"><a href="#springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;" class="headerlink" title="springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;"></a>springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;</h1><p>&#x4E0A;&#x9762;&#x8BF4;&#x7684;<code>&#x5176;&#x4E2D;&#x4E2D;&#x592E;Servlet DispatcherServlet&#x4E3A;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x63D0;&#x4F9B;&#x5171;&#x4EAB;&#x7B97;&#x6CD5;&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x7531;&#x53EF;&#x914D;&#x7F6E;&#x59D4;&#x6258;&#x7EC4;&#x4EF6;&#x6267;&#x884C;</code> &#x6211;&#x4EEC;&#x6765;&#x7528;&#x56FE;&#x4F8B;&#x770B;&#x4E00;&#x4E0B;&#xFF1A;</p>
-<p><img src="http://ra7kbkh6f.bkt.clouddn.com/SpringMVC%E6%A0%B8%E5%BF%83%E6%B5%81%E7%A8%8B.jpg" alt="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;" title="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;"></p>
+<p><img src="/uploads/SpringMVC&#x6838;&#x5FC3;/SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;.jpg" alt="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;" title="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;"></p>
 <p><strong>&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#xFF1A;</strong></p>
 <ol>
 <li><p>&#x9996;&#x5148;&#x7528;&#x6237;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x2014;&gt;DispatcherServlet&#xFF0C;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#x81EA;&#x5DF1;&#x4E0D;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x662F;&#x59D4;&#x6258;&#x7ED9;&#x5176;&#x4ED6;&#x7684;&#x89E3;&#x6790;&#x5668;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x4F5C;&#x4E3A;&#x7EDF;&#x4E00;&#x8BBF;&#x95EE;&#x70B9;&#xFF0C;&#x8FDB;&#x884C;&#x5168;&#x5C40;&#x7684;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#xFF1B;</p>
@@ -654,7 +654,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="http://ra7kbkh6f.bkt.clouddn.com/head_portrait.jpeg" alt="ShaoHui">
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpeg" alt="ShaoHui">
             
               <p class="site-author-name" itemprop="name">ShaoHui</p>
               <p class="site-description motion-element" itemprop="description">君若不学，则何以成？</p>
