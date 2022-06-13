@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="hu&#39;s BlOG">
 <meta property="og:description" content="&amp;#x65E5;&amp;#x5E38;&amp;#x5DE5;&amp;#x4F5C;&amp;#x4E2D;&amp;#xFF0C;&amp;#x5BF9;&amp;#x4E8E;&amp;#x6570;&amp;#x636E;&amp;#x7684;&amp;#x5206;&amp;#x6790;/&amp;#x7EDF;&amp;#x8BA1;/&amp;#x7B5B;&amp;#x9009;&amp;#x7B49;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4E2D;&amp;#x591A;&amp;#x6709;&amp;#x9047;&amp;#x523">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-06-13T09:11:37.089Z">
+<meta property="og:updated_time" content="2022-06-13T09:57:21.228Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL优化：Left join 技巧">
 <meta name="twitter:description" content="&amp;#x65E5;&amp;#x5E38;&amp;#x5DE5;&amp;#x4F5C;&amp;#x4E2D;&amp;#xFF0C;&amp;#x5BF9;&amp;#x4E8E;&amp;#x6570;&amp;#x636E;&amp;#x7684;&amp;#x5206;&amp;#x6790;/&amp;#x7EDF;&amp;#x8BA1;/&amp;#x7B5B;&amp;#x9009;&amp;#x7B49;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4E2D;&amp;#x591A;&amp;#x6709;&amp;#x9047;&amp;#x523">
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  756
+                  772
                 </span>
               
 
@@ -417,21 +417,199 @@
 
       
         <p>&#x65E5;&#x5E38;&#x5DE5;&#x4F5C;&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x5206;&#x6790;/&#x7EDF;&#x8BA1;/&#x7B5B;&#x9009;&#x7B49;&#x8FC7;&#x7A0B;&#x4E2D;&#x591A;&#x6709;&#x9047;&#x5230;&#x9700;&#x8981;&#x6392;&#x9664;&#x5927;&#x91CF;&#x6570;&#x636E;&#x8303;&#x56F4;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;<code>left join</code>&#x6765;&#x9650;&#x5236;&#x6570;&#x636E;&#x7ED3;&#x679C;&#x5E94;&#x8BE5;&#x7B97;&#x662F;&#x6BD4;&#x8F83;&#x4FBF;&#x6377;&#xFF1B;&#x5173;&#x4E8E;<code>left join</code>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x603B;&#x7ED3;&#x4E0B;&#x5728;&#x9650;&#x5236;&#x7ED3;&#x679C;&#x96C6;&#x65F6;&#x7684;&#x6280;&#x5DE7;&#x3002;<br>&#x6587;&#x7AE0;&#x4E2D;&#x6240;&#x6709;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x5747;&#x4EE5;&#x4E0B;&#x9762;A&#x3001;B&#x4E24;&#x5F20;&#x8868;&#x6837;&#x4F8B;&#x6570;&#x636E;&#x4E3A;&#x53C2;&#x8003;&#x3002;</p>
-<p>A:<br>id|name<br>-:|:-<br>1|&#x7B2C;&#x4E00;&#x7CFB;&#x5217;<br>2|&#x7B2C;&#x4E8C;&#x7CFB;&#x5217;<br>3|&#x7B2C;&#x4E09;&#x7CFB;&#x5217;<br>4|&#x7B2C;&#x56DB;&#x7CFB;&#x5217;<br>5|&#x7B2C;&#x4E94;&#x7CFB;&#x5217;<br>6|&#x5176;&#x4ED6;&#x7CFB;&#x5217;</p>
-<p>B:<br>id|score<br>-:|:-<br>1|90<br>2|20<br>3|30<br>4|60<br>5|100</p>
+<p><strong>&#x8868;A</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">id</th>
+<th style="text-align:center">name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">&#x7B2C;&#x4E00;&#x7CFB;&#x5217;</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">&#x7B2C;&#x4E8C;&#x7CFB;&#x5217;</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">&#x7B2C;&#x4E09;&#x7CFB;&#x5217;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">&#x7B2C;&#x56DB;&#x7CFB;&#x5217;</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">&#x7B2C;&#x4E94;&#x7CFB;&#x5217;</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">&#x5176;&#x4ED6;&#x7CFB;&#x5217;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8868;B</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">id</th>
+<th style="text-align:center">score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">90</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">20</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">30</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">60</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">100</td>
+</tr>
+</tbody>
+</table>
 <p><strong>&#x5EFA;&#x8868;&#x8BED;&#x53E5;&#xFF1A;</strong></p>
 <figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tmp.tab_a (</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    <span class="string">`name`</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line"><span class="keyword">CONSTRAINT</span> <span class="string">`PRIMARY`</span> PRIMARY <span class="keyword">KEY</span> (<span class="keyword">id</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tmp.tab_b (</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span>,</span><br><span class="line">    score <span class="built_in">int</span>,</span><br><span class="line"><span class="keyword">CONSTRAINT</span> <span class="string">`PRIMARY`</span> PRIMARY <span class="keyword">KEY</span> (<span class="keyword">id</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> tmp.tab_a(<span class="keyword">id</span>,<span class="string">`name`</span>) </span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">    (<span class="string">&apos;1&apos;</span>,<span class="string">&apos;&#x7B2C;&#x4E00;&#x7CFB;&#x5217;&apos;</span>),</span><br><span class="line">    (<span class="string">&apos;2&apos;</span>,<span class="string">&apos;&#x7B2C;&#x4E8C;&#x7CFB;&#x5217;&apos;</span>),</span><br><span class="line">    (<span class="string">&apos;3&apos;</span>,<span class="string">&apos;&#x7B2C;&#x4E09;&#x7CFB;&#x5217;&apos;</span>),</span><br><span class="line">    (<span class="string">&apos;4&apos;</span>,<span class="string">&apos;&#x7B2C;&#x56DB;&#x7CFB;&#x5217;&apos;</span>),</span><br><span class="line">    (<span class="string">&apos;5&apos;</span>,<span class="string">&apos;&#x7B2C;&#x4E94;&#x7CFB;&#x5217;&apos;</span>),</span><br><span class="line">    (<span class="string">&apos;6&apos;</span>,<span class="string">&apos;&#x5176;&#x4ED6;&#x7CFB;&#x5217;&apos;</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> tmp.tab_a(<span class="keyword">id</span>,<span class="string">`name`</span>) </span><br><span class="line"><span class="keyword">VALUES</span></span><br><span class="line">    (<span class="string">&apos;1&apos;</span>,<span class="string">&apos;90&apos;</span>),</span><br><span class="line">    (<span class="string">&apos;2&apos;</span>,<span class="string">&apos;20&apos;</span>),</span><br><span class="line">    (<span class="string">&apos;3&apos;</span>,<span class="string">&apos;30&apos;</span>),</span><br><span class="line">    (<span class="string">&apos;4&apos;</span>,<span class="string">&apos;60&apos;</span>),</span><br><span class="line">    (<span class="string">&apos;5&apos;</span>,<span class="string">&apos;100&apos;</span>);</span><br></pre></td></tr></tbody></table></figure>
 <h2 id="&#x6837;&#x4F8B;&#x4E00;"><a href="#&#x6837;&#x4F8B;&#x4E00;" class="headerlink" title="&#x6837;&#x4F8B;&#x4E00;"></a>&#x6837;&#x4F8B;&#x4E00;</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a.*,b.score</span><br><span class="line"><span class="keyword">from</span> tab_a a</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> tab_b b</span><br><span class="line"><span class="keyword">on</span> a.id=b.id</span><br><span class="line"><span class="keyword">and</span> b.score=<span class="number">100</span></span><br></pre></td></tr></tbody></table></figure>
-<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF1A;<br>id|name|score<br>-:|:-:|:-<br>1|&#x7B2C;&#x4E00;&#x7CFB;&#x5217;|null<br>2|&#x7B2C;&#x4E8C;&#x7CFB;&#x5217;|null<br>3|&#x7B2C;&#x4E09;&#x7CFB;&#x5217;|null<br>4|&#x7B2C;&#x56DB;&#x7CFB;&#x5217;|null<br>5|&#x7B2C;&#x4E94;&#x7CFB;&#x5217;|100<br>6|&#x5176;&#x4ED6;&#x7CFB;&#x5217;|null</p>
+<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">id</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">&#x7B2C;&#x4E00;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">null</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">&#x7B2C;&#x4E8C;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">null</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">&#x7B2C;&#x4E09;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">null</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">&#x7B2C;&#x56DB;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">null</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">&#x7B2C;&#x4E94;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">100</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">&#x5176;&#x4ED6;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">null</td>
+</tr>
+</tbody>
+</table>
 <p>&#x5728;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;a&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5168;&#x90E8;&#x7CFB;&#x5217;&#x90FD;&#x4F1A;&#x663E;&#x793A;&#xFF0C;b&#x8868;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x6309;&#x7167;score=100&#x7684;&#x6761;&#x4EF6;&#x6765;&#x5173;&#x8054;a&#x8868;&#x6570;&#x636E;&#xFF0C;&#x6700;&#x7EC8;&#x5728;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4E2D;&#x627E;&#x5230;&#x7684;&#x53EA;&#x6709;&#x6210;&#x7EE9;&#x4E3A;100&#x7684;&#x8FD9;&#x6761;&#x8BB0;&#x5F55;&#x3002;</p>
 <h2 id="&#x6837;&#x4F8B;&#x4E8C;"><a href="#&#x6837;&#x4F8B;&#x4E8C;" class="headerlink" title="&#x6837;&#x4F8B;&#x4E8C;"></a>&#x6837;&#x4F8B;&#x4E8C;</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a.*,b.score</span><br><span class="line"><span class="keyword">from</span> tab_a a</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> tab_b b</span><br><span class="line"><span class="keyword">on</span> a.id=b.id</span><br><span class="line"><span class="keyword">where</span> b.score=<span class="number">100</span></span><br></pre></td></tr></tbody></table></figure>
-<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF1A;<br>id|name|score<br>-:|:-:|:-<br>5|&#x7B2C;&#x4E94;&#x7CFB;&#x5217;|100</p>
+<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">id</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">&#x7B2C;&#x4E94;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">100</td>
+</tr>
+</tbody>
+</table>
 <p>&#x5728;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x4F1A;&#x6309;&#x7167;score=100&#x7684;&#x6761;&#x4EF6;&#x6765;&#x8FC7;&#x6EE4;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x3002;</p>
 <h2 id="&#x6837;&#x4F8B;&#x4E09;"><a href="#&#x6837;&#x4F8B;&#x4E09;" class="headerlink" title="&#x6837;&#x4F8B;&#x4E09;"></a>&#x6837;&#x4F8B;&#x4E09;</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a.*,b.score</span><br><span class="line"><span class="keyword">from</span> tab_a a</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> tab_b b</span><br><span class="line"><span class="keyword">on</span> a.id=b.id</span><br><span class="line"><span class="keyword">and</span> a.id <span class="keyword">in</span> (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="keyword">and</span> b.score&gt;<span class="number">20</span></span><br></pre></td></tr></tbody></table></figure>
-<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF1A;<br>id|name|score<br>-:|:-:|:-<br>1|&#x7B2C;&#x4E00;&#x7CFB;&#x5217;|90<br>2|&#x7B2C;&#x4E8C;&#x7CFB;&#x5217;|null<br>3|&#x7B2C;&#x4E09;&#x7CFB;&#x5217;|30<br>4|&#x7B2C;&#x56DB;&#x7CFB;&#x5217;|null<br>5|&#x7B2C;&#x4E94;&#x7CFB;&#x5217;|null<br>6|&#x5176;&#x4ED6;&#x7CFB;&#x5217;|null</p>
+<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">id</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">&#x7B2C;&#x4E00;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">90</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">&#x7B2C;&#x4E8C;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">null</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">&#x7B2C;&#x4E09;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">30</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">&#x7B2C;&#x56DB;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">null</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">&#x7B2C;&#x4E94;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">null</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">&#x5176;&#x4ED6;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">null</td>
+</tr>
+</tbody>
+</table>
 <p>&#x4EE5;&#x4E0A;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;&#x9996;&#x5148;&#x8868;a&#x7ED3;&#x679C;&#x5168;&#x90E8;&#x663E;&#x793A;&#x4E86;&#xFF08;on&#x6761;&#x4EF6;&#x4E2D;&#x7684;in&#x6761;&#x4EF6;&#x770B;&#x8D77;&#x6765;&#x4E0D;&#x751F;&#x6548;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x53EA;&#x5BF9;&#x8868;b&#x7684;&#x5173;&#x8054;&#x6570;&#x636E;&#x751F;&#x6548;&#xFF09;&#xFF0C;score&#x5217;&#x6570;&#x636E;&#x663E;&#x793A;&#x4E86;&#x5927;&#x4E8E;20&#x5E76;&#x4E14;&#x8868;b&#x4E2D;id&#x80FD;&#x4E0E;&#x8868;a&#x4E2D;id&#x662F;&#xFF08;1/2/3&#xFF09;&#x4E00;&#x81F4;&#x7684;&#x8BB0;&#x5F55;&#x3002;</p>
 <h2 id="&#x6837;&#x4F8B;&#x56DB;"><a href="#&#x6837;&#x4F8B;&#x56DB;" class="headerlink" title="&#x6837;&#x4F8B;&#x56DB;"></a>&#x6837;&#x4F8B;&#x56DB;</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a.*,b.score</span><br><span class="line"><span class="keyword">from</span> tab_a a</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> tab_b b</span><br><span class="line"><span class="keyword">on</span> a.id=b.id</span><br><span class="line"><span class="keyword">where</span> b.id <span class="keyword">is</span> <span class="literal">null</span></span><br></pre></td></tr></tbody></table></figure>
-<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF1A;<br>id|name|score<br>-:|:-:|:-<br>6|&#x5176;&#x4ED6;&#x7CFB;&#x5217;|null</p>
+<p>&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">id</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">&#x5176;&#x4ED6;&#x7CFB;&#x5217;</td>
+<td style="text-align:center">null</td>
+</tr>
+</tbody>
+</table>
 <p>&#x4EE5;&#x4E0A;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;&#x53EA;&#x4F1A;&#x663E;&#x793A;b&#x8868;id&#x5728;a&#x8868;id&#x4E2D;&#x627E;&#x4E0D;&#x5230;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E5F;&#x901A;&#x5E38;&#x7528;&#x6765;&#x4F5C;&#x4E3A;&#x6BD4;&#x8F83;&#x6570;&#x636E;&#x5DEE;&#x5F02;&#x7684;&#x5E38;&#x7528;&#x903B;&#x8F91;&#x3002;</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -471,7 +649,7 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="ShaoHui 微信支付">
+        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="ShaoHui 微信支付">
         <p>微信支付</p>
       </div>
     
