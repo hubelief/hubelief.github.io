@@ -1,5 +1,7 @@
+http://www.hushaohui.site/Azkaban任务维护归纳/
 http://www.hushaohui.site/SQL优化：Left join 技巧/
 http://www.hushaohui.site/Hive、Spark常用技巧/
+http://www.hushaohui.site/淘宝会员通疑问总结/
 http://www.hushaohui.site/SQL优化：inner join、left join/
 http://www.hushaohui.site/hello-world/
 http://www.hushaohui.site/SpringMVC核心（三）：DispatcherServlet/
