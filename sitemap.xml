@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.hushaohui.site/Sqoop%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%B7%A5%E5%85%B7/</loc>
+    
+    <lastmod>2022-06-22T03:09:12.236Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.hushaohui.site/hello-world/</loc>
+    
+    <lastmod>2022-06-21T04:43:27.074Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.hushaohui.site/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    
+    <lastmod>2022-06-21T04:41:23.655Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.hushaohui.site/Hive%E3%80%81Spark%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    
+    <lastmod>2022-06-21T03:10:19.905Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.hushaohui.site/%E6%B7%98%E5%AE%9D%E4%BC%9A%E5%91%98%E9%80%9A%E7%96%91%E9%97%AE%E6%80%BB%E7%BB%93/</loc>
     
     <lastmod>2022-06-20T10:12:29.828Z</lastmod>
@@ -30,13 +58,6 @@
   </url>
   
   <url>
-    <loc>http://www.hushaohui.site/Hive%E3%80%81Spark%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
-    
-    <lastmod>2022-06-13T09:43:30.911Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.hushaohui.site/SQL%E4%BC%98%E5%8C%96%EF%BC%9Ainner%20join%E3%80%81left%20join/</loc>
     
     <lastmod>2022-06-13T01:50:18.862Z</lastmod>
@@ -51,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://www.hushaohui.site/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E6%A0%B9%E6%8D%AE%E5%90%AF%E5%8A%A8%E6%97%A5%E5%BF%97%E5%AD%A6%E5%8E%9F%E7%90%86/</loc>
+    <loc>http://www.hushaohui.site/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9ADispatcherServlet/</loc>
     
     <lastmod>2022-05-17T06:21:34.466Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.hushaohui.site/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9ADispatcherServlet/</loc>
+    <loc>http://www.hushaohui.site/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E6%A0%B9%E6%8D%AE%E5%90%AF%E5%8A%A8%E6%97%A5%E5%BF%97%E5%AD%A6%E5%8E%9F%E7%90%86/</loc>
     
     <lastmod>2022-05-17T06:21:34.466Z</lastmod>
     
@@ -68,13 +89,6 @@
     <loc>http://www.hushaohui.site/photo/index.html</loc>
     
     <lastmod>2022-05-17T06:21:34.466Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.hushaohui.site/hello-world/</loc>
-    
-    <lastmod>2022-05-17T06:05:20.084Z</lastmod>
     
   </url>
   
