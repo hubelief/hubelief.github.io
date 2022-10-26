@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Hadoop,Hive,Spark,">
 
 
 
@@ -84,16 +84,18 @@
 
 
 
-<meta name="description" content="君若不学，则何以成？">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hu&#39;s BlOG">
-<meta property="og:url" content="http://www.hushaohui.site/tags/SQL/index.html">
+<meta name="description" content="&amp;#x5E38;&amp;#x89C1;&amp;#x5206;&amp;#x6790;&amp;#x51FD;&amp;#x6570; Aggregate Functions: &amp;#x805A;&amp;#x5408;&amp;#x51FD;&amp;#x6570;,&amp;#x6BD4;&amp;#x5982;&amp;#xFF1A;sum(&amp;#x2026;)&amp;#x3001; max(&amp;#x2026;)&amp;#x3001;min(&amp;#x2026;)&amp;#x3001;avg(&amp;#x20">
+<meta name="keywords" content="Hadoop,Hive,Spark">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hive窗口分析函数">
+<meta property="og:url" content="http://www.hushaohui.site/Hive窗口分析函数/index.html">
 <meta property="og:site_name" content="hu&#39;s BlOG">
-<meta property="og:description" content="君若不学，则何以成？">
+<meta property="og:description" content="&amp;#x5E38;&amp;#x89C1;&amp;#x5206;&amp;#x6790;&amp;#x51FD;&amp;#x6570; Aggregate Functions: &amp;#x805A;&amp;#x5408;&amp;#x51FD;&amp;#x6570;,&amp;#x6BD4;&amp;#x5982;&amp;#xFF1A;sum(&amp;#x2026;)&amp;#x3001; max(&amp;#x2026;)&amp;#x3001;min(&amp;#x2026;)&amp;#x3001;avg(&amp;#x20">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-10-26T07:27:08.679Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hu&#39;s BlOG">
-<meta name="twitter:description" content="君若不学，则何以成？">
+<meta name="twitter:title" content="Hive窗口分析函数">
+<meta name="twitter:description" content="&amp;#x5E38;&amp;#x89C1;&amp;#x5206;&amp;#x6790;&amp;#x51FD;&amp;#x6570; Aggregate Functions: &amp;#x805A;&amp;#x5408;&amp;#x51FD;&amp;#x6570;,&amp;#x6BD4;&amp;#x5982;&amp;#xFF1A;sum(&amp;#x2026;)&amp;#x3001; max(&amp;#x2026;)&amp;#x3001;min(&amp;#x2026;)&amp;#x3001;avg(&amp;#x20">
 
 
 
@@ -125,12 +127,12 @@
 
 
 
-  <link rel="canonical" href="http://www.hushaohui.site/tags/SQL/">
+  <link rel="canonical" href="http://www.hushaohui.site/Hive窗口分析函数/">
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <title>标签: SQL | hu's BlOG</title>
+  <title>Hive窗口分析函数 | hu's BlOG</title>
   
 
 
@@ -149,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband">
     <a href="https://github.com/hubelief" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     </div>
@@ -297,78 +299,260 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>SQL<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.hushaohui.site/Hive窗口分析函数/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ShaoHui">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hu's BlOG">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/SQL优化：Left join 技巧/" itemprop="url">
-              
-                <span itemprop="name">SQL优化：Left join 技巧</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Hive窗口分析函数</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2022-06-10T00:00:00+08:00" content="2022-06-10">
-          06-10
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-10-13T00:00:00+08:00">
+                2022-10-13
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  178
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/SQL优化：inner join、left join/" itemprop="url">
-              
-                <span itemprop="name">SQL优化：inner、left join</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-05-30T20:24:41+08:00" content="2020-05-30">
-          05-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h3 id="&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;"><a href="#&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;" class="headerlink" title="&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;"></a>&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;</h3><ul>
+<li>Aggregate Functions: &#x805A;&#x5408;&#x51FD;&#x6570;,&#x6BD4;&#x5982;&#xFF1A;sum(&#x2026;)&#x3001; max(&#x2026;)&#x3001;min(&#x2026;)&#x3001;avg(&#x2026;)&#x7B49;</li>
+<li>Sort Functions: &#x6570;&#x636E;&#x6392;&#x5E8F;&#x51FD;&#x6570;, &#x6BD4;&#x5982; &#xFF1A;rank(&#x2026;)&#x3001;row_number(&#x2026;)&#x7B49;</li>
+<li>Analytics Functions: &#x7EDF;&#x8BA1;&#x548C;&#x6BD4;&#x8F83;&#x51FD;&#x6570;, &#x6BD4;&#x5982;&#xFF1A;lead(&#x2026;)&#x3001;lag(&#x2026;)&#x3001; first_value(&#x2026;)&#x7B49;</li>
+</ul>
+<h4 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><a href="#&#x57FA;&#x672C;&#x8BED;&#x6CD5;" class="headerlink" title="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"></a>&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h4><figure class="highlight"><table><tbody><tr><td class="code"><pre><span class="line">Function (arg1,..., argn) OVER ([PARTITION BY &lt;...&gt;] [ORDER BY &lt;....&gt;]</span><br><span class="line">[&lt;window_expression&gt;])</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x6301;&#x7EED;&#x66F4;&#x65B0;&#x4E2D;&#x2026;..</p>
+<h3 id="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"><a href="#&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;" class="headerlink" title="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"></a>&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;</h3><p>[<a href="https://cwiki.apache.org/confluence/display/Hive/Enhanced+Aggregation%2C+Cube%2C+Grouping+and+Rollup]" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/Hive/Enhanced+Aggregation%2C+Cube%2C+Grouping+and+Rollup]</a></p>
+<h3 id="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"><a href="#&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;" class="headerlink" title="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"></a>&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</h3><p>[<a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy]" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy]</a><br><!-- [https://blog.csdn.net/weixin_40267121/article/details/119650606] --></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的赞赏是对我最大的鼓励（Donate here,thank you）</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="ShaoHui 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="ShaoHui 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    ShaoHui
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.hushaohui.site/Hive窗口分析函数/" title="Hive窗口分析函数">http://www.hushaohui.site/Hive窗口分析函数/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hadoop/" rel="tag"># Hadoop</a>
+          
+            <a href="/tags/Hive/" rel="tag"># Hive</a>
+          
+            <a href="/tags/Spark/" rel="tag"># Spark</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/常用正则表达式/" rel="next" title="常用正则表达式">
+                <i class="fa fa-chevron-left"></i> 常用正则表达式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -376,6 +560,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzAyMS8xOTU2Nw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -396,8 +589,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -478,6 +680,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见分析函数"><span class="nav-number">1.</span> <span class="nav-text">常见分析函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本语法"><span class="nav-number">1.1.</span> <span class="nav-text">基本语法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增强聚合函数"><span class="nav-number">2.</span> <span class="nav-text">增强聚合函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四种排序方式"><span class="nav-number">3.</span> <span class="nav-text">四种排序方式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
 
@@ -661,6 +879,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/js/src/post-details.js?v="></script>
+
+
 
   
 
@@ -689,6 +911,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

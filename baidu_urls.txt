@@ -1,7 +1,8 @@
+http://www.hushaohui.site/Hive窗口分析函数/
 http://www.hushaohui.site/常用正则表达式/
 http://www.hushaohui.site/Azkaban任务维护归纳/
 http://www.hushaohui.site/SQL优化：Left join 技巧/
-http://www.hushaohui.site/Hive、Spark常用技巧/
+http://www.hushaohui.site/Hive、Spark常用配置项/
 http://www.hushaohui.site/Sqoop数据传输工具/
 http://www.hushaohui.site/淘宝会员通疑问总结/
 http://www.hushaohui.site/Excel VBA生成目录列表/
