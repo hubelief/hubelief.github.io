@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="Hadoop,Hive,Spark,">
+  <meta name="keywords" content="Hive,Hadoop,Spark,">
 
 
 
@@ -85,14 +85,14 @@
 
 
 <meta name="description" content="&amp;#x5E38;&amp;#x89C1;&amp;#x5206;&amp;#x6790;&amp;#x51FD;&amp;#x6570; Aggregate Functions: &amp;#x805A;&amp;#x5408;&amp;#x51FD;&amp;#x6570;,&amp;#x6BD4;&amp;#x5982;&amp;#xFF1A;sum(&amp;#x2026;)&amp;#x3001; max(&amp;#x2026;)&amp;#x3001;min(&amp;#x2026;)&amp;#x3001;avg(&amp;#x20">
-<meta name="keywords" content="Hadoop,Hive,Spark">
+<meta name="keywords" content="Hive,Hadoop,Spark">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hive窗口分析函数">
 <meta property="og:url" content="http://www.hushaohui.site/Hive窗口分析函数/index.html">
 <meta property="og:site_name" content="hu&#39;s BlOG">
 <meta property="og:description" content="&amp;#x5E38;&amp;#x89C1;&amp;#x5206;&amp;#x6790;&amp;#x51FD;&amp;#x6570; Aggregate Functions: &amp;#x805A;&amp;#x5408;&amp;#x51FD;&amp;#x6570;,&amp;#x6BD4;&amp;#x5982;&amp;#xFF1A;sum(&amp;#x2026;)&amp;#x3001; max(&amp;#x2026;)&amp;#x3001;min(&amp;#x2026;)&amp;#x3001;avg(&amp;#x20">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-10-26T07:27:08.679Z">
+<meta property="og:updated_time" content="2022-10-26T07:53:23.136Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hive窗口分析函数">
 <meta name="twitter:description" content="&amp;#x5E38;&amp;#x89C1;&amp;#x5206;&amp;#x6790;&amp;#x51FD;&amp;#x6570; Aggregate Functions: &amp;#x805A;&amp;#x5408;&amp;#x51FD;&amp;#x6570;,&amp;#x6BD4;&amp;#x5982;&amp;#xFF1A;sum(&amp;#x2026;)&amp;#x3001; max(&amp;#x2026;)&amp;#x3001;min(&amp;#x2026;)&amp;#x3001;avg(&amp;#x20">
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  178
+                  162
                 </span>
               
 
@@ -423,8 +423,8 @@
 </ul>
 <h4 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><a href="#&#x57FA;&#x672C;&#x8BED;&#x6CD5;" class="headerlink" title="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"></a>&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h4><figure class="highlight"><table><tbody><tr><td class="code"><pre><span class="line">Function (arg1,..., argn) OVER ([PARTITION BY &lt;...&gt;] [ORDER BY &lt;....&gt;]</span><br><span class="line">[&lt;window_expression&gt;])</span><br></pre></td></tr></tbody></table></figure>
 <p>&#x6301;&#x7EED;&#x66F4;&#x65B0;&#x4E2D;&#x2026;..</p>
-<h3 id="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"><a href="#&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;" class="headerlink" title="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"></a>&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;</h3><p>[<a href="https://cwiki.apache.org/confluence/display/Hive/Enhanced+Aggregation%2C+Cube%2C+Grouping+and+Rollup]" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/Hive/Enhanced+Aggregation%2C+Cube%2C+Grouping+and+Rollup]</a></p>
-<h3 id="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"><a href="#&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;" class="headerlink" title="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"></a>&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</h3><p>[<a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy]" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy]</a><br><!-- [https://blog.csdn.net/weixin_40267121/article/details/119650606] --></p>
+<h3 id="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"><a href="#&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;" class="headerlink" title="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"></a>&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;</h3><p><a href="https://cwiki.apache.org/confluence/display/Hive/Enhanced+Aggregation%2C+Cube%2C+Grouping+and+Rollup" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x5730;&#x5740;</a></p>
+<h3 id="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"><a href="#&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;" class="headerlink" title="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"></a>&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</h3><p><a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x5730;&#x5740;</a><br><!-- [https://blog.csdn.net/weixin_40267121/article/details/119650606] --></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -507,9 +507,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hadoop/" rel="tag"># Hadoop</a>
-          
             <a href="/tags/Hive/" rel="tag"># Hive</a>
+          
+            <a href="/tags/Hadoop/" rel="tag"># Hadoop</a>
           
             <a href="/tags/Spark/" rel="tag"># Spark</a>
           

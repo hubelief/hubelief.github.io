@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hive窗口分析函数</title>
+    <url>/Hive%E7%AA%97%E5%8F%A3%E5%88%86%E6%9E%90%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h3 id="&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;"><a href="#&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;" class="headerlink" title="&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;"></a>&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;</h3><ul>
+<li>Aggregate Functions: &#x805A;&#x5408;&#x51FD;&#x6570;,&#x6BD4;&#x5982;&#xFF1A;sum(&#x2026;)&#x3001; max(&#x2026;)&#x3001;min(&#x2026;)&#x3001;avg(&#x2026;)&#x7B49;</li>
+<li>Sort Functions: &#x6570;&#x636E;&#x6392;&#x5E8F;&#x51FD;&#x6570;, &#x6BD4;&#x5982; &#xFF1A;rank(&#x2026;)&#x3001;row_number(&#x2026;)&#x7B49;</li>
+<li>Analytics Functions: &#x7EDF;&#x8BA1;&#x548C;&#x6BD4;&#x8F83;&#x51FD;&#x6570;, &#x6BD4;&#x5982;&#xFF1A;lead(&#x2026;)&#x3001;lag(&#x2026;)&#x3001; first_value(&#x2026;)&#x7B49;</li>
+</ul>
+<h4 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><a href="#&#x57FA;&#x672C;&#x8BED;&#x6CD5;" class="headerlink" title="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"></a>&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h4><figure class="highlight"><table><tbody><tr><td class="code"><pre><span class="line">Function (arg1,..., argn) OVER ([PARTITION BY &lt;...&gt;] [ORDER BY &lt;....&gt;]</span><br><span class="line">[&lt;window_expression&gt;])</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x6301;&#x7EED;&#x66F4;&#x65B0;&#x4E2D;&#x2026;..</p>
+<h3 id="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"><a href="#&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;" class="headerlink" title="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"></a>&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;</h3><p><a href="https://cwiki.apache.org/confluence/display/Hive/Enhanced+Aggregation%2C+Cube%2C+Grouping+and+Rollup" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x5730;&#x5740;</a></p>
+<h3 id="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"><a href="#&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;" class="headerlink" title="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"></a>&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</h3><p><a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x5730;&#x5740;</a><br><!-- [https://blog.csdn.net/weixin_40267121/article/details/119650606] --></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <tags>
+        <tag>Hive</tag>
+        <tag>Hadoop</tag>
+        <tag>Spark</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Excel VBA 生成目录列表</title>
     <url>/Excel%20VBA%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8/</url>
     <content><![CDATA[<h3 id="&#x4E00;&#x952E;&#x751F;&#x6210;&#x5E26;&#x951A;&#x70B9;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;"><a href="#&#x4E00;&#x952E;&#x751F;&#x6210;&#x5E26;&#x951A;&#x70B9;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;" class="headerlink" title="&#x4E00;&#x952E;&#x751F;&#x6210;&#x5E26;&#x951A;&#x70B9;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;"></a>&#x4E00;&#x952E;&#x751F;&#x6210;&#x5E26;&#x951A;&#x70B9;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">Excel&#x751F;&#x6210;&#x76EE;&#x5F55;VBA</span><br><span class="line">Sub dic()</span><br><span class="line">    On Error GoTo back_out</span><br><span class="line">    Dim i As Integer</span><br><span class="line">    Dim ShtCount As Integer</span><br><span class="line">    Dim SelectionCell As Range</span><br><span class="line"></span><br><span class="line">    ShtCount = Worksheets.Count</span><br><span class="line">    If ShtCount = 0 Or ShtCount = 1 Then Exit Sub</span><br><span class="line">    Application.ScreenUpdating = False</span><br><span class="line">    For i = 1 To ShtCount</span><br><span class="line">        If Sheets(i).Name = &quot;&#x76EE;&#x5F55;&quot; Then</span><br><span class="line">            Sheets(&quot;&#x76EE;&#x5F55;&quot;).Move Before:=Sheets(1)</span><br><span class="line">        End If</span><br><span class="line">    Next i</span><br><span class="line">    If Sheets(1).Name &lt;&gt; &quot;&#x76EE;&#x5F55;&quot; Then</span><br><span class="line">        ShtCount = ShtCount + 1</span><br><span class="line">        Sheets(1).Select</span><br><span class="line">        Sheets.Add</span><br><span class="line">        Sheets(1).Name = &quot;&#x76EE;&#x5F55;&quot;</span><br><span class="line">    End If</span><br><span class="line">    Sheets(&quot;&#x76EE;&#x5F55;&quot;).Select</span><br><span class="line">    Columns(&quot;B:B&quot;).Delete Shift:=xlToLeft</span><br><span class="line">    Application.StatusBar = &quot;&#x6B63;&#x5728;&#x751F;&#x6210;&#x76EE;&#x5F55;&#x2026;&#x2026;&#x2026;&#x2026;&#x8BF7;&#x7B49;&#x5F85;&#xFF01;&quot;</span><br><span class="line">    For i = 2 To ShtCount</span><br><span class="line">        ActiveSheet.Hyperlinks.Add Anchor:=Worksheets(&quot;&#x76EE;&#x5F55;&quot;).Cells(i, 2), Address:=&quot;&quot;, SubAddress:= _</span><br><span class="line">            &quot;&apos;&quot; &amp; Sheets(i).Name &amp; &quot;&apos;!R1C1&quot;, TextToDisplay:=Sheets(i).Name</span><br><span class="line">    Next</span><br><span class="line">    Sheets(&quot;&#x76EE;&#x5F55;&quot;).Select</span><br><span class="line">    Columns(&quot;B:B&quot;).AutoFit</span><br><span class="line">    Cells(1, 2) = &quot;&#x76EE;&#x5F55;&quot;</span><br><span class="line">    Set SelectionCell = Worksheets(&quot;&#x76EE;&#x5F55;&quot;).Range(&quot;B1&quot;)</span><br><span class="line">    With SelectionCell</span><br><span class="line">        .HorizontalAlignment = xlDistributed</span><br><span class="line">        .VerticalAlignment = xlCenter</span><br><span class="line">        .AddIndent = True</span><br><span class="line">        .Font.Bold = True</span><br><span class="line">        .Interior.ColorIndex = 34</span><br><span class="line">    End With</span><br><span class="line">    Application.StatusBar = False</span><br><span class="line">    Application.ScreenUpdating = True</span><br><span class="line">back_out:</span><br><span class="line">End Sub</span><br></pre></td></tr></tbody></table></figure>
@@ -109,135 +146,11 @@
           });
       </script>]]></content>
       <tags>
+        <tag>Hive</tag>
+        <tag>Hadoop</tag>
+        <tag>Spark</tag>
         <tag>大数据</tag>
         <tag>数仓</tag>
-        <tag>Hadoop</tag>
-        <tag>Hive</tag>
-        <tag>Spark</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hive窗口分析函数</title>
-    <url>/Hive%E7%AA%97%E5%8F%A3%E5%88%86%E6%9E%90%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h3 id="&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;"><a href="#&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;" class="headerlink" title="&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;"></a>&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;</h3><ul>
-<li>Aggregate Functions: &#x805A;&#x5408;&#x51FD;&#x6570;,&#x6BD4;&#x5982;&#xFF1A;sum(&#x2026;)&#x3001; max(&#x2026;)&#x3001;min(&#x2026;)&#x3001;avg(&#x2026;)&#x7B49;</li>
-<li>Sort Functions: &#x6570;&#x636E;&#x6392;&#x5E8F;&#x51FD;&#x6570;, &#x6BD4;&#x5982; &#xFF1A;rank(&#x2026;)&#x3001;row_number(&#x2026;)&#x7B49;</li>
-<li>Analytics Functions: &#x7EDF;&#x8BA1;&#x548C;&#x6BD4;&#x8F83;&#x51FD;&#x6570;, &#x6BD4;&#x5982;&#xFF1A;lead(&#x2026;)&#x3001;lag(&#x2026;)&#x3001; first_value(&#x2026;)&#x7B49;</li>
-</ul>
-<h4 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><a href="#&#x57FA;&#x672C;&#x8BED;&#x6CD5;" class="headerlink" title="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"></a>&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h4><figure class="highlight"><table><tbody><tr><td class="code"><pre><span class="line">Function (arg1,..., argn) OVER ([PARTITION BY &lt;...&gt;] [ORDER BY &lt;....&gt;]</span><br><span class="line">[&lt;window_expression&gt;])</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x6301;&#x7EED;&#x66F4;&#x65B0;&#x4E2D;&#x2026;..</p>
-<h3 id="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"><a href="#&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;" class="headerlink" title="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"></a>&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;</h3><p>[<a href="https://cwiki.apache.org/confluence/display/Hive/Enhanced+Aggregation%2C+Cube%2C+Grouping+and+Rollup]" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/Hive/Enhanced+Aggregation%2C+Cube%2C+Grouping+and+Rollup]</a></p>
-<h3 id="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"><a href="#&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;" class="headerlink" title="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"></a>&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</h3><p>[<a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy]" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy]</a><br><!-- [https://blog.csdn.net/weixin_40267121/article/details/119650606] --></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <tags>
-        <tag>Hadoop</tag>
-        <tag>Hive</tag>
-        <tag>Spark</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SpringMVC核心（一）：核心业务流程</title>
-    <url>/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E6%A0%B8%E5%BF%83%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="SpringMVC&#x7B80;&#x4ECB;"><a href="#SpringMVC&#x7B80;&#x4ECB;" class="headerlink" title="SpringMVC&#x7B80;&#x4ECB;"></a>SpringMVC&#x7B80;&#x4ECB;</h1><p>Spring MVC &#x878D;&#x5408;&#x5728; Spring Web Flow &#x91CC;&#x9762;&#x3002; &#x4F7F;&#x7528; Spring &#x53EF;&#x63D2;&#x5165;&#x7684; <code>MVC</code> &#x67B6;&#x6784;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x662F;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7684; Spring Web &#x6846;&#x67B6;&#x8FD8;&#x662F; Struts &#x8FD9;&#x6837;&#x7684; Web&#x6846;&#x67B6;&#xFF0C;MVC &#x5DF2;&#x7ECF;&#x662F;&#x73B0;&#x4EE3;Web&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x90E8;&#x5206;&#x3002;&#x4E0E;&#x8BB8;&#x591A;&#x5176;&#x4ED6;Web&#x6846;&#x67B6;&#x4E00;&#x6837;&#xFF0C;Spring MVC&#x56F4;&#x7ED5;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x6A21;&#x5F0F;&#x8BBE;&#x8BA1;&#xFF0C;&#x5176;&#x4E2D;&#x4E2D;&#x592E; Servlet DispatcherServlet &#x4E3A;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x63D0;&#x4F9B;&#x5171;&#x4EAB;&#x7B97;&#x6CD5;&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x7531;&#x53EF;&#x914D;&#x7F6E;&#x59D4;&#x6258;&#x7EC4;&#x4EF6;&#x6267;&#x884C;&#x3002;&#x8BE5;&#x6A21;&#x578B;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x3002;<br>Spring+SpringMVC&#x5F00;&#x53D1;&#x7684;&#x65F6;&#x5019;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E00;&#x822C;&#x6709; <code>web.xml</code>&#xFF08;&#x5FC5;&#x987B;&#xFF09;<br>&#x5FC5;&#x987B;&#x7684;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF1A;&#x914D;&#x7F6E;<code>contexLoadListener</code>&#xFF0C;&#x914D;&#x7F6E;<code>DispatcherServlet</code>&#x62E6;&#x622A;&#x8BF7;&#x6C42; </p>
-<p><strong> &#x89E3;&#x6790;&#xFF1A;</strong></p>
-<ol>
-<li><p>MVC&#x67B6;&#x6784;&#x6A21;&#x5F0F;&#x7684;&#x601D;&#x60F3;&#xFF1A;&#x5C06;Web&#x5C42;&#x8FDB;&#x884C;&#x6307;&#x8D23;&#x89E3;&#x8026;</p>
-</li>
-<li><p>&#x57FA;&#x4E8E;&#x8BF7;&#x6C42;&#x9A71;&#x52A8;&#xFF1A;&#x8BF7;&#x6C42;-&#x76F8;&#x5E94;&#x6A21;&#x578B;</p>
-</li>
-<li><p>&#x6846;&#x67B6;&#x7684;&#x76EE;&#x7684;&#xFF1A;&#x7B80;&#x5316;&#x5F00;&#x53D1;</p>
-</li>
-</ol>
-<p><strong>SpringMVC&#x7684;&#x75DB;&#x75D2;&#x70B9;&#x6709;&#x4E09;&#x4E2A;:</strong></p>
-<p>&#xFF08;1&#xFF09;&#x5C06;Web&#x9875;&#x9762;&#x7684;&#x8BF7;&#x6C42;&#x4F20;&#x7ED9;&#x670D;&#x52A1;&#x5668; </p>
-<p>&#xFF08;2&#xFF09;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7684;&#x903B;&#x8F91;&#x9875;&#x9762; </p>
-<p>&#xFF08;3&#xFF09;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x5E76;&#x8DF3;&#x8F6C;&#x9875;&#x9762; </p>
-<h1 id="springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;"><a href="#springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;" class="headerlink" title="springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;"></a>springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;</h1><p>&#x4E0A;&#x9762;&#x8BF4;&#x7684;<code>&#x5176;&#x4E2D;&#x4E2D;&#x592E;Servlet DispatcherServlet&#x4E3A;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x63D0;&#x4F9B;&#x5171;&#x4EAB;&#x7B97;&#x6CD5;&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x7531;&#x53EF;&#x914D;&#x7F6E;&#x59D4;&#x6258;&#x7EC4;&#x4EF6;&#x6267;&#x884C;</code> &#x6211;&#x4EEC;&#x6765;&#x7528;&#x56FE;&#x4F8B;&#x770B;&#x4E00;&#x4E0B;&#xFF1A;</p>
-<p><img src="/uploads/SpringMVC&#x6838;&#x5FC3;/SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;.jpg" alt="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;" title="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;"></p>
-<p><strong>&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#xFF1A;</strong></p>
-<ol>
-<li><p>&#x9996;&#x5148;&#x7528;&#x6237;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x2014;&gt;DispatcherServlet&#xFF0C;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#x81EA;&#x5DF1;&#x4E0D;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x662F;&#x59D4;&#x6258;&#x7ED9;&#x5176;&#x4ED6;&#x7684;&#x89E3;&#x6790;&#x5668;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x4F5C;&#x4E3A;&#x7EDF;&#x4E00;&#x8BBF;&#x95EE;&#x70B9;&#xFF0C;&#x8FDB;&#x884C;&#x5168;&#x5C40;&#x7684;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#xFF1B;</p>
-</li>
-<li><p>DispatcherServlet&#x2014;&gt;HandlerMapping&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x8BF7;&#x6C42;&#x6620;&#x5C04;&#x4E3A; HandlerExecutionChain &#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x542B;&#x4E00;&#x4E2A; Handler &#x5904;&#x7406;&#x5668;&#xFF08;&#x9875;&#x9762;&#x63A7;&#x5236;&#x5668;&#xFF09;&#x5BF9;&#x8C61;&#x3001;&#x591A;&#x4E2A; HandlerInterceptor &#x62E6;&#x622A;&#x5668;&#xFF09;&#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x6620;&#x5C04;&#x7B56;&#x7565;&#xFF1B;</p>
-</li>
-<li><p>DispatcherServlet&#x2014;&gt;HandlerAdapter&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x5904;&#x7406;&#x5668;&#x5305;&#x88C5;&#x4E3A;&#x9002;&#x914D;&#x5668;&#xFF0C;&#x4ECE;&#x800C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x5373;<code>&#x9002;&#x914D;&#x5668;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</code>&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4ECE;&#x800C;&#x5F88;&#x5BB9;&#x6613;&#x652F;&#x6301;&#x5F88;&#x591A;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF1B;</p>
-</li>
-<li><p>HandlerAdapter&#x2014;&gt;&#x5904;&#x7406;&#x5668;&#x529F;&#x80FD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x6839;&#x636E;&#x9002;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x8C03;&#x7528;&#x771F;&#x6B63;&#x7684;&#x5904;&#x7406;&#x5668;&#x7684;&#x529F;&#x80FD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x5B8C;&#x6210;&#x529F;&#x80FD;&#x5904;&#x7406;&#xFF08;&#x5904;&#x7406;&#x5668;&#x5728;&#x8FD9;&#x91CC;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#x5668;&#x7684;&#x5904;&#x7406;&#x3001;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x5668;&#x7684;&#x5904;&#x7406;&#x7B49;&#x7B49;&#xFF09;&#xFF1B;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; ModelAndView &#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x542B;&#x6A21;&#x578B;&#x6570;&#x636E;&#x3001;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#xFF09;&#xFF1B;</p>
-</li>
-<li><p>ModelAndView &#x7684;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#x2014;&gt; ViewResolver&#xFF0C; &#x5B83;&#x5C06;&#x628A;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#x89E3;&#x6790;&#x4E3A;&#x5177;&#x4F53;&#x7684; View&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x66F4;&#x6362;&#x5176;&#x4ED6;&#x89C6;&#x56FE;&#x6280;&#x672F;&#xFF1B;</p>
-</li>
-<li><p>View&#x2014;&gt;&#x6E32;&#x67D3;&#xFF0C;&#x5B83;&#x4F1A;&#x6839;&#x636E;&#x4F20;&#x8FDB;&#x6765;&#x7684; Model &#x6A21;&#x578B;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#xFF0C;&#x6B64;&#x5904;&#x7684; Model &#x5B9E;&#x9645;&#x662F;&#x4E00;&#x4E2A; Map &#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x56E0;&#x6B64;&#x5F88;&#x5BB9;&#x6613;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x89C6;&#x56FE;&#x6280;&#x672F;&#xFF1B;</p>
-</li>
-<li><p>&#x8FD4;&#x56DE;&#x63A7;&#x5236;&#x6743;&#x7ED9; DispatcherServlet&#xFF0C;&#x7531; DispatcherServlet &#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x7ED9;&#x7528;&#x6237;&#xFF0C;&#x5230;&#x6B64;&#x4E00;&#x4E2A;&#x6D41;&#x7A0B;&#x7ED3;&#x675F;&#x3002;&#xFF08;&#x58F0;&#x660E;:&#x56FE;&#x4E2D;&#x7684;View&#x6307;&#x5411;&#x7528;&#x6237;&#x53EA;&#x662F;&#x5355;&#x7EAF;&#x65B9;&#x4FBF;&#x7406;&#x89E3;&#xFF09;</p>
-</li>
-</ol>
-<hr>
-<h1 id="&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><a href="#&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;" class="headerlink" title="&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"></a>&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;</h1><ol>
-<li>DispatcherServlet: &#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;</li>
-</ol>
-<p>&#x7B49;&#x540C;&#x4E8E;&#x4EE5;&#x524D;&#x7684;Controller&#xFF0C; &#x662F;&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x7684;&#x4E2D;&#x5FC3;&#xFF0C; &#x8D1F;&#x8D23;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x3002;<br>&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#xFF08;DispatcherServlet&#xFF09;&#xFF1A;&#x8FD9;&#x4E2A;&#x662F; SpringMVC&#x7684;&#x5165;&#x53E3;&#xFF08;&#x5B9E;&#x9645;&#x4E0A;&#x5462;&#x5C31;&#x662F;&#x4E00;&#x4E2A;Servlet&#x5BF9;&#x8C61;&#xFF09;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x8981;&#x901A;&#x8FC7;&#x5B83;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x4E2A;Servlet&#x6240;&#x4EE5;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x7684;&#x4F60;&#x8981;&#x5728;web.xml&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
-<ol start="2">
-<li>HandlerMapping&#xFF1A; &#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;</li>
-</ol>
-<p>&#x8D1F;&#x8D23;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x627E;&#x5230;Handler&#xFF08;&#x5904;&#x7406;&#x5668;&#xFF09;&#xFF0C;springMVC&#x4E2D;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x6620;&#x5C04;&#x5668;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x6620;&#x5C04;&#xFF0C;&#x6BD4;&#x5982; xml&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF0C;&#x6CE8;&#x89E3;&#x65B9;&#x5F0F;&#xFF0C;&#x63A5;&#x53E3;&#x65B9;&#x5F0F;&#x7B49;&#x3002;<br>&#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;(HandlerMapper)&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x627E;&#x5230;&#x5904;&#x7406;&#x5668;&#xFF08;Handler&#xFF09;&#xFF0C;&#x5B83;&#x652F;&#x6301;&#x7684;&#x6709;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5F62;&#x5F0F;&#xFF0C;&#x63A5;&#x53E3;&#x5F62;&#x5F0F;&#xFF0C;&#x6CE8;&#x89E3;&#x5F62;&#x5F0F;&#x7B49;&#x7B49;&#x3002;</p>
-<ol start="3">
-<li>HandlerAdapter&#xFF1A;&#x5904;&#x7406;&#x5668;&#x9002;&#x914D;&#x5668;</li>
-</ol>
-<p>&#x5904;&#x7406;Handler&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#x8FDB;&#x884C;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x662F;&#x5BF9;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x7684;&#x5E94;&#x7528;&#x4F53;&#x73B0;&#x3002;<br>&#x5904;&#x7406;&#x5668;&#x9002;&#x914D;&#x5668;&#xFF08;HandlAdapter&#xFF09;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x5206;&#x6790;&#x5904;&#x7406;&#x5668;&#x662F;&#x90A3;&#x79CD;&#x65B9;&#x5F0F;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF08;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x63A5;&#x53E3;&#x3001;&#x6CE8;&#x89E3;&#x7B49;&#x5F62;&#x5F0F;&#xFF09;&#x7136;&#x540E;&#x6267;&#x884C;Handler&#x3002;</p>
-<ol start="4">
-<li>Handler&#xFF1A;&#x540E;&#x7AEF;&#x63A7;&#x5236;&#x5668;</li>
-</ol>
-<p>&#x5728;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x7684;&#x63A7;&#x5236;&#x4E0B;&#x5BF9;&#x5177;&#x4F53;&#x7684;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x8FDB;&#x884C;&#x6839;&#x636E;&#x9700;&#x6C42;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x3002;</p>
-<ol start="5">
-<li>ViewResolver: &#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;</li>
-</ol>
-<p>&#x8D1F;&#x8D23;&#x5C06;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x751F;&#x6210;view&#x89C6;&#x56FE;&#x3001;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x5F00;&#x53D1;view;SpringMVC&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x89C6;&#x56FE;&#xFF0C;&#x6BD4;&#x5982;jstlView&#x3001;freemarkerView&#x3001;pdfView&#xFF08;<code>&#x540E;&#x9762;&#x66F4;&#x65B0;</code>&#xFF09;&#x7B49;&#x3002;</p>
-<blockquote>
-<p>SpringMVC&#x4E2D;&#x7684;&#x4E09;&#x5927;&#x7EC4;&#x4EF6;&#x5206;&#x522B;&#x662F;&#xFF1A;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;&#xFF0C;&#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;&#xFF1B;&#x7528;&#x6237;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x7684;&#x90E8;&#x4EF6;&#x662F;&#xFF1A;Handler&#x548C;view</p>
-</blockquote>
-<blockquote>
-<p>ModelAndView &#x5C01;&#x88C5;&#x4E86;&#x6570;&#x636E;&#x548C;&#x89C6;&#x56FE;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x8FD9;&#x4E2A;&#x662F;&#x8FDB;&#x884C;&#x4F20;&#x8F93;&#xFF0C;&#x6570;&#x636E;&#x7684;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x662F;Request&#x57DF;&#x3002;</p>
-</blockquote>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <tags>
-        <tag>Spring</tag>
-        <tag>SpringMVC</tag>
       </tags>
   </entry>
   <entry>
@@ -531,6 +444,93 @@
       </tags>
   </entry>
   <entry>
+    <title>SpringMVC核心（一）：核心业务流程</title>
+    <url>/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E6%A0%B8%E5%BF%83%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="SpringMVC&#x7B80;&#x4ECB;"><a href="#SpringMVC&#x7B80;&#x4ECB;" class="headerlink" title="SpringMVC&#x7B80;&#x4ECB;"></a>SpringMVC&#x7B80;&#x4ECB;</h1><p>Spring MVC &#x878D;&#x5408;&#x5728; Spring Web Flow &#x91CC;&#x9762;&#x3002; &#x4F7F;&#x7528; Spring &#x53EF;&#x63D2;&#x5165;&#x7684; <code>MVC</code> &#x67B6;&#x6784;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x662F;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7684; Spring Web &#x6846;&#x67B6;&#x8FD8;&#x662F; Struts &#x8FD9;&#x6837;&#x7684; Web&#x6846;&#x67B6;&#xFF0C;MVC &#x5DF2;&#x7ECF;&#x662F;&#x73B0;&#x4EE3;Web&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x90E8;&#x5206;&#x3002;&#x4E0E;&#x8BB8;&#x591A;&#x5176;&#x4ED6;Web&#x6846;&#x67B6;&#x4E00;&#x6837;&#xFF0C;Spring MVC&#x56F4;&#x7ED5;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x6A21;&#x5F0F;&#x8BBE;&#x8BA1;&#xFF0C;&#x5176;&#x4E2D;&#x4E2D;&#x592E; Servlet DispatcherServlet &#x4E3A;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x63D0;&#x4F9B;&#x5171;&#x4EAB;&#x7B97;&#x6CD5;&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x7531;&#x53EF;&#x914D;&#x7F6E;&#x59D4;&#x6258;&#x7EC4;&#x4EF6;&#x6267;&#x884C;&#x3002;&#x8BE5;&#x6A21;&#x578B;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x3002;<br>Spring+SpringMVC&#x5F00;&#x53D1;&#x7684;&#x65F6;&#x5019;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E00;&#x822C;&#x6709; <code>web.xml</code>&#xFF08;&#x5FC5;&#x987B;&#xFF09;<br>&#x5FC5;&#x987B;&#x7684;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF1A;&#x914D;&#x7F6E;<code>contexLoadListener</code>&#xFF0C;&#x914D;&#x7F6E;<code>DispatcherServlet</code>&#x62E6;&#x622A;&#x8BF7;&#x6C42; </p>
+<p><strong> &#x89E3;&#x6790;&#xFF1A;</strong></p>
+<ol>
+<li><p>MVC&#x67B6;&#x6784;&#x6A21;&#x5F0F;&#x7684;&#x601D;&#x60F3;&#xFF1A;&#x5C06;Web&#x5C42;&#x8FDB;&#x884C;&#x6307;&#x8D23;&#x89E3;&#x8026;</p>
+</li>
+<li><p>&#x57FA;&#x4E8E;&#x8BF7;&#x6C42;&#x9A71;&#x52A8;&#xFF1A;&#x8BF7;&#x6C42;-&#x76F8;&#x5E94;&#x6A21;&#x578B;</p>
+</li>
+<li><p>&#x6846;&#x67B6;&#x7684;&#x76EE;&#x7684;&#xFF1A;&#x7B80;&#x5316;&#x5F00;&#x53D1;</p>
+</li>
+</ol>
+<p><strong>SpringMVC&#x7684;&#x75DB;&#x75D2;&#x70B9;&#x6709;&#x4E09;&#x4E2A;:</strong></p>
+<p>&#xFF08;1&#xFF09;&#x5C06;Web&#x9875;&#x9762;&#x7684;&#x8BF7;&#x6C42;&#x4F20;&#x7ED9;&#x670D;&#x52A1;&#x5668; </p>
+<p>&#xFF08;2&#xFF09;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7684;&#x903B;&#x8F91;&#x9875;&#x9762; </p>
+<p>&#xFF08;3&#xFF09;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x5E76;&#x8DF3;&#x8F6C;&#x9875;&#x9762; </p>
+<h1 id="springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;"><a href="#springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;" class="headerlink" title="springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;"></a>springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;</h1><p>&#x4E0A;&#x9762;&#x8BF4;&#x7684;<code>&#x5176;&#x4E2D;&#x4E2D;&#x592E;Servlet DispatcherServlet&#x4E3A;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x63D0;&#x4F9B;&#x5171;&#x4EAB;&#x7B97;&#x6CD5;&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x7531;&#x53EF;&#x914D;&#x7F6E;&#x59D4;&#x6258;&#x7EC4;&#x4EF6;&#x6267;&#x884C;</code> &#x6211;&#x4EEC;&#x6765;&#x7528;&#x56FE;&#x4F8B;&#x770B;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<p><img src="/uploads/SpringMVC&#x6838;&#x5FC3;/SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;.jpg" alt="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;" title="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;"></p>
+<p><strong>&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#xFF1A;</strong></p>
+<ol>
+<li><p>&#x9996;&#x5148;&#x7528;&#x6237;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x2014;&gt;DispatcherServlet&#xFF0C;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#x81EA;&#x5DF1;&#x4E0D;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x662F;&#x59D4;&#x6258;&#x7ED9;&#x5176;&#x4ED6;&#x7684;&#x89E3;&#x6790;&#x5668;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x4F5C;&#x4E3A;&#x7EDF;&#x4E00;&#x8BBF;&#x95EE;&#x70B9;&#xFF0C;&#x8FDB;&#x884C;&#x5168;&#x5C40;&#x7684;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#xFF1B;</p>
+</li>
+<li><p>DispatcherServlet&#x2014;&gt;HandlerMapping&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x8BF7;&#x6C42;&#x6620;&#x5C04;&#x4E3A; HandlerExecutionChain &#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x542B;&#x4E00;&#x4E2A; Handler &#x5904;&#x7406;&#x5668;&#xFF08;&#x9875;&#x9762;&#x63A7;&#x5236;&#x5668;&#xFF09;&#x5BF9;&#x8C61;&#x3001;&#x591A;&#x4E2A; HandlerInterceptor &#x62E6;&#x622A;&#x5668;&#xFF09;&#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x6620;&#x5C04;&#x7B56;&#x7565;&#xFF1B;</p>
+</li>
+<li><p>DispatcherServlet&#x2014;&gt;HandlerAdapter&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x5904;&#x7406;&#x5668;&#x5305;&#x88C5;&#x4E3A;&#x9002;&#x914D;&#x5668;&#xFF0C;&#x4ECE;&#x800C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x5373;<code>&#x9002;&#x914D;&#x5668;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</code>&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4ECE;&#x800C;&#x5F88;&#x5BB9;&#x6613;&#x652F;&#x6301;&#x5F88;&#x591A;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF1B;</p>
+</li>
+<li><p>HandlerAdapter&#x2014;&gt;&#x5904;&#x7406;&#x5668;&#x529F;&#x80FD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x6839;&#x636E;&#x9002;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x8C03;&#x7528;&#x771F;&#x6B63;&#x7684;&#x5904;&#x7406;&#x5668;&#x7684;&#x529F;&#x80FD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x5B8C;&#x6210;&#x529F;&#x80FD;&#x5904;&#x7406;&#xFF08;&#x5904;&#x7406;&#x5668;&#x5728;&#x8FD9;&#x91CC;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#x5668;&#x7684;&#x5904;&#x7406;&#x3001;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x5668;&#x7684;&#x5904;&#x7406;&#x7B49;&#x7B49;&#xFF09;&#xFF1B;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; ModelAndView &#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x542B;&#x6A21;&#x578B;&#x6570;&#x636E;&#x3001;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#xFF09;&#xFF1B;</p>
+</li>
+<li><p>ModelAndView &#x7684;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#x2014;&gt; ViewResolver&#xFF0C; &#x5B83;&#x5C06;&#x628A;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#x89E3;&#x6790;&#x4E3A;&#x5177;&#x4F53;&#x7684; View&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x66F4;&#x6362;&#x5176;&#x4ED6;&#x89C6;&#x56FE;&#x6280;&#x672F;&#xFF1B;</p>
+</li>
+<li><p>View&#x2014;&gt;&#x6E32;&#x67D3;&#xFF0C;&#x5B83;&#x4F1A;&#x6839;&#x636E;&#x4F20;&#x8FDB;&#x6765;&#x7684; Model &#x6A21;&#x578B;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#xFF0C;&#x6B64;&#x5904;&#x7684; Model &#x5B9E;&#x9645;&#x662F;&#x4E00;&#x4E2A; Map &#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x56E0;&#x6B64;&#x5F88;&#x5BB9;&#x6613;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x89C6;&#x56FE;&#x6280;&#x672F;&#xFF1B;</p>
+</li>
+<li><p>&#x8FD4;&#x56DE;&#x63A7;&#x5236;&#x6743;&#x7ED9; DispatcherServlet&#xFF0C;&#x7531; DispatcherServlet &#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x7ED9;&#x7528;&#x6237;&#xFF0C;&#x5230;&#x6B64;&#x4E00;&#x4E2A;&#x6D41;&#x7A0B;&#x7ED3;&#x675F;&#x3002;&#xFF08;&#x58F0;&#x660E;:&#x56FE;&#x4E2D;&#x7684;View&#x6307;&#x5411;&#x7528;&#x6237;&#x53EA;&#x662F;&#x5355;&#x7EAF;&#x65B9;&#x4FBF;&#x7406;&#x89E3;&#xFF09;</p>
+</li>
+</ol>
+<hr>
+<h1 id="&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><a href="#&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;" class="headerlink" title="&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"></a>&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;</h1><ol>
+<li>DispatcherServlet: &#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;</li>
+</ol>
+<p>&#x7B49;&#x540C;&#x4E8E;&#x4EE5;&#x524D;&#x7684;Controller&#xFF0C; &#x662F;&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x7684;&#x4E2D;&#x5FC3;&#xFF0C; &#x8D1F;&#x8D23;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x3002;<br>&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#xFF08;DispatcherServlet&#xFF09;&#xFF1A;&#x8FD9;&#x4E2A;&#x662F; SpringMVC&#x7684;&#x5165;&#x53E3;&#xFF08;&#x5B9E;&#x9645;&#x4E0A;&#x5462;&#x5C31;&#x662F;&#x4E00;&#x4E2A;Servlet&#x5BF9;&#x8C61;&#xFF09;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x8981;&#x901A;&#x8FC7;&#x5B83;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x4E2A;Servlet&#x6240;&#x4EE5;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x7684;&#x4F60;&#x8981;&#x5728;web.xml&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
+<ol start="2">
+<li>HandlerMapping&#xFF1A; &#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;</li>
+</ol>
+<p>&#x8D1F;&#x8D23;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x627E;&#x5230;Handler&#xFF08;&#x5904;&#x7406;&#x5668;&#xFF09;&#xFF0C;springMVC&#x4E2D;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x6620;&#x5C04;&#x5668;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x6620;&#x5C04;&#xFF0C;&#x6BD4;&#x5982; xml&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF0C;&#x6CE8;&#x89E3;&#x65B9;&#x5F0F;&#xFF0C;&#x63A5;&#x53E3;&#x65B9;&#x5F0F;&#x7B49;&#x3002;<br>&#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;(HandlerMapper)&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x627E;&#x5230;&#x5904;&#x7406;&#x5668;&#xFF08;Handler&#xFF09;&#xFF0C;&#x5B83;&#x652F;&#x6301;&#x7684;&#x6709;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5F62;&#x5F0F;&#xFF0C;&#x63A5;&#x53E3;&#x5F62;&#x5F0F;&#xFF0C;&#x6CE8;&#x89E3;&#x5F62;&#x5F0F;&#x7B49;&#x7B49;&#x3002;</p>
+<ol start="3">
+<li>HandlerAdapter&#xFF1A;&#x5904;&#x7406;&#x5668;&#x9002;&#x914D;&#x5668;</li>
+</ol>
+<p>&#x5904;&#x7406;Handler&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#x8FDB;&#x884C;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x662F;&#x5BF9;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x7684;&#x5E94;&#x7528;&#x4F53;&#x73B0;&#x3002;<br>&#x5904;&#x7406;&#x5668;&#x9002;&#x914D;&#x5668;&#xFF08;HandlAdapter&#xFF09;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x5206;&#x6790;&#x5904;&#x7406;&#x5668;&#x662F;&#x90A3;&#x79CD;&#x65B9;&#x5F0F;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF08;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x63A5;&#x53E3;&#x3001;&#x6CE8;&#x89E3;&#x7B49;&#x5F62;&#x5F0F;&#xFF09;&#x7136;&#x540E;&#x6267;&#x884C;Handler&#x3002;</p>
+<ol start="4">
+<li>Handler&#xFF1A;&#x540E;&#x7AEF;&#x63A7;&#x5236;&#x5668;</li>
+</ol>
+<p>&#x5728;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x7684;&#x63A7;&#x5236;&#x4E0B;&#x5BF9;&#x5177;&#x4F53;&#x7684;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x8FDB;&#x884C;&#x6839;&#x636E;&#x9700;&#x6C42;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x3002;</p>
+<ol start="5">
+<li>ViewResolver: &#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;</li>
+</ol>
+<p>&#x8D1F;&#x8D23;&#x5C06;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x751F;&#x6210;view&#x89C6;&#x56FE;&#x3001;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x5F00;&#x53D1;view;SpringMVC&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x89C6;&#x56FE;&#xFF0C;&#x6BD4;&#x5982;jstlView&#x3001;freemarkerView&#x3001;pdfView&#xFF08;<code>&#x540E;&#x9762;&#x66F4;&#x65B0;</code>&#xFF09;&#x7B49;&#x3002;</p>
+<blockquote>
+<p>SpringMVC&#x4E2D;&#x7684;&#x4E09;&#x5927;&#x7EC4;&#x4EF6;&#x5206;&#x522B;&#x662F;&#xFF1A;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;&#xFF0C;&#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;&#xFF1B;&#x7528;&#x6237;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x7684;&#x90E8;&#x4EF6;&#x662F;&#xFF1A;Handler&#x548C;view</p>
+</blockquote>
+<blockquote>
+<p>ModelAndView &#x5C01;&#x88C5;&#x4E86;&#x6570;&#x636E;&#x548C;&#x89C6;&#x56FE;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x8FD9;&#x4E2A;&#x662F;&#x8FDB;&#x884C;&#x4F20;&#x8F93;&#xFF0C;&#x6570;&#x636E;&#x7684;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x662F;Request&#x57DF;&#x3002;</p>
+</blockquote>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <tags>
+        <tag>Spring</tag>
+        <tag>SpringMVC</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>常用正则表达式</title>
     <url>/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
     <content><![CDATA[<ol>
@@ -584,6 +584,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read.">
+    <label for="pass">Please enter the password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+U2FsdGVkX1+1ayQxzUUJIEUiNOR02BT+IoBbUbd36hLvyW3el4gpj2pONvxdMBsgccq0TnIKR3PsSy0wUCe36PO9K/H80B23jg8ll8h/A9yBT3vpG+hzBEM5eg1JBD4qYZULIkV/MtPXdTZysaWEOQusnPQnKOJK4NmRtzsSq8Q7iJk2KGge1yZ1YbJNmleC+469Ee0C4UGGdvJ5VLK1/+NdHPmhfEEb2JK5ATTbZBO6kZr6ttJIAn5MO9B82OkBSblQIqMvl1ySoVa4DvsmKYyK5J9gS+Z/T2kRsor+a+j8mDvE+BsnX/fj1H4eEd0wrhPMI2ttSMriw92YGM3Uw9m2MfLLHNZparYF+f99krZe8UWRG7AGjWWK/uLEpJIni9uUJoN/luscPMoktM2vyr3JdHM6khCFNWljGKYgQNI/4KTC98uZaJEDhOlB3drB/YDh5xmf7ZrpzHGgUK0hgReST5Lxg/FOR8YITD6pIUe6Z+JXmyTnhfvQo54LKwyI4aVIf8kBqElNq00+OGZ0pR0rqAvjrHr1jWheHxkusHt0Yr2wzNn5f2PS5Vg1px0ehYJ2O7pdUSfazKvPtMp7gEEKGSB6J0IY+tQ9pur/v9a5COek13AaqHf3KWkelmgi3NktWKsrPPhVgG2tvlCWNQkkCJwsvjFU46jfluDPBwa3511kdd8K0FDcqH61yMbfk3cyn9qpIiPLQ/g9gUPEGKuv3yIfWqyxlRj6p37Gq4Q/MBVMyL0rmTUuYYXElM7hy2EkbJGtGeyw1qWQ0k1xXu1DvX26vXzKNhgwYOCuHaCGewq+dlTKma3c4WrxLAWv/RPKHy5KDOrdkYaWfvTmSvjTnrByJYOgrm4nTxD7IxNEeoEACrOoj/j2y7ot9YLZ7pKoCFO+q+GH/jkeFouG0PJ/Oj/21FxguJmpdlL4iIIU3m3NBuKNGYd6d2rE3hoNdyjZ5np68ZG1K+PJ/YhtQpVPuXmC4hMbIu4PCxkMU2lZVQNSPfIX7lH+u0ZebxM2vKYsgoeUVulY1I3veoGMg72M8z4veTbNo/EamgJ8nHEkGPkXGwmfg0t44OisYJ0/oya85IIkbZ71nW8KZmCOPSvSfYWuFAmnXsDMo6sAugXH6mfgWre6jU9aYmtN0teza8K3Vg2lAjL8v7sz0ynobRWmMht0qfyWKEG1WO7gA/1Y2Ozypvmn3bh/KAJa5RAfqmLHK7JB3Q8AmgpUf3TT4pmc8eHov91/vE8Fn3TGJTJ66E2oxU4D08HiFAMT5FxvxOaq3w5OHbMnWipMQsHQ2Fal6a05kCuD9MP34YCXgnoG/Z/RP4CPqIC/eGm+LCpCWv+nf6YryfV7OVb5PYc0Bz7m5kRSUw/20XprS97VLgAykYZFgv3NZOvTpHiFJ3xi01kalT8F08Cy1ztSDQr/BUPrFF7LHmmwTkn1tdcByPzJi0bXpbSVsJtuHuxddD+Wr9+++ELRAugCOPOfCFgyoEWKU+g4n33wAXxrN+LfCxZa9HfY40mQQsbvEyGwJf5OYdaMTKedsXwp/l3FtZhcuGMWTLLifBc5uLrFQ+tz7AugetmOtiPIqvZnObWyjIpKamMvYhrJ0QtGWMUFgLyi+vuLhGLS/gKUvEEz4w6R+TPM2wOhSJ9WwozRTQGQOJFXzuDVbXPDM31utLC0oeK7bQPUd51WeIgsmYLXFDK0AvQBWdPyldaSdnYEjJoi65kv+BXyQ4qNnAV2QNV3C06k7mn1pMaPtooh5zJXrmM47cgHM4Y2A8Ys3ovyJ3q5Dg3c7hmpf5cR/N7RAwHwGpPhhmk30hw9gT9g/47PFDmxQnpk6J9f0Tm5I6i+awu/zO2f+wIKH2Cd5ghHRVMpwSSP7KHjPfnajwtquvfClIB+XHdGN+fvxFdfCAePRXA2zSD1JOnlbPoJKpXcWAG/wdBlskgbpit8Ps7fddIG2mtWr+UpEg1ebhYDJmlERegABZaOy1rF+iJYsh6or+lWysS+JMilI0IDfz0IcZkJqayHRXbEKjSJs8ceH9Uk0pW3gi84XT7d1VXzaSjxufUSAJCoYRdzMwtG8KXbj8D+pxJ25V0fWaOpx2E5Z9ieAqsHvPtsw/LN6/h5wwqbf4pXh7ujXeHSV0omaygi7avsZWRgcs6YghVVpjMKB7SxwMX5MK0Dr0nrzBzKypCN+SKAtYK7Azq7vcatvhrqn8TVKy+P2NYeE1mths9aeqa0afBFX8vuPMjPdtpvYn1KwC/9VgNukWFfMlSG3V+OYJSMtekYIbTojM0CVw/mpBZg1cTrbNldZw/lTiLVMYKip7kcjYQKwU91Xvm10WCOkZCNY0wKDCL/EVc/l1v29Sx3ttNCuQZoK4M+sU+y7qQvoB4XK1pn154itGqe9pDGLjuET82KotkRDwkz1xl+OqRNw/ECtiurqloCOZlSSfnjUmWkS6KY1aO+2TKvCYKxSsH/XBKkrxjwQ9h9DTRUujGhTWvV7cf2wrq6BsjP8dFc/GvbTlrio0VkRu2HjUu9dMQX3pyUO/0xOZpCB6f8fjb2H2QmdIfNST5m2kiEQqNJdtiIeTzvTTRcWA7GWsuXzovoKagHkaG40BbEZUuDnHzoimT1wwPjBEWRdTb32j3w/ZHByFqGnYNCxuoxcZWn1sqfkhNVFaJjOwWFYNh8t+hZP63RdTo5B8XJ/Ppdsgyg7q81xInonl0sZtZh3FZ2OzgI92lxYM6Z/mKDK+rN68Z1UmCYl+0TjWsemP4tXJfMAZRr20S+p8f3L+dvFUzjxkrwOru6tZstr6k/XUTmSh5C2OPZ1I/jUs/XQNX0OMLRLd4ut4yDPazBPy433b2sjhN0jHg3UZzfjSvqNwutMSnRNGSSisNGECaE5D1TLlmxXUD6JAYJoTcR5+4ee5nJloIyit14FRFjX69VU96gg/HYH09/5Mr8XS/Ho0xCL0k+TIaUM3FaNvkx8Q/PnZMlbNrN2oEAHalL+JXU5qqnTRohT7JCtmak44ZgsbfovG/UIWh/V0jFnKNSu1vDuHX1e2uq8b9lDe3fmS8iLBd047tpet0IUBzDy1zELxe3lsTV/q58R61NnkmS1GGsCTdsAI5SaO7HeyUsIcNz+JP2i1/DhZ5oKO07EXrGNutrxhWcTEEQPRbRoh7tmdX8fguTus/ggbJOuOwutoJryvoZMkGZKpLPPxfEtONq7yVZG3RmL/NVljfzYfEKFPp359Z3gaoz4vfy+irvz/qSwHWQKD4Kl5hDAUlysO5LqrJAhiecCehOpGvirV/VHgIKIMKK7oUqbxLwvFEYMgvv4XY2QwfH/45KWJWdf3/moPjIj1ZOVMT5x71UFgcx63ifgMN2qIelogW8uyr5CVZTx4xsVwXCTYfvCYL4Bq4kygQckhGgVo6rDh1igvAkrjSjWdeXU1tZobjj8YnOQal8IqksX82h/xuKOFMzg7VMEs5tl/DS20L9VPsySP/vOZuP+uT02QpN3FBu2aOrj6z0ox3he8pnQmNwjkSst7/yR4D6e3COsMovCR8ZjlTc/sy3l4XP1PodJTPQlvfu+zCzJf/ize25IJjojtUyIOuO7vY6jxfQtlWjXJvm52ALJWA6vFjZFZLrhC43zVx+oMeAVhXMk4wnFMgZD1/AFA3DdAUKnL8cu6MTQU1U1MlubSBBvDBMy4vF13nKlYHMSXjErAZ5xfG3Ffsh4TuBiDeXWhib3zjXXXUKah+QShJxKcyPfOu5VKBMhuW9RtUl8FIy5a5fvKa1WLW+g1Cmq8Njk3EdZkwtgvYGSfbGjPUa3AsiN60wXVFJMZSPiZW/g6YAWp/TYgpy9BN8QrMYYJqHPVts6haK9k47dPudKDhqAHHhxVomQMKX3uf728DZPnjUv73d/sPlzH9q9ymv2dd6R1MGbkmTTe1lZFfPwWYk3rEKJV+D/yD3cbytX4C+nQSgWAJq0lp5JNukTJ4AChXclrkDb0qi5642I9AB8tvbIa5aJGE683O2AdLHu7Th/Y6CbtkDrFMm7pF451pkg30XHE8x8KnFAEYk/mxcJDqiTb2U1mBhT9KB8YlkCR3HwddNoqdnDoZzC2vRnagw6pYa8Nfk8RtaAR/OYW3ybB7yd0x/HeNauRA2ITT9XAjbyN9VFnumadY0q9yDK/uq6tjMKw/QvoBhgVlAIxvVIkj7QBps39GwYEoH5Bs57/o=
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css"><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <tags>
+        <tag>HelloWorld</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>淘宝会员通疑问总结</title>
     <url>/%E6%B7%98%E5%AE%9D%E4%BC%9A%E5%91%98%E9%80%9A%E7%96%91%E9%97%AE%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<ol>
@@ -629,27 +667,6 @@
         <tag>淘宝会员通</tag>
         <tag>OMID</tag>
         <tag>OUID</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read." />
-    <label for="pass">Please enter the password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-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
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>HelloWorld</tag>
       </tags>
   </entry>
   <entry>
@@ -895,91 +912,6 @@ U2FsdGVkX1+oyADQa7JykKa7oqqLBQ0AOTjjTyefBKPlQpuV3mN1e8RGQmEFgYCaRnoyi2x15CFZ7qn0
       </tags>
   </entry>
   <entry>
-    <title>Sqoop数据传输工具</title>
-    <url>/Sqoop%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%B7%A5%E5%85%B7/</url>
-    <content><![CDATA[<h3 id="&#x7B80;&#x4ECB;"><a href="#&#x7B80;&#x4ECB;" class="headerlink" title="&#x7B80;&#x4ECB;"></a>&#x7B80;&#x4ECB;</h3><p>Sqoop &#x662F;&#x4E00;&#x79CD;&#x5F00;&#x6E90;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x5DE5;&#x5177;&#xFF0C;&#x7528;&#x4E8E;&#x5728; Hadoop &#x548C;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#xFF08;RDBMS&#xFF09;&#x6216;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x4E3B;&#x673A;&#x4E4B;&#x95F4;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x7684;&#x5DE5;&#x5177;&#x3002; &#xFF08;<strong>&#x8BE5;&#x6280;&#x672F;&#x5DF2;&#x4E8E;2021&#x5E74;&#x4E0B;&#x534A;&#x5E74;&#x52A0;&#x5165;Apache Attic&#xFF0C;&#x4F46;&#x4ECD;&#x4F1A;&#x53D1;&#x5E03;&#x65B0;&#x7248;&#x672C;&#x548C;&#x4FEE;&#x590D;bug</strong>&#xFF09;<br>Sqoop &#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x4ECE; MySQL &#x6216; Oracle &#x6216;&#x5927;&#x578B;&#x673A;&#x7B49;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF; (RDBMS) &#x5BFC;&#x5165; Hadoop &#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF; (HDFS)&#xFF0C;&#x5728; Hadoop MapReduce &#x4E2D;&#x8F6C;&#x6362;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6570;&#x636E;&#x5BFC;&#x51FA;&#x56DE; RDBMS &#x3002;<br>Sqoop &#x4F7F;&#x7528; MapReduce &#x5BFC;&#x5165;&#x548C;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4F9B;&#x5E76;&#x884C;&#x64CD;&#x4F5C;&#x548C;&#x5BB9;&#x9519;&#x3002;</p>
-<h3 id="&#x7248;&#x672C;&#x63A7;&#x5236;"><a href="#&#x7248;&#x672C;&#x63A7;&#x5236;" class="headerlink" title="&#x7248;&#x672C;&#x63A7;&#x5236;"></a>&#x7248;&#x672C;&#x63A7;&#x5236;</h3><ol>
-<li><p>Sqoop1</p>
-<ul>
-<li>sqoop&#x7248;&#x672C;&#x53F7;&#x4E3A;1.4.x&#x4E3A;sqoop1</li>
-<li>sqoop1&#x5728;&#x8BE5;&#x7248;&#x672C;&#x662F;&#x901A;&#x8FC7;cli&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x8F93;&#x5165;&#x94FE;&#x63A5;&#x53CA;&#x5BC6;&#x7801;&#x540E;&#x76F4;&#x63A5;&#x63D0;&#x4EA4;&#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x76EE;&#x6807;&#x5E93;&#x6216;&#x5B58;&#x50A8;&#x5730;&#x5740;</li>
-<li>sqoop1&#x94FE;&#x63A5;&#x4FE1;&#x606F;&#x5FC5;&#x987B;&#x7B26;&#x5408;jdbc&#x6A21;&#x578B;</li>
-</ul>
-</li>
-<li><p>Sqoop2</p>
-<ul>
-<li>sqoop2&#x7248;&#x672C;&#x53F7;&#x4E3A;1.99.x&#x4E3A;sqoop2</li>
-<li>sqoop2&#x52A0;&#x5165;&#x4E86;server&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4EE5;&#x6B64;&#x53EF;&#x4EE5;&#x6240;&#x6709;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#x96C6;&#x4E2D;&#x7BA1;&#x7406;</li>
-<li>&#x4EA4;&#x4E92;/&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#x66F4;&#x591A;&#x82B1;&#x6837;&#xFF08;API/WEB UI/CLI&#xFF09;<br>Sqoop&#x4E24;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x4EA4;&#x4E92;&#x65B9;&#x5F0F;&#x611F;&#x89C9;&#x5927;&#x76F8;&#x5F84;&#x5EAD;&#xFF0C;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#x4E0A;&#x5BF9;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x66F4;&#x52A0;&#x53CB;&#x597D;&#x4E86;&#xFF0C;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x5E93;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x6A21;&#x578B;&#x95F4;&#x53EF;&#x7075;&#x6D3B;&#x914D;&#x7F6E;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E5F;&#x66F4;&#x591A;&#x4E86;&#xFF08;&#x5BF9;&#x4E8E;&#x8FD0;&#x7EF4;&#x540C;&#x5B66;&#x800C;&#x8A00;&#x914D;&#x7F6E;&#x8D77;&#x6765;&#x76F8;&#x5BF9;&#x53EF;&#x80FD;&#x4F1A;&#x7E41;&#x7410;&#x4E00;&#x4E9B;&#xFF09;</li>
-</ul>
-</li>
-</ol>
-<h3 id="&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;"><a href="#&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;" class="headerlink" title="&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;"></a>&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;</h3><p>&#x672C;&#x6587;&#x6309;&#x7167;Sqoop1&#x7248;&#x672C; <code>v1.4.6</code> &#x7F16;&#x5199;&#x3002;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E5F;&#x5EFA;&#x8BAE;&#x9009;&#x62E9;&#x8BE5;&#x7248;&#x672C;&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x3002;</p>
-<h3 id="&#x517C;&#x5BB9;&#x6570;&#x636E;&#x5E93;"><a href="#&#x517C;&#x5BB9;&#x6570;&#x636E;&#x5E93;" class="headerlink" title="&#x517C;&#x5BB9;&#x6570;&#x636E;&#x5E93;"></a>&#x517C;&#x5BB9;&#x6570;&#x636E;&#x5E93;</h3><p>MySQL&#xFF0C;PostgreSQL&#xFF0C;Oracle&#xFF0C;HSQLDB&#xFF0C;CUBRID&#x7B49;&#x5176;&#x4ED6;jdbc&#x517C;&#x5BB9;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
-<h4 id="&#x517C;&#x5BB9;&#x6027;&#x8BF4;&#x660E;"><a href="#&#x517C;&#x5BB9;&#x6027;&#x8BF4;&#x660E;" class="headerlink" title="&#x517C;&#x5BB9;&#x6027;&#x8BF4;&#x660E;"></a>&#x517C;&#x5BB9;&#x6027;&#x8BF4;&#x660E;</h4><p><a href="https://sqoop.apache.org/docs/1.4.6/SqoopUserGuide.html#_compatibility_notes" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x517C;&#x5BB9;&#x6027;&#x8BF4;&#x660E;</a></p>
-<h5 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h5><ul>
-<li><p>&#x65F6;&#x95F4;&#x5B57;&#x6BB5;&#x503C;&#x4E3A;<code>0000-00-00\</code>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x8F6C;&#x6362;&#x4E3A;null&#x503C;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x56DB;&#x820D;&#x4E94;&#x5165;&#x53D6;&#x503C;</p>
-<figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">jdbc:mysql:<span class="regexp">//db</span>.example.com/someDb?zeroDateTimeBehavior=round</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>Sqoop &#x76EE;&#x524D;&#x65E0;&#x6CD5;&#x5BFC;&#x5165;&#x5927;&#x4E8E; <strong>2147483647</strong> &#x7684; UNSIGNED &#x503C;&#x3002;</p>
-</li>
-<li>Sqoop &#x7684;&#x76F4;&#x63A5;&#x6A21;&#x5F0F;&#x4E0D;&#x652F;&#x6301;&#x5BFC;&#x5165; <code>BLOB</code>/<code>CLOB</code> &#x6216; <code>LONGVARBINARY</code> &#x5217;&#xFF1B;&#x5BF9;&#x8FD9;&#x4E9B;&#x5217;&#x4F7F;&#x7528;&#x57FA;&#x4E8E; JDBC &#x7684;&#x5BFC;&#x5165;&#x5EFA;&#x8BAE;&#x52A0;&#x4E0A;<code>--inline-lob-limit</code>&#x9650;&#x5236;&#x4E0B;&#xFF1B;&#x5E76;&#x4E14;&#x4E0D;&#x8981;&#x5728;&#x5BFC;&#x5165;&#x5DE5;&#x5177;&#x6DFB;&#x52A0; <code>--direct</code> &#x53C2;&#x6570;&#x3002;</li>
-<li>Sqoop &#x76EE;&#x524D;&#x4E0D;&#x652F;&#x6301;&#x76F4;&#x63A5;&#x6A21;&#x5F0F;&#x4E0B;&#x4ECE;&#x89C6;&#x56FE;&#x5BFC;&#x5165;&#xFF1B;&#x4E0D;&#x8981;&#x5728;&#x5BFC;&#x5165;&#x5DE5;&#x5177;&#x6DFB;&#x52A0; <code>--direct</code> &#x53C2;&#x6570;&#x3002;</li>
-</ul>
-<h5 id="PostgreSQL"><a href="#PostgreSQL" class="headerlink" title="PostgreSQL"></a>PostgreSQL</h5><p>PostgreSQL&#x53EA;&#x6709;8.3+&#x7248;&#x672C;&#x4EE5;&#x4E0A;&#x652F;&#x6301;<code>import</code>&#x547D;&#x4EE4;&#x76F4;&#x8FDE;&#x6A21;&#x5F0F;&#xFF0C;&#x5176;&#x4ED6;&#x6682;&#x4E0D;&#x652F;&#x6301;&#x76F4;&#x8FDE;&#x6A21;&#x5F0F;&#xFF1B;&#x9664;<code>import</code>&#x547D;&#x4EE4;&#x5916;&#x4E0D;&#x8981;&#x5728;&#x5BFC;&#x5165;&#x5DE5;&#x5177;&#x6DFB;&#x52A0; <code>--direct</code> &#x53C2;&#x6570;&#x3002;</p>
-<h5 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a>Hive</h5><ul>
-<li>DATE, TIME, TIMESTAMP &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x5230;Hive&#x91CC;&#x4F1A;&#x88AB;&#x5904;&#x7406;&#x4E3A; String</li>
-<li>NUMERIC, DECIMAL &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x5230;Hive&#x91CC;&#x4F1A;&#x88AB;&#x5904;&#x7406;&#x4E3A; DOUBLE</li>
-<li><p>tinyInt&#x9ED8;&#x8BA4;&#x8F6C;&#x6362;boolean&#x540E;&#x4E3A;&#x7A7A;&#xFF0C;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x5728;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;&#x540E;&#x914D;&#x7F6E;tinyInt1isBit=false</p>
-<figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">jdbc:mysql:<span class="regexp">//db</span>.example.com/someDb?tinyInt1isBit=false</span><br></pre></td></tr></tbody></table></figure>
-</li>
-</ul>
-<h3 id="&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"><a href="#&#x8BED;&#x6CD5;&#x7ED3;&#x6784;" class="headerlink" title="&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"></a>&#x8BED;&#x6CD5;&#x7ED3;&#x6784;</h3><h4 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"><a href="#&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;" class="headerlink" title="&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"></a>&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;</h4><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">$ sqoop help</span><br><span class="line">&#x7528;&#x6CD5;: sqoop COMMAND [ARGS]</span><br><span class="line"></span><br><span class="line">&#x53EF;&#x7528;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#xFF08;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#xFF09;:</span><br><span class="line">  codegen            &#x751F;&#x6210;&#x4EE3;&#x7801;&#x4EE5;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x8BB0;&#x5F55;&#x4EA4;&#x4E92;</span><br><span class="line">  create-hive-table  &#x5C06;&#x8868;&#x5B9A;&#x4E49;&#x5BFC;&#x5165; Hive</span><br><span class="line">  <span class="keyword">eval</span>               &#x8BC4;&#x4F30; SQL &#x8BED;&#x53E5;&#x5E76;&#x663E;&#x793A;&#x7ED3;&#x679C; [&#x5E38;&#x7528;]</span><br><span class="line">  export             &#x5C06; HDFS &#x76EE;&#x5F55;&#x5BFC;&#x51FA;&#x5230;&#x6570;&#x636E;&#x5E93;&#x8868; [&#x5E38;&#x7528;]</span><br><span class="line">  help               &#x5217;&#x51FA;&#x53EF;&#x7528;&#x547D;&#x4EE4;</span><br><span class="line">  import             &#x5C06;&#x8868;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x5BFC;&#x5165; HDFS [&#x5E38;&#x7528;]</span><br><span class="line">  import-all-tables  &#x5C06;&#x591A;&#x5F20;&#x8868;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x5BFC;&#x5165; HDFS,&#x53EF;&#x4EE5;&#x6574;&#x5E93;&#x7684;import</span><br><span class="line">  import-mainframe   &#x5C06;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#x4E3B;&#x673A;&#x6570;&#x636E;&#x96C6;&#x5BFC;&#x5165; HDFS</span><br><span class="line">  list-databases     &#x5217;&#x51FA;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x53EF;&#x7528;&#x6570;&#x636E;&#x5E93; [&#x5E38;&#x7528;]</span><br><span class="line">  list-tables        &#x5217;&#x51FA;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x53EF;&#x7528;&#x8868; [&#x5E38;&#x7528;]</span><br><span class="line">  version            &#x663E;&#x793A;&#x7248;&#x672C;&#x4FE1;&#x606F;</span><br><span class="line"></span><br><span class="line">&#x6709;&#x5173;&#x7279;&#x5B9A;&#x547D;&#x4EE4;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1;&#x201C;sqoop help COMMAND&#x201D;&#x3002;</span><br></pre></td></tr></tbody></table></figure>
-<ul>
-<li><code>eval</code> &#x5E38;&#x7528;&#x6765;&#x505A;&#x8FDE;&#x63A5;&#x6D4B;&#x8BD5;&#x6216;&#x7B80;&#x5355;&#x7684;&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;</li>
-<li><code>export</code> Sqoop&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x4E4B;&#x4E00;&#xFF0C;&#x4ECE;hadoop&#x5BFC;&#x51FA;&#x6570;&#x636E;</li>
-<li><code>import</code> Sqoop&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x4E4B;&#x4E00;&#xFF0C;&#x4ECE;hadoop&#x5BFC;&#x5165;&#x6570;&#x636E;</li>
-<li><code>list-databases</code> &#x5185;&#x7F6E;&#x4E86;<code>show databases</code>&#x8BED;&#x53E5;</li>
-<li><code>list-tables</code> &#x5185;&#x7F6E;&#x4E86;<code>show tables</code>&#x8BED;&#x53E5;</li>
-</ul>
-<h4 id="&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"><a href="#&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;" class="headerlink" title="&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"></a>&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;</h4><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">$ sqoop import</span><br><span class="line">$ sqoop-import</span><br><span class="line"></span><br><span class="line">&#x7528;&#x6CD5;: sqoop import [GENERIC-ARGS] [TOOL-ARGS] &#x6216;&#x8005;sqoop-import [GENERIC-ARGS] [TOOL-ARGS]</span><br><span class="line"></span><br><span class="line">&#x5E38;&#x89C1;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#xFF08;&#x5DE5;&#x5177;&#x547D;&#x4EE4;&#xFF09;:</span><br><span class="line">   --<span class="keyword">connect</span> &lt;jdbc-uri&gt;               &#x6307;&#x5B9A; JDBC &#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;</span><br><span class="line">   --<span class="keyword">connect</span>-manager &lt;class-name&gt;     &#x6307;&#x5B9A;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x8FDE;&#x63A5;&#x7BA1;&#x7406;&#x5668;&#x7C7B;</span><br><span class="line">   --driver &lt;class-name&gt;              &#x624B;&#x52A8;&#x6307;&#x5B9A;&#x8981;&#x4F7F;&#x7528;&#x7684; JDBC &#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x7C7B;</span><br><span class="line">   --hadoop-mapred-home &lt;dir&gt;         &#x8986;&#x76D6; $HADOOP_MAPRED_HOME</span><br><span class="line">   --help                             &#x6253;&#x5370;&#x4F7F;&#x7528;&#x8BF4;&#x660E;</span><br><span class="line">   --password-file                    &#x8BBE;&#x7F6E;&#x5305;&#x542B;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;</span><br><span class="line">   -P                                 &#x4ECE;&#x63A7;&#x5236;&#x53F0;&#x8BFB;&#x53D6;&#x5BC6;&#x7801;</span><br><span class="line">   --password &lt;password&gt;              &#x8BBE;&#x7F6E;&#x8BA4;&#x8BC1;&#x5BC6;&#x7801;</span><br><span class="line">   --username &lt;username&gt;              &#x8BBE;&#x7F6E;&#x8BA4;&#x8BC1;&#x7528;&#x6237;&#x540D;</span><br><span class="line">   --verbose                          &#x5DE5;&#x4F5C;&#x65F6;&#x6253;&#x5370;&#x66F4;&#x591A;&#x4FE1;&#x606F;</span><br><span class="line">   --hadoop-home &lt;dir&gt;                &#x5DF2;&#x5F03;&#x7528;&#x3002;&#x8986;&#x76D6; $HADOOP_HOME</span><br><span class="line"></span><br><span class="line">&#x5E38;&#x89C1;&#x5BFC;&#x5165;&#x63A7;&#x5236;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#xFF08;&#x5DE5;&#x5177;&#x547D;&#x4EE4;&#xFF09;:</span><br><span class="line">   --append                           &#x5C06;&#x6570;&#x636E;&#x8FFD;&#x52A0;&#x5230; HDFS &#x4E2D;&#x7684;&#x73B0;&#x6709;&#x6570;&#x636E;&#x96C6;</span><br><span class="line">   --as-sequencefile                  import&#x5E8F;&#x5217;&#x5316;&#x7684;&#x6587;&#x4EF6;</span><br><span class="line">   --as-textfile                      import plain&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;textfile</span><br><span class="line">   --columns &lt;col,col,col&#x2026;&gt;           &#x6307;&#x5B9A;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x7684;&#x5217;&#x540D;&#xFF0C;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF1B;&#x6BD4;&#x5982;&#xFF1A;--columns <span class="string">&quot;id,name&quot;</span></span><br><span class="line">   --<span class="keyword">delete</span>-target-dir                &#x5220;&#x9664;&#x5B58;&#x5728;&#x7684;import&#x76EE;&#x6807;&#x76EE;&#x5F55;</span><br><span class="line">   --direct                           &#x76F4;&#x8FDE;&#x6A21;&#x5F0F;&#xFF0C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;&#xFF08;HBase&#x4E0D;&#x652F;&#x6301;&#xFF09;</span><br><span class="line">   --fetch-size &lt;n&gt;                   &#x4E00;&#x6B21;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x8BFB;&#x53D6; n &#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x5373;n&#x6761;&#x6570;&#x636E;&#xFF1B;&#x9ED8;&#x8BA4;&#x662F;<span class="number">5000</span></span><br><span class="line">   -<span class="keyword">m</span>,--num-mappers &lt;n&gt;               &#x5EFA;&#x7ACB; n &#x4E2A;&#x5E76;&#x53D1;&#x6267;&#x884C;task import&#xFF1B;&#x9ED8;&#x8BA4;&#x662F;<span class="number">4</span>&#x4E2A;</span><br><span class="line">   -e,--query &lt;statement&gt;             &#x6784;&#x5EFA;&#x8868;&#x8FBE;&#x5F0F;&lt;statement&gt;&#x6267;&#x884C;&#xFF1B;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x5BFC;&#x5165;</span><br><span class="line">   --<span class="keyword">split</span>-by &lt;column-name&gt;           &#x6839;&#x636E;column&#x5206;&#x9694;&#x5B9E;&#x4F8B;</span><br><span class="line">   --autoreset-to-one-mappe           &#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E3B;&#x952E;&#x548C;<span class="keyword">split</span>-by &#x7528;one mapper import &#xFF08;<span class="keyword">split</span>-by &#x548C;&#x6B64;&#x9009;&#x9879;&#x4E0D;&#x5171;&#x5B58;&#xFF09;</span><br><span class="line">   --table &lt;table-name&gt;               &#x6307;&#x5B9A;&#x8868;&#x540D;import</span><br><span class="line">   --target-dir &lt;d&gt;                   HDFS &#x76EE;&#x6807;&#x76EE;&#x5F55;</span><br><span class="line">   --warehouse-dir &lt;d&gt;                HDFS &#x8868;&#x76EE;&#x6807;&#x7684;&#x7236;&#x7EA7;</span><br><span class="line">   --where &lt;where clause&gt;             &#x6307;&#x5B9A;where&#x4ECE;&#x53E5;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x53CC;&#x5F15;&#x53F7;&#xFF0C;&#x6CE8;&#x610F;&#x8F6C;&#x4E49;&#xFF1B;&#x4E0D;&#x80FD;&#x7528;<span class="keyword">or</span>&#xFF0C;&#x5B50;&#x67E5;&#x8BE2;&#xFF0C;<span class="keyword">join</span></span><br><span class="line">   -z,--compress                      &#x5F00;&#x542F;&#x538B;&#x7F29;</span><br><span class="line">   --null-string &lt;null-string&gt;        string&#x5217;&#x4E3A;&#x7A7A;&#x6307;&#x5B9A;&#x4E3A;&#x6B64;&#x503C;&#xFF1B;&#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F1A;&#x6307;&#x5B9A;&#x4E3A;<span class="string">&quot;null&quot;</span></span><br><span class="line">   --null-non-string &lt;null-string&gt;    &#x975E;string&#x5217;&#x4E3A;&#x7A7A;&#x6307;&#x5B9A;&#x4E3A;&#x6B64;&#x503C;&#xFF1B; &#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F1A;&#x6307;&#x5B9A;&#x4E3A;<span class="string">&quot;null&quot;</span></span><br><span class="line"></span><br><span class="line">[...]</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x5BFC;&#x5165;&#x53C2;&#x6570;&#x5E38;&#x7528;&#x7684;&#x5C31;&#x662F;&#x4EE5;&#x4E0A;&#x8FD9;&#x90E8;&#x5206;&#xFF0C;<a href="#&#x5BFC;&#x5165;&#x6837;&#x4F8B;">&#x5BFC;&#x5165;&#x6837;&#x4F8B;</a></p>
-<p>&#xA0;</p>
-<h4 id="&#x5BFC;&#x51FA;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"><a href="#&#x5BFC;&#x51FA;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;" class="headerlink" title="&#x5BFC;&#x51FA;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"></a>&#x5BFC;&#x51FA;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;</h4><p><a href="#&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;">&#x5E38;&#x89C1;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#x540C;&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;</a></p>
-<figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">$ sqoop export (generic-args) (export-args)</span><br><span class="line">$ sqoop-export (generic-args) (export-args)</span><br><span class="line"></span><br><span class="line">&#x7528;&#x6CD5;: sqoop export [GENERIC-ARGS] [TOOL-ARGS] &#x6216;&#x8005;sqoop-export [GENERIC-ARGS] [TOOL-ARGS]</span><br><span class="line"></span><br><span class="line">&#x5E38;&#x89C1;&#x5BFC;&#x5165;&#x63A7;&#x5236;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#xFF08;&#x5DE5;&#x5177;&#x547D;&#x4EE4;&#xFF09;:</span><br><span class="line">--columns &lt;col,col,col&#x2026;&gt;               &#x8981;&#x5BFC;&#x51FA;&#x5230;&#x8868;&#x7684;&#x5217;&#x540D;&#xFF0C;&#x9017;&#x53F7;&#x5206;&#x9694;</span><br><span class="line">--direct                               &#x76F4;&#x8FDE;&#x6A21;&#x5F0F;</span><br><span class="line">--export-dir &lt;dir&gt;                     &#x5BFC;&#x51FA;&#x7684; HDFS &#x6E90;&#x8DEF;&#x5F84;</span><br><span class="line">-<span class="keyword">m</span>,--num-mappers &lt;n&gt;                   &#x4F7F;&#x7528;n&#x4E2A;<span class="keyword">map</span>&#x4EFB;&#x52A1;&#x5E76;&#x884C;&#x5BFC;&#x51FA;</span><br><span class="line">--table &lt;table-name&gt;                   &#x8981;&#x586B;&#x5145;&#x7684;&#x8868;</span><br><span class="line">--call &lt;stored-proc-name&gt;              &#x8981;&#x8C03;&#x7528;&#x7684;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</span><br><span class="line">--update-key &lt;col-name&gt;                &#x7528;&#x4E8E;&#x66F4;&#x65B0;&#x7684;&#x951A;&#x5217;;&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x5217;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x5217;&#x5217;&#x8868;&#x3002;</span><br><span class="line">--update-mode &lt;mode&gt;                   &#x6307;&#x5B9A;&#x5F53;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x627E;&#x5230;&#x5177;&#x6709;&#x4E0D;&#x5339;&#x914D;&#x952E;&#x7684;&#x65B0;&#x884C;&#x65F6;&#x5982;&#x4F55;&#x6267;&#x884C;&#x66F4;&#x65B0;&#x3002;&#x6A21;&#x5F0F;&#x7684;&#x5408;&#x6CD5;&#x503C;&#x5305;&#x62EC; updateonly&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;&#x548C; allowinsert&#x3002;</span><br><span class="line">--input-null-string &lt;null-string&gt;      &#x5B57;&#x7B26;&#x4E32;&#x5217;&#x88AB;&#x89E3;&#x91CA;&#x4E3A; null &#x7684;&#x5B57;&#x7B26;&#x4E32;</span><br><span class="line">--input-null-non-string &lt;null-string&gt;  &#x5BF9;&#x4E8E;&#x975E;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#xFF0C;&#x8981;&#x89E3;&#x91CA;&#x4E3A; null &#x7684;&#x5B57;&#x7B26;&#x4E32;</span><br><span class="line">--staging-table &lt;staging-table-name&gt;   &#x5728;&#x5C06;&#x6570;&#x636E;&#x63D2;&#x5165;&#x76EE;&#x6807;&#x8868;&#x4E4B;&#x524D;&#x5C06;&#x5728;&#x5176;&#x4E2D;&#x6682;&#x5B58;&#x6570;&#x636E;&#x7684;&#x8868;&#x3002;</span><br><span class="line">--clear-staging-table                  &#x8868;&#x793A;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x4E34;&#x65F6;&#x8868;&#x4E2D;&#x5B58;&#x5728;&#x7684;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x3002;</span><br><span class="line">--batch                                &#x4F7F;&#x7528;&#x6279;&#x5904;&#x7406;&#x6A21;&#x5F0F;&#x6267;&#x884C;&#x57FA;&#x7840;&#x8BED;&#x53E5;&#x3002;</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x5BFC;&#x51FA;&#x53C2;&#x6570;&#x5E38;&#x7528;&#x7684;&#x5C31;&#x662F;&#x4EE5;&#x4E0A;&#x8FD9;&#x90E8;&#x5206;&#xFF0C;<a href="#&#x5BFC;&#x51FA;&#x6837;&#x4F8B;">&#x5BFC;&#x51FA;&#x6837;&#x4F8B;</a></p>
-<p>&#xA0;</p>
-<h3 id="&#x5E38;&#x7528;&#x6570;&#x636E;&#x6A21;&#x578B;&#x8F6C;&#x6362;"><a href="#&#x5E38;&#x7528;&#x6570;&#x636E;&#x6A21;&#x578B;&#x8F6C;&#x6362;" class="headerlink" title="&#x5E38;&#x7528;&#x6570;&#x636E;&#x6A21;&#x578B;&#x8F6C;&#x6362;"></a>&#x5E38;&#x7528;&#x6570;&#x636E;&#x6A21;&#x578B;&#x8F6C;&#x6362;</h3><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">--<span class="keyword">map</span>-column-hive col2=String,col3=String <span class="comment"># &#x5BFC;&#x5165;&#x5217;&#x7C7B;&#x578B;&#x6620;&#x5C04;hive&#x7C7B;&#x578B;&#xFF0C;&#x901A;&#x7528;&#x8F6C;&#x6362;&#xFF0C;&#x6570;&#x7EC4;&#x6216;&#x8005;json&#x8F6C;string&#x540E;&#x5BFC;&#x5165;hive</span></span><br><span class="line">--<span class="keyword">map</span>-column-java col2=String,col3=String <span class="comment"># &#x5BFC;&#x5165;&#x5217;&#x7C7B;&#x578B;&#x6620;&#x5C04;java&#x7C7B;&#x578B;&#xFF0C;&#x901A;&#x7528;&#x8F6C;&#x6362;&#xFF0C;&#x6570;&#x7EC4;&#x6216;&#x8005;json&#x8F6C;string&#x540E;&#x5BFC;&#x5165;hive</span></span><br><span class="line">--<span class="keyword">map</span>-column-hive col1=<span class="string">&apos;DECIMAL(10%2C2)&apos;</span> <span class="comment"># Decimal&#x7CBE;&#x5EA6;&#x4E22;&#x5931;&#x95EE;&#x9898;&#x914D;&#x7F6E;hive&#x7CBE;&#x5EA6;&#x8F6C;&#x6362;&#xFF08;hive&#x662F;double&#xFF09;</span></span><br></pre></td></tr></tbody></table></figure>
-<h3 id="&#x5E38;&#x7528;&#x6837;&#x4F8B;"><a href="#&#x5E38;&#x7528;&#x6837;&#x4F8B;" class="headerlink" title="&#x5E38;&#x7528;&#x6837;&#x4F8B;"></a>&#x5E38;&#x7528;&#x6837;&#x4F8B;</h3><h4 id="&#x5BFC;&#x5165;&#x6837;&#x4F8B;"><a href="#&#x5BFC;&#x5165;&#x6837;&#x4F8B;" class="headerlink" title="&#x5BFC;&#x5165;&#x6837;&#x4F8B;"></a>&#x5BFC;&#x5165;&#x6837;&#x4F8B;</h4><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">sqoop import \</span><br><span class="line">-D mapred.job.queue.name=hap.testqueue \</span><br><span class="line">--<span class="keyword">connect</span> <span class="string">&quot;jdbc:postgresql://10.101.66.10:3601/testdb?currentSchema=public&quot;</span> \</span><br><span class="line">--username admin \</span><br><span class="line">--password admin@1 \</span><br><span class="line">--table test_tab \</span><br><span class="line">--columns <span class="string">&quot;col1,col2,col3&quot;</span> \</span><br><span class="line">--where <span class="string">&quot;increment_date=&apos;<span class="subst">${increment_date}</span>&apos;&quot;</span> \</span><br><span class="line">-<span class="keyword">m</span> <span class="number">3</span> \</span><br><span class="line">--fields-terminated-by <span class="string">&quot;\001&quot;</span> \</span><br><span class="line">--lines-terminated-by <span class="string">&quot;\n&quot;</span> \</span><br><span class="line">--<span class="keyword">delete</span>-target-dir \</span><br><span class="line">--null-string <span class="string">&apos;\\N&apos;</span>  \ <span class="comment"># NULL&#x5B57;&#x7B26;&#x8F6C;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span></span><br><span class="line">--null-non-string <span class="string">&apos;\\N&apos;</span> \ <span class="comment"># &#x975E;String&#x7C7B;&#x578B;&#x7A7A;&#x503C;&#x8F6C;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span></span><br><span class="line">--out-dir <span class="string">&quot;<span class="subst">${home}</span>/.sqoop/&quot;</span> \ <span class="comment"># &#x914D;&#x7F6E;java&#x7F16;&#x8BD1;&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x76EE;&#x5F55;</span></span><br><span class="line">--hive-delims-replacement <span class="string">&quot;&quot;</span> \</span><br><span class="line">--<span class="keyword">map</span>-column-java col1=String,col2=String \ <span class="comment"># &#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</span></span><br><span class="line">--<span class="keyword">map</span>-column-hive col1=String,col2=String \ <span class="comment"># &#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</span></span><br><span class="line">--target-dir /DATA/TMP/test_tab_hive/date=${increment_date}</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="&#x5BFC;&#x51FA;&#x6837;&#x4F8B;"><a href="#&#x5BFC;&#x51FA;&#x6837;&#x4F8B;" class="headerlink" title="&#x5BFC;&#x51FA;&#x6837;&#x4F8B;"></a>&#x5BFC;&#x51FA;&#x6837;&#x4F8B;</h4><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">sqoop export \</span><br><span class="line">-D mapred.job.queue.name=hap.testqueue \</span><br><span class="line">--<span class="keyword">connect</span> <span class="string">&quot;jdbc:postgresql://10.101.66.10:3601/testdb?currentSchema=public&quot;</span> \</span><br><span class="line">--username admin \</span><br><span class="line">--password admin@1 \</span><br><span class="line">--table test_tab \</span><br><span class="line">--hcatalog-database tmp \</span><br><span class="line">--hcatalog-table test_tab_hive \</span><br><span class="line">--hcatalog-partition-<span class="keyword">keys</span> date \</span><br><span class="line">--hcatalog-partition-<span class="keyword">values</span> ${date} \</span><br><span class="line">--columns <span class="string">&quot;col1,col2,col3&quot;</span> \</span><br><span class="line">--batch \</span><br><span class="line">--num-mappers <span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <tags>
-        <tag>大数据</tag>
-        <tag>数仓</tag>
-        <tag>Hadoop</tag>
-        <tag>Hive</tag>
-        <tag>Sqoop</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SpringMVC核心（二）：根据启动日志学原理</title>
     <url>/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E6%A0%B9%E6%8D%AE%E5%90%AF%E5%8A%A8%E6%97%A5%E5%BF%97%E5%AD%A6%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<p>&#x524D;&#x9762;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x8BB2;&#x5230;&#xFF0C;&#x5728;Spring&#x6846;&#x67B6;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;SpringMVC&#x7684;&#x52A0;&#x8F7D;&#x662F;&#x901A;&#x8FC7;Servlet&#x5BB9;&#x5668;&#x89E3;&#x6790;Web.xml&#x6765;&#x52A0;&#x8F7D;&#x521D;&#x59CB;&#x5316;SpringIOC&#x5BB9;&#x5668;&#x4E0E;SpringMVC&#x7684;&#x57FA;&#x7840;&#x73AF;&#x5883;&#x53C2;&#x6570;&#x7684;&#x3002; </p>
@@ -1165,6 +1097,91 @@ U2FsdGVkX1+oyADQa7JykKa7oqqLBQ0AOTjjTyefBKPlQpuV3mN1e8RGQmEFgYCaRnoyi2x15CFZ7qn0
       <tags>
         <tag>Spring</tag>
         <tag>SpringMVC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Sqoop数据传输工具</title>
+    <url>/Sqoop%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<h3 id="&#x7B80;&#x4ECB;"><a href="#&#x7B80;&#x4ECB;" class="headerlink" title="&#x7B80;&#x4ECB;"></a>&#x7B80;&#x4ECB;</h3><p>Sqoop &#x662F;&#x4E00;&#x79CD;&#x5F00;&#x6E90;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x5DE5;&#x5177;&#xFF0C;&#x7528;&#x4E8E;&#x5728; Hadoop &#x548C;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#xFF08;RDBMS&#xFF09;&#x6216;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x4E3B;&#x673A;&#x4E4B;&#x95F4;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x7684;&#x5DE5;&#x5177;&#x3002; &#xFF08;<strong>&#x8BE5;&#x6280;&#x672F;&#x5DF2;&#x4E8E;2021&#x5E74;&#x4E0B;&#x534A;&#x5E74;&#x52A0;&#x5165;Apache Attic&#xFF0C;&#x4F46;&#x4ECD;&#x4F1A;&#x53D1;&#x5E03;&#x65B0;&#x7248;&#x672C;&#x548C;&#x4FEE;&#x590D;bug</strong>&#xFF09;<br>Sqoop &#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x4ECE; MySQL &#x6216; Oracle &#x6216;&#x5927;&#x578B;&#x673A;&#x7B49;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF; (RDBMS) &#x5BFC;&#x5165; Hadoop &#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF; (HDFS)&#xFF0C;&#x5728; Hadoop MapReduce &#x4E2D;&#x8F6C;&#x6362;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6570;&#x636E;&#x5BFC;&#x51FA;&#x56DE; RDBMS &#x3002;<br>Sqoop &#x4F7F;&#x7528; MapReduce &#x5BFC;&#x5165;&#x548C;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4F9B;&#x5E76;&#x884C;&#x64CD;&#x4F5C;&#x548C;&#x5BB9;&#x9519;&#x3002;</p>
+<h3 id="&#x7248;&#x672C;&#x63A7;&#x5236;"><a href="#&#x7248;&#x672C;&#x63A7;&#x5236;" class="headerlink" title="&#x7248;&#x672C;&#x63A7;&#x5236;"></a>&#x7248;&#x672C;&#x63A7;&#x5236;</h3><ol>
+<li><p>Sqoop1</p>
+<ul>
+<li>sqoop&#x7248;&#x672C;&#x53F7;&#x4E3A;1.4.x&#x4E3A;sqoop1</li>
+<li>sqoop1&#x5728;&#x8BE5;&#x7248;&#x672C;&#x662F;&#x901A;&#x8FC7;cli&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x8F93;&#x5165;&#x94FE;&#x63A5;&#x53CA;&#x5BC6;&#x7801;&#x540E;&#x76F4;&#x63A5;&#x63D0;&#x4EA4;&#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x76EE;&#x6807;&#x5E93;&#x6216;&#x5B58;&#x50A8;&#x5730;&#x5740;</li>
+<li>sqoop1&#x94FE;&#x63A5;&#x4FE1;&#x606F;&#x5FC5;&#x987B;&#x7B26;&#x5408;jdbc&#x6A21;&#x578B;</li>
+</ul>
+</li>
+<li><p>Sqoop2</p>
+<ul>
+<li>sqoop2&#x7248;&#x672C;&#x53F7;&#x4E3A;1.99.x&#x4E3A;sqoop2</li>
+<li>sqoop2&#x52A0;&#x5165;&#x4E86;server&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4EE5;&#x6B64;&#x53EF;&#x4EE5;&#x6240;&#x6709;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#x96C6;&#x4E2D;&#x7BA1;&#x7406;</li>
+<li>&#x4EA4;&#x4E92;/&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#x66F4;&#x591A;&#x82B1;&#x6837;&#xFF08;API/WEB UI/CLI&#xFF09;<br>Sqoop&#x4E24;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x4EA4;&#x4E92;&#x65B9;&#x5F0F;&#x611F;&#x89C9;&#x5927;&#x76F8;&#x5F84;&#x5EAD;&#xFF0C;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#x4E0A;&#x5BF9;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x66F4;&#x52A0;&#x53CB;&#x597D;&#x4E86;&#xFF0C;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x5E93;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x6A21;&#x578B;&#x95F4;&#x53EF;&#x7075;&#x6D3B;&#x914D;&#x7F6E;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E5F;&#x66F4;&#x591A;&#x4E86;&#xFF08;&#x5BF9;&#x4E8E;&#x8FD0;&#x7EF4;&#x540C;&#x5B66;&#x800C;&#x8A00;&#x914D;&#x7F6E;&#x8D77;&#x6765;&#x76F8;&#x5BF9;&#x53EF;&#x80FD;&#x4F1A;&#x7E41;&#x7410;&#x4E00;&#x4E9B;&#xFF09;</li>
+</ul>
+</li>
+</ol>
+<h3 id="&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;"><a href="#&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;" class="headerlink" title="&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;"></a>&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;</h3><p>&#x672C;&#x6587;&#x6309;&#x7167;Sqoop1&#x7248;&#x672C; <code>v1.4.6</code> &#x7F16;&#x5199;&#x3002;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E5F;&#x5EFA;&#x8BAE;&#x9009;&#x62E9;&#x8BE5;&#x7248;&#x672C;&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x3002;</p>
+<h3 id="&#x517C;&#x5BB9;&#x6570;&#x636E;&#x5E93;"><a href="#&#x517C;&#x5BB9;&#x6570;&#x636E;&#x5E93;" class="headerlink" title="&#x517C;&#x5BB9;&#x6570;&#x636E;&#x5E93;"></a>&#x517C;&#x5BB9;&#x6570;&#x636E;&#x5E93;</h3><p>MySQL&#xFF0C;PostgreSQL&#xFF0C;Oracle&#xFF0C;HSQLDB&#xFF0C;CUBRID&#x7B49;&#x5176;&#x4ED6;jdbc&#x517C;&#x5BB9;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<h4 id="&#x517C;&#x5BB9;&#x6027;&#x8BF4;&#x660E;"><a href="#&#x517C;&#x5BB9;&#x6027;&#x8BF4;&#x660E;" class="headerlink" title="&#x517C;&#x5BB9;&#x6027;&#x8BF4;&#x660E;"></a>&#x517C;&#x5BB9;&#x6027;&#x8BF4;&#x660E;</h4><p><a href="https://sqoop.apache.org/docs/1.4.6/SqoopUserGuide.html#_compatibility_notes" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x517C;&#x5BB9;&#x6027;&#x8BF4;&#x660E;</a></p>
+<h5 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h5><ul>
+<li><p>&#x65F6;&#x95F4;&#x5B57;&#x6BB5;&#x503C;&#x4E3A;<code>0000-00-00\</code>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x8F6C;&#x6362;&#x4E3A;null&#x503C;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x56DB;&#x820D;&#x4E94;&#x5165;&#x53D6;&#x503C;</p>
+<figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">jdbc:mysql:<span class="regexp">//db</span>.example.com/someDb?zeroDateTimeBehavior=round</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>Sqoop &#x76EE;&#x524D;&#x65E0;&#x6CD5;&#x5BFC;&#x5165;&#x5927;&#x4E8E; <strong>2147483647</strong> &#x7684; UNSIGNED &#x503C;&#x3002;</p>
+</li>
+<li>Sqoop &#x7684;&#x76F4;&#x63A5;&#x6A21;&#x5F0F;&#x4E0D;&#x652F;&#x6301;&#x5BFC;&#x5165; <code>BLOB</code>/<code>CLOB</code> &#x6216; <code>LONGVARBINARY</code> &#x5217;&#xFF1B;&#x5BF9;&#x8FD9;&#x4E9B;&#x5217;&#x4F7F;&#x7528;&#x57FA;&#x4E8E; JDBC &#x7684;&#x5BFC;&#x5165;&#x5EFA;&#x8BAE;&#x52A0;&#x4E0A;<code>--inline-lob-limit</code>&#x9650;&#x5236;&#x4E0B;&#xFF1B;&#x5E76;&#x4E14;&#x4E0D;&#x8981;&#x5728;&#x5BFC;&#x5165;&#x5DE5;&#x5177;&#x6DFB;&#x52A0; <code>--direct</code> &#x53C2;&#x6570;&#x3002;</li>
+<li>Sqoop &#x76EE;&#x524D;&#x4E0D;&#x652F;&#x6301;&#x76F4;&#x63A5;&#x6A21;&#x5F0F;&#x4E0B;&#x4ECE;&#x89C6;&#x56FE;&#x5BFC;&#x5165;&#xFF1B;&#x4E0D;&#x8981;&#x5728;&#x5BFC;&#x5165;&#x5DE5;&#x5177;&#x6DFB;&#x52A0; <code>--direct</code> &#x53C2;&#x6570;&#x3002;</li>
+</ul>
+<h5 id="PostgreSQL"><a href="#PostgreSQL" class="headerlink" title="PostgreSQL"></a>PostgreSQL</h5><p>PostgreSQL&#x53EA;&#x6709;8.3+&#x7248;&#x672C;&#x4EE5;&#x4E0A;&#x652F;&#x6301;<code>import</code>&#x547D;&#x4EE4;&#x76F4;&#x8FDE;&#x6A21;&#x5F0F;&#xFF0C;&#x5176;&#x4ED6;&#x6682;&#x4E0D;&#x652F;&#x6301;&#x76F4;&#x8FDE;&#x6A21;&#x5F0F;&#xFF1B;&#x9664;<code>import</code>&#x547D;&#x4EE4;&#x5916;&#x4E0D;&#x8981;&#x5728;&#x5BFC;&#x5165;&#x5DE5;&#x5177;&#x6DFB;&#x52A0; <code>--direct</code> &#x53C2;&#x6570;&#x3002;</p>
+<h5 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a>Hive</h5><ul>
+<li>DATE, TIME, TIMESTAMP &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x5230;Hive&#x91CC;&#x4F1A;&#x88AB;&#x5904;&#x7406;&#x4E3A; String</li>
+<li>NUMERIC, DECIMAL &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x5230;Hive&#x91CC;&#x4F1A;&#x88AB;&#x5904;&#x7406;&#x4E3A; DOUBLE</li>
+<li><p>tinyInt&#x9ED8;&#x8BA4;&#x8F6C;&#x6362;boolean&#x540E;&#x4E3A;&#x7A7A;&#xFF0C;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x5728;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;&#x540E;&#x914D;&#x7F6E;tinyInt1isBit=false</p>
+<figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">jdbc:mysql:<span class="regexp">//db</span>.example.com/someDb?tinyInt1isBit=false</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ul>
+<h3 id="&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"><a href="#&#x8BED;&#x6CD5;&#x7ED3;&#x6784;" class="headerlink" title="&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"></a>&#x8BED;&#x6CD5;&#x7ED3;&#x6784;</h3><h4 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"><a href="#&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;" class="headerlink" title="&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"></a>&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;</h4><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">$ sqoop help</span><br><span class="line">&#x7528;&#x6CD5;: sqoop COMMAND [ARGS]</span><br><span class="line"></span><br><span class="line">&#x53EF;&#x7528;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#xFF08;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#xFF09;:</span><br><span class="line">  codegen            &#x751F;&#x6210;&#x4EE3;&#x7801;&#x4EE5;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x8BB0;&#x5F55;&#x4EA4;&#x4E92;</span><br><span class="line">  create-hive-table  &#x5C06;&#x8868;&#x5B9A;&#x4E49;&#x5BFC;&#x5165; Hive</span><br><span class="line">  <span class="keyword">eval</span>               &#x8BC4;&#x4F30; SQL &#x8BED;&#x53E5;&#x5E76;&#x663E;&#x793A;&#x7ED3;&#x679C; [&#x5E38;&#x7528;]</span><br><span class="line">  export             &#x5C06; HDFS &#x76EE;&#x5F55;&#x5BFC;&#x51FA;&#x5230;&#x6570;&#x636E;&#x5E93;&#x8868; [&#x5E38;&#x7528;]</span><br><span class="line">  help               &#x5217;&#x51FA;&#x53EF;&#x7528;&#x547D;&#x4EE4;</span><br><span class="line">  import             &#x5C06;&#x8868;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x5BFC;&#x5165; HDFS [&#x5E38;&#x7528;]</span><br><span class="line">  import-all-tables  &#x5C06;&#x591A;&#x5F20;&#x8868;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x5BFC;&#x5165; HDFS,&#x53EF;&#x4EE5;&#x6574;&#x5E93;&#x7684;import</span><br><span class="line">  import-mainframe   &#x5C06;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#x4E3B;&#x673A;&#x6570;&#x636E;&#x96C6;&#x5BFC;&#x5165; HDFS</span><br><span class="line">  list-databases     &#x5217;&#x51FA;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x53EF;&#x7528;&#x6570;&#x636E;&#x5E93; [&#x5E38;&#x7528;]</span><br><span class="line">  list-tables        &#x5217;&#x51FA;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x53EF;&#x7528;&#x8868; [&#x5E38;&#x7528;]</span><br><span class="line">  version            &#x663E;&#x793A;&#x7248;&#x672C;&#x4FE1;&#x606F;</span><br><span class="line"></span><br><span class="line">&#x6709;&#x5173;&#x7279;&#x5B9A;&#x547D;&#x4EE4;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1;&#x201C;sqoop help COMMAND&#x201D;&#x3002;</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li><code>eval</code> &#x5E38;&#x7528;&#x6765;&#x505A;&#x8FDE;&#x63A5;&#x6D4B;&#x8BD5;&#x6216;&#x7B80;&#x5355;&#x7684;&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;</li>
+<li><code>export</code> Sqoop&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x4E4B;&#x4E00;&#xFF0C;&#x4ECE;hadoop&#x5BFC;&#x51FA;&#x6570;&#x636E;</li>
+<li><code>import</code> Sqoop&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x4E4B;&#x4E00;&#xFF0C;&#x4ECE;hadoop&#x5BFC;&#x5165;&#x6570;&#x636E;</li>
+<li><code>list-databases</code> &#x5185;&#x7F6E;&#x4E86;<code>show databases</code>&#x8BED;&#x53E5;</li>
+<li><code>list-tables</code> &#x5185;&#x7F6E;&#x4E86;<code>show tables</code>&#x8BED;&#x53E5;</li>
+</ul>
+<h4 id="&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"><a href="#&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;" class="headerlink" title="&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"></a>&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;</h4><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">$ sqoop import</span><br><span class="line">$ sqoop-import</span><br><span class="line"></span><br><span class="line">&#x7528;&#x6CD5;: sqoop import [GENERIC-ARGS] [TOOL-ARGS] &#x6216;&#x8005;sqoop-import [GENERIC-ARGS] [TOOL-ARGS]</span><br><span class="line"></span><br><span class="line">&#x5E38;&#x89C1;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#xFF08;&#x5DE5;&#x5177;&#x547D;&#x4EE4;&#xFF09;:</span><br><span class="line">   --<span class="keyword">connect</span> &lt;jdbc-uri&gt;               &#x6307;&#x5B9A; JDBC &#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;</span><br><span class="line">   --<span class="keyword">connect</span>-manager &lt;class-name&gt;     &#x6307;&#x5B9A;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x8FDE;&#x63A5;&#x7BA1;&#x7406;&#x5668;&#x7C7B;</span><br><span class="line">   --driver &lt;class-name&gt;              &#x624B;&#x52A8;&#x6307;&#x5B9A;&#x8981;&#x4F7F;&#x7528;&#x7684; JDBC &#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x7C7B;</span><br><span class="line">   --hadoop-mapred-home &lt;dir&gt;         &#x8986;&#x76D6; $HADOOP_MAPRED_HOME</span><br><span class="line">   --help                             &#x6253;&#x5370;&#x4F7F;&#x7528;&#x8BF4;&#x660E;</span><br><span class="line">   --password-file                    &#x8BBE;&#x7F6E;&#x5305;&#x542B;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x5BC6;&#x7801;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;</span><br><span class="line">   -P                                 &#x4ECE;&#x63A7;&#x5236;&#x53F0;&#x8BFB;&#x53D6;&#x5BC6;&#x7801;</span><br><span class="line">   --password &lt;password&gt;              &#x8BBE;&#x7F6E;&#x8BA4;&#x8BC1;&#x5BC6;&#x7801;</span><br><span class="line">   --username &lt;username&gt;              &#x8BBE;&#x7F6E;&#x8BA4;&#x8BC1;&#x7528;&#x6237;&#x540D;</span><br><span class="line">   --verbose                          &#x5DE5;&#x4F5C;&#x65F6;&#x6253;&#x5370;&#x66F4;&#x591A;&#x4FE1;&#x606F;</span><br><span class="line">   --hadoop-home &lt;dir&gt;                &#x5DF2;&#x5F03;&#x7528;&#x3002;&#x8986;&#x76D6; $HADOOP_HOME</span><br><span class="line"></span><br><span class="line">&#x5E38;&#x89C1;&#x5BFC;&#x5165;&#x63A7;&#x5236;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#xFF08;&#x5DE5;&#x5177;&#x547D;&#x4EE4;&#xFF09;:</span><br><span class="line">   --append                           &#x5C06;&#x6570;&#x636E;&#x8FFD;&#x52A0;&#x5230; HDFS &#x4E2D;&#x7684;&#x73B0;&#x6709;&#x6570;&#x636E;&#x96C6;</span><br><span class="line">   --as-sequencefile                  import&#x5E8F;&#x5217;&#x5316;&#x7684;&#x6587;&#x4EF6;</span><br><span class="line">   --as-textfile                      import plain&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;textfile</span><br><span class="line">   --columns &lt;col,col,col&#x2026;&gt;           &#x6307;&#x5B9A;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x7684;&#x5217;&#x540D;&#xFF0C;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF1B;&#x6BD4;&#x5982;&#xFF1A;--columns <span class="string">&quot;id,name&quot;</span></span><br><span class="line">   --<span class="keyword">delete</span>-target-dir                &#x5220;&#x9664;&#x5B58;&#x5728;&#x7684;import&#x76EE;&#x6807;&#x76EE;&#x5F55;</span><br><span class="line">   --direct                           &#x76F4;&#x8FDE;&#x6A21;&#x5F0F;&#xFF0C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;&#xFF08;HBase&#x4E0D;&#x652F;&#x6301;&#xFF09;</span><br><span class="line">   --fetch-size &lt;n&gt;                   &#x4E00;&#x6B21;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x8BFB;&#x53D6; n &#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x5373;n&#x6761;&#x6570;&#x636E;&#xFF1B;&#x9ED8;&#x8BA4;&#x662F;<span class="number">5000</span></span><br><span class="line">   -<span class="keyword">m</span>,--num-mappers &lt;n&gt;               &#x5EFA;&#x7ACB; n &#x4E2A;&#x5E76;&#x53D1;&#x6267;&#x884C;task import&#xFF1B;&#x9ED8;&#x8BA4;&#x662F;<span class="number">4</span>&#x4E2A;</span><br><span class="line">   -e,--query &lt;statement&gt;             &#x6784;&#x5EFA;&#x8868;&#x8FBE;&#x5F0F;&lt;statement&gt;&#x6267;&#x884C;&#xFF1B;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x5BFC;&#x5165;</span><br><span class="line">   --<span class="keyword">split</span>-by &lt;column-name&gt;           &#x6839;&#x636E;column&#x5206;&#x9694;&#x5B9E;&#x4F8B;</span><br><span class="line">   --autoreset-to-one-mappe           &#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E3B;&#x952E;&#x548C;<span class="keyword">split</span>-by &#x7528;one mapper import &#xFF08;<span class="keyword">split</span>-by &#x548C;&#x6B64;&#x9009;&#x9879;&#x4E0D;&#x5171;&#x5B58;&#xFF09;</span><br><span class="line">   --table &lt;table-name&gt;               &#x6307;&#x5B9A;&#x8868;&#x540D;import</span><br><span class="line">   --target-dir &lt;d&gt;                   HDFS &#x76EE;&#x6807;&#x76EE;&#x5F55;</span><br><span class="line">   --warehouse-dir &lt;d&gt;                HDFS &#x8868;&#x76EE;&#x6807;&#x7684;&#x7236;&#x7EA7;</span><br><span class="line">   --where &lt;where clause&gt;             &#x6307;&#x5B9A;where&#x4ECE;&#x53E5;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x53CC;&#x5F15;&#x53F7;&#xFF0C;&#x6CE8;&#x610F;&#x8F6C;&#x4E49;&#xFF1B;&#x4E0D;&#x80FD;&#x7528;<span class="keyword">or</span>&#xFF0C;&#x5B50;&#x67E5;&#x8BE2;&#xFF0C;<span class="keyword">join</span></span><br><span class="line">   -z,--compress                      &#x5F00;&#x542F;&#x538B;&#x7F29;</span><br><span class="line">   --null-string &lt;null-string&gt;        string&#x5217;&#x4E3A;&#x7A7A;&#x6307;&#x5B9A;&#x4E3A;&#x6B64;&#x503C;&#xFF1B;&#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F1A;&#x6307;&#x5B9A;&#x4E3A;<span class="string">&quot;null&quot;</span></span><br><span class="line">   --null-non-string &lt;null-string&gt;    &#x975E;string&#x5217;&#x4E3A;&#x7A7A;&#x6307;&#x5B9A;&#x4E3A;&#x6B64;&#x503C;&#xFF1B; &#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F1A;&#x6307;&#x5B9A;&#x4E3A;<span class="string">&quot;null&quot;</span></span><br><span class="line"></span><br><span class="line">[...]</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x5BFC;&#x5165;&#x53C2;&#x6570;&#x5E38;&#x7528;&#x7684;&#x5C31;&#x662F;&#x4EE5;&#x4E0A;&#x8FD9;&#x90E8;&#x5206;&#xFF0C;<a href="#&#x5BFC;&#x5165;&#x6837;&#x4F8B;">&#x5BFC;&#x5165;&#x6837;&#x4F8B;</a></p>
+<p>&#xA0;</p>
+<h4 id="&#x5BFC;&#x51FA;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"><a href="#&#x5BFC;&#x51FA;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;" class="headerlink" title="&#x5BFC;&#x51FA;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;"></a>&#x5BFC;&#x51FA;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;</h4><p><a href="#&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;">&#x5E38;&#x89C1;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#x540C;&#x5BFC;&#x5165;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;</a></p>
+<figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">$ sqoop export (generic-args) (export-args)</span><br><span class="line">$ sqoop-export (generic-args) (export-args)</span><br><span class="line"></span><br><span class="line">&#x7528;&#x6CD5;: sqoop export [GENERIC-ARGS] [TOOL-ARGS] &#x6216;&#x8005;sqoop-export [GENERIC-ARGS] [TOOL-ARGS]</span><br><span class="line"></span><br><span class="line">&#x5E38;&#x89C1;&#x5BFC;&#x5165;&#x63A7;&#x5236;&#x547D;&#x4EE4;&#x53C2;&#x6570;&#xFF08;&#x5DE5;&#x5177;&#x547D;&#x4EE4;&#xFF09;:</span><br><span class="line">--columns &lt;col,col,col&#x2026;&gt;               &#x8981;&#x5BFC;&#x51FA;&#x5230;&#x8868;&#x7684;&#x5217;&#x540D;&#xFF0C;&#x9017;&#x53F7;&#x5206;&#x9694;</span><br><span class="line">--direct                               &#x76F4;&#x8FDE;&#x6A21;&#x5F0F;</span><br><span class="line">--export-dir &lt;dir&gt;                     &#x5BFC;&#x51FA;&#x7684; HDFS &#x6E90;&#x8DEF;&#x5F84;</span><br><span class="line">-<span class="keyword">m</span>,--num-mappers &lt;n&gt;                   &#x4F7F;&#x7528;n&#x4E2A;<span class="keyword">map</span>&#x4EFB;&#x52A1;&#x5E76;&#x884C;&#x5BFC;&#x51FA;</span><br><span class="line">--table &lt;table-name&gt;                   &#x8981;&#x586B;&#x5145;&#x7684;&#x8868;</span><br><span class="line">--call &lt;stored-proc-name&gt;              &#x8981;&#x8C03;&#x7528;&#x7684;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;</span><br><span class="line">--update-key &lt;col-name&gt;                &#x7528;&#x4E8E;&#x66F4;&#x65B0;&#x7684;&#x951A;&#x5217;;&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x5217;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x5217;&#x5217;&#x8868;&#x3002;</span><br><span class="line">--update-mode &lt;mode&gt;                   &#x6307;&#x5B9A;&#x5F53;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x627E;&#x5230;&#x5177;&#x6709;&#x4E0D;&#x5339;&#x914D;&#x952E;&#x7684;&#x65B0;&#x884C;&#x65F6;&#x5982;&#x4F55;&#x6267;&#x884C;&#x66F4;&#x65B0;&#x3002;&#x6A21;&#x5F0F;&#x7684;&#x5408;&#x6CD5;&#x503C;&#x5305;&#x62EC; updateonly&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;&#x548C; allowinsert&#x3002;</span><br><span class="line">--input-null-string &lt;null-string&gt;      &#x5B57;&#x7B26;&#x4E32;&#x5217;&#x88AB;&#x89E3;&#x91CA;&#x4E3A; null &#x7684;&#x5B57;&#x7B26;&#x4E32;</span><br><span class="line">--input-null-non-string &lt;null-string&gt;  &#x5BF9;&#x4E8E;&#x975E;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#xFF0C;&#x8981;&#x89E3;&#x91CA;&#x4E3A; null &#x7684;&#x5B57;&#x7B26;&#x4E32;</span><br><span class="line">--staging-table &lt;staging-table-name&gt;   &#x5728;&#x5C06;&#x6570;&#x636E;&#x63D2;&#x5165;&#x76EE;&#x6807;&#x8868;&#x4E4B;&#x524D;&#x5C06;&#x5728;&#x5176;&#x4E2D;&#x6682;&#x5B58;&#x6570;&#x636E;&#x7684;&#x8868;&#x3002;</span><br><span class="line">--clear-staging-table                  &#x8868;&#x793A;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x4E34;&#x65F6;&#x8868;&#x4E2D;&#x5B58;&#x5728;&#x7684;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x3002;</span><br><span class="line">--batch                                &#x4F7F;&#x7528;&#x6279;&#x5904;&#x7406;&#x6A21;&#x5F0F;&#x6267;&#x884C;&#x57FA;&#x7840;&#x8BED;&#x53E5;&#x3002;</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x5BFC;&#x51FA;&#x53C2;&#x6570;&#x5E38;&#x7528;&#x7684;&#x5C31;&#x662F;&#x4EE5;&#x4E0A;&#x8FD9;&#x90E8;&#x5206;&#xFF0C;<a href="#&#x5BFC;&#x51FA;&#x6837;&#x4F8B;">&#x5BFC;&#x51FA;&#x6837;&#x4F8B;</a></p>
+<p>&#xA0;</p>
+<h3 id="&#x5E38;&#x7528;&#x6570;&#x636E;&#x6A21;&#x578B;&#x8F6C;&#x6362;"><a href="#&#x5E38;&#x7528;&#x6570;&#x636E;&#x6A21;&#x578B;&#x8F6C;&#x6362;" class="headerlink" title="&#x5E38;&#x7528;&#x6570;&#x636E;&#x6A21;&#x578B;&#x8F6C;&#x6362;"></a>&#x5E38;&#x7528;&#x6570;&#x636E;&#x6A21;&#x578B;&#x8F6C;&#x6362;</h3><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">--<span class="keyword">map</span>-column-hive col2=String,col3=String <span class="comment"># &#x5BFC;&#x5165;&#x5217;&#x7C7B;&#x578B;&#x6620;&#x5C04;hive&#x7C7B;&#x578B;&#xFF0C;&#x901A;&#x7528;&#x8F6C;&#x6362;&#xFF0C;&#x6570;&#x7EC4;&#x6216;&#x8005;json&#x8F6C;string&#x540E;&#x5BFC;&#x5165;hive</span></span><br><span class="line">--<span class="keyword">map</span>-column-java col2=String,col3=String <span class="comment"># &#x5BFC;&#x5165;&#x5217;&#x7C7B;&#x578B;&#x6620;&#x5C04;java&#x7C7B;&#x578B;&#xFF0C;&#x901A;&#x7528;&#x8F6C;&#x6362;&#xFF0C;&#x6570;&#x7EC4;&#x6216;&#x8005;json&#x8F6C;string&#x540E;&#x5BFC;&#x5165;hive</span></span><br><span class="line">--<span class="keyword">map</span>-column-hive col1=<span class="string">&apos;DECIMAL(10%2C2)&apos;</span> <span class="comment"># Decimal&#x7CBE;&#x5EA6;&#x4E22;&#x5931;&#x95EE;&#x9898;&#x914D;&#x7F6E;hive&#x7CBE;&#x5EA6;&#x8F6C;&#x6362;&#xFF08;hive&#x662F;double&#xFF09;</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="&#x5E38;&#x7528;&#x6837;&#x4F8B;"><a href="#&#x5E38;&#x7528;&#x6837;&#x4F8B;" class="headerlink" title="&#x5E38;&#x7528;&#x6837;&#x4F8B;"></a>&#x5E38;&#x7528;&#x6837;&#x4F8B;</h3><h4 id="&#x5BFC;&#x5165;&#x6837;&#x4F8B;"><a href="#&#x5BFC;&#x5165;&#x6837;&#x4F8B;" class="headerlink" title="&#x5BFC;&#x5165;&#x6837;&#x4F8B;"></a>&#x5BFC;&#x5165;&#x6837;&#x4F8B;</h4><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">sqoop import \</span><br><span class="line">-D mapred.job.queue.name=hap.testqueue \</span><br><span class="line">--<span class="keyword">connect</span> <span class="string">&quot;jdbc:postgresql://10.101.66.10:3601/testdb?currentSchema=public&quot;</span> \</span><br><span class="line">--username admin \</span><br><span class="line">--password admin@1 \</span><br><span class="line">--table test_tab \</span><br><span class="line">--columns <span class="string">&quot;col1,col2,col3&quot;</span> \</span><br><span class="line">--where <span class="string">&quot;increment_date=&apos;<span class="subst">${increment_date}</span>&apos;&quot;</span> \</span><br><span class="line">-<span class="keyword">m</span> <span class="number">3</span> \</span><br><span class="line">--fields-terminated-by <span class="string">&quot;\001&quot;</span> \</span><br><span class="line">--lines-terminated-by <span class="string">&quot;\n&quot;</span> \</span><br><span class="line">--<span class="keyword">delete</span>-target-dir \</span><br><span class="line">--null-string <span class="string">&apos;\\N&apos;</span>  \ <span class="comment"># NULL&#x5B57;&#x7B26;&#x8F6C;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span></span><br><span class="line">--null-non-string <span class="string">&apos;\\N&apos;</span> \ <span class="comment"># &#x975E;String&#x7C7B;&#x578B;&#x7A7A;&#x503C;&#x8F6C;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span></span><br><span class="line">--out-dir <span class="string">&quot;<span class="subst">${home}</span>/.sqoop/&quot;</span> \ <span class="comment"># &#x914D;&#x7F6E;java&#x7F16;&#x8BD1;&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x76EE;&#x5F55;</span></span><br><span class="line">--hive-delims-replacement <span class="string">&quot;&quot;</span> \</span><br><span class="line">--<span class="keyword">map</span>-column-java col1=String,col2=String \ <span class="comment"># &#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</span></span><br><span class="line">--<span class="keyword">map</span>-column-hive col1=String,col2=String \ <span class="comment"># &#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</span></span><br><span class="line">--target-dir /DATA/TMP/test_tab_hive/date=${increment_date}</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="&#x5BFC;&#x51FA;&#x6837;&#x4F8B;"><a href="#&#x5BFC;&#x51FA;&#x6837;&#x4F8B;" class="headerlink" title="&#x5BFC;&#x51FA;&#x6837;&#x4F8B;"></a>&#x5BFC;&#x51FA;&#x6837;&#x4F8B;</h4><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">sqoop export \</span><br><span class="line">-D mapred.job.queue.name=hap.testqueue \</span><br><span class="line">--<span class="keyword">connect</span> <span class="string">&quot;jdbc:postgresql://10.101.66.10:3601/testdb?currentSchema=public&quot;</span> \</span><br><span class="line">--username admin \</span><br><span class="line">--password admin@1 \</span><br><span class="line">--table test_tab \</span><br><span class="line">--hcatalog-database tmp \</span><br><span class="line">--hcatalog-table test_tab_hive \</span><br><span class="line">--hcatalog-partition-<span class="keyword">keys</span> date \</span><br><span class="line">--hcatalog-partition-<span class="keyword">values</span> ${date} \</span><br><span class="line">--columns <span class="string">&quot;col1,col2,col3&quot;</span> \</span><br><span class="line">--batch \</span><br><span class="line">--num-mappers <span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <tags>
+        <tag>Hive</tag>
+        <tag>Hadoop</tag>
+        <tag>大数据</tag>
+        <tag>数仓</tag>
+        <tag>Sqoop</tag>
       </tags>
   </entry>
   <entry>
