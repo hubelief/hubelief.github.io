@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hive窗口分析函数</title>
-    <url>/Hive%E7%AA%97%E5%8F%A3%E5%88%86%E6%9E%90%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h3 id="&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;"><a href="#&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;" class="headerlink" title="&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;"></a>&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;</h3><ul>
-<li>Aggregate Functions: &#x805A;&#x5408;&#x51FD;&#x6570;,&#x6BD4;&#x5982;&#xFF1A;sum(&#x2026;)&#x3001; max(&#x2026;)&#x3001;min(&#x2026;)&#x3001;avg(&#x2026;)&#x7B49;</li>
-<li>Sort Functions: &#x6570;&#x636E;&#x6392;&#x5E8F;&#x51FD;&#x6570;, &#x6BD4;&#x5982; &#xFF1A;rank(&#x2026;)&#x3001;row_number(&#x2026;)&#x7B49;</li>
-<li>Analytics Functions: &#x7EDF;&#x8BA1;&#x548C;&#x6BD4;&#x8F83;&#x51FD;&#x6570;, &#x6BD4;&#x5982;&#xFF1A;lead(&#x2026;)&#x3001;lag(&#x2026;)&#x3001; first_value(&#x2026;)&#x7B49;</li>
-</ul>
-<h4 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><a href="#&#x57FA;&#x672C;&#x8BED;&#x6CD5;" class="headerlink" title="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"></a>&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h4><figure class="highlight"><table><tbody><tr><td class="code"><pre><span class="line">Function (arg1,..., argn) OVER ([PARTITION BY &lt;...&gt;] [ORDER BY &lt;....&gt;]</span><br><span class="line">[&lt;window_expression&gt;])</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x6301;&#x7EED;&#x66F4;&#x65B0;&#x4E2D;&#x2026;..</p>
-<h3 id="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"><a href="#&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;" class="headerlink" title="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"></a>&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;</h3><p><a href="https://cwiki.apache.org/confluence/display/Hive/Enhanced+Aggregation%2C+Cube%2C+Grouping+and+Rollup" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x5730;&#x5740;</a></p>
-<h3 id="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"><a href="#&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;" class="headerlink" title="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"></a>&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</h3><p><a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x5730;&#x5740;</a><br><!-- [https://blog.csdn.net/weixin_40267121/article/details/119650606] --></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <tags>
-        <tag>Hive</tag>
-        <tag>Hadoop</tag>
-        <tag>Spark</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Excel VBA 生成目录列表</title>
     <url>/Excel%20VBA%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95%E5%88%97%E8%A1%A8/</url>
     <content><![CDATA[<h3 id="&#x4E00;&#x952E;&#x751F;&#x6210;&#x5E26;&#x951A;&#x70B9;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;"><a href="#&#x4E00;&#x952E;&#x751F;&#x6210;&#x5E26;&#x951A;&#x70B9;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;" class="headerlink" title="&#x4E00;&#x952E;&#x751F;&#x6210;&#x5E26;&#x951A;&#x70B9;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;"></a>&#x4E00;&#x952E;&#x751F;&#x6210;&#x5E26;&#x951A;&#x70B9;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">Excel&#x751F;&#x6210;&#x76EE;&#x5F55;VBA</span><br><span class="line">Sub dic()</span><br><span class="line">    On Error GoTo back_out</span><br><span class="line">    Dim i As Integer</span><br><span class="line">    Dim ShtCount As Integer</span><br><span class="line">    Dim SelectionCell As Range</span><br><span class="line"></span><br><span class="line">    ShtCount = Worksheets.Count</span><br><span class="line">    If ShtCount = 0 Or ShtCount = 1 Then Exit Sub</span><br><span class="line">    Application.ScreenUpdating = False</span><br><span class="line">    For i = 1 To ShtCount</span><br><span class="line">        If Sheets(i).Name = &quot;&#x76EE;&#x5F55;&quot; Then</span><br><span class="line">            Sheets(&quot;&#x76EE;&#x5F55;&quot;).Move Before:=Sheets(1)</span><br><span class="line">        End If</span><br><span class="line">    Next i</span><br><span class="line">    If Sheets(1).Name &lt;&gt; &quot;&#x76EE;&#x5F55;&quot; Then</span><br><span class="line">        ShtCount = ShtCount + 1</span><br><span class="line">        Sheets(1).Select</span><br><span class="line">        Sheets.Add</span><br><span class="line">        Sheets(1).Name = &quot;&#x76EE;&#x5F55;&quot;</span><br><span class="line">    End If</span><br><span class="line">    Sheets(&quot;&#x76EE;&#x5F55;&quot;).Select</span><br><span class="line">    Columns(&quot;B:B&quot;).Delete Shift:=xlToLeft</span><br><span class="line">    Application.StatusBar = &quot;&#x6B63;&#x5728;&#x751F;&#x6210;&#x76EE;&#x5F55;&#x2026;&#x2026;&#x2026;&#x2026;&#x8BF7;&#x7B49;&#x5F85;&#xFF01;&quot;</span><br><span class="line">    For i = 2 To ShtCount</span><br><span class="line">        ActiveSheet.Hyperlinks.Add Anchor:=Worksheets(&quot;&#x76EE;&#x5F55;&quot;).Cells(i, 2), Address:=&quot;&quot;, SubAddress:= _</span><br><span class="line">            &quot;&apos;&quot; &amp; Sheets(i).Name &amp; &quot;&apos;!R1C1&quot;, TextToDisplay:=Sheets(i).Name</span><br><span class="line">    Next</span><br><span class="line">    Sheets(&quot;&#x76EE;&#x5F55;&quot;).Select</span><br><span class="line">    Columns(&quot;B:B&quot;).AutoFit</span><br><span class="line">    Cells(1, 2) = &quot;&#x76EE;&#x5F55;&quot;</span><br><span class="line">    Set SelectionCell = Worksheets(&quot;&#x76EE;&#x5F55;&quot;).Range(&quot;B1&quot;)</span><br><span class="line">    With SelectionCell</span><br><span class="line">        .HorizontalAlignment = xlDistributed</span><br><span class="line">        .VerticalAlignment = xlCenter</span><br><span class="line">        .AddIndent = True</span><br><span class="line">        .Font.Bold = True</span><br><span class="line">        .Interior.ColorIndex = 34</span><br><span class="line">    End With</span><br><span class="line">    Application.StatusBar = False</span><br><span class="line">    Application.ScreenUpdating = True</span><br><span class="line">back_out:</span><br><span class="line">End Sub</span><br></pre></td></tr></tbody></table></figure>
@@ -146,11 +109,11 @@
           });
       </script>]]></content>
       <tags>
-        <tag>Hive</tag>
-        <tag>Hadoop</tag>
-        <tag>Spark</tag>
         <tag>大数据</tag>
         <tag>数仓</tag>
+        <tag>Hadoop</tag>
+        <tag>Hive</tag>
+        <tag>Spark</tag>
       </tags>
   </entry>
   <entry>
@@ -531,6 +494,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read.">
+    <label for="pass">Please enter the password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css"><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <tags>
+        <tag>HelloWorld</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>常用正则表达式</title>
     <url>/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
     <content><![CDATA[<ol>
@@ -581,44 +582,6 @@
       <tags>
         <tag>Regex</tag>
         <tag>正则表达式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read.">
-    <label for="pass">Please enter the password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-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
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css"><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <tags>
-        <tag>HelloWorld</tag>
       </tags>
   </entry>
   <entry>
@@ -810,6 +773,141 @@ U2FsdGVkX1+1ayQxzUUJIEUiNOR02BT+IoBbUbd36hLvyW3el4gpj2pONvxdMBsgccq0TnIKR3PsSy0w
         <tag>Azkaban</tag>
         <tag>Workflow Manager</tag>
         <tag>Cron</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hive窗口分析函数</title>
+    <url>/Hive%E7%AA%97%E5%8F%A3%E5%88%86%E6%9E%90%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h3 id="&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;"><a href="#&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;" class="headerlink" title="&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;"></a>&#x5E38;&#x89C1;&#x5206;&#x6790;&#x51FD;&#x6570;</h3><ul>
+<li>Aggregate Functions: &#x805A;&#x5408;&#x51FD;&#x6570;,&#x6BD4;&#x5982;&#xFF1A;sum(&#x2026;)&#x3001; max(&#x2026;)&#x3001;min(&#x2026;)&#x3001;avg(&#x2026;)&#x7B49;</li>
+<li>Sort Functions: &#x6570;&#x636E;&#x6392;&#x5E8F;&#x51FD;&#x6570;, &#x6BD4;&#x5982; &#xFF1A;rank(&#x2026;)&#x3001;row_number(&#x2026;)&#x3001;dense_rank(&#x2026;)&#x7B49;</li>
+<li>Analytics Functions: &#x7EDF;&#x8BA1;&#x548C;&#x6BD4;&#x8F83;&#x51FD;&#x6570;, &#x6BD4;&#x5982;&#xFF1A;lead(&#x2026;)&#x3001;lag(&#x2026;)&#x3001; first_value(&#x2026;)&#x7B49;</li>
+</ul>
+<h3 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><a href="#&#x57FA;&#x672C;&#x8BED;&#x6CD5;" class="headerlink" title="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"></a>&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h3><figure class="highlight"><table><tbody><tr><td class="code"><pre><span class="line">Function (arg1,..., argn) OVER ([PARTITION BY &lt;...&gt;] [ORDER BY &lt;....&gt;]</span><br><span class="line">[&lt;window_expression&gt;])</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="&#x805A;&#x5408;&#x51FD;&#x6570;"><a href="#&#x805A;&#x5408;&#x51FD;&#x6570;" class="headerlink" title="&#x805A;&#x5408;&#x51FD;&#x6570;"></a>&#x805A;&#x5408;&#x51FD;&#x6570;</h3><ul>
+<li>&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x6E20;&#x9053;&#x8BA2;&#x5355;&#x6B63;&#x9000;&#x6838;&#x51CF;&#x540E;&#x7684;&#x8BA2;&#x5355;&#x6570;</li>
+</ul>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> channel,<span class="keyword">sum</span>(order_num) <span class="keyword">as</span> order_num</span><br><span class="line"><span class="keyword">from</span> (</span><br><span class="line">    <span class="keyword">select</span> channel,memberNO,<span class="keyword">if</span>(<span class="keyword">sum</span>(price) <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> memberNO)&gt;<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>) <span class="keyword">as</span> order_num</span><br><span class="line">    <span class="keyword">from</span> <span class="keyword">order</span></span><br><span class="line">) <span class="keyword">ord</span> </span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> channel</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x4EBA;&#x591A;&#x4E2A;&#x624B;&#x673A;&#x53F7;&#x60C5;&#x51B5;&#x4E0B;&#x6700;&#x65E9;&#x7684;&#x52A0;&#x5165;&#x65F6;&#x95F4;</li>
+</ul>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> channel,memberNO,mobile,<span class="keyword">min</span>(join_date) <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> mobile) <span class="keyword">as</span> max_join_date</span><br><span class="line"><span class="keyword">from</span> <span class="keyword">member</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="&#x6570;&#x636E;&#x6392;&#x5E8F;&#x51FD;&#x6570;"><a href="#&#x6570;&#x636E;&#x6392;&#x5E8F;&#x51FD;&#x6570;" class="headerlink" title="&#x6570;&#x636E;&#x6392;&#x5E8F;&#x51FD;&#x6570;"></a>&#x6570;&#x636E;&#x6392;&#x5E8F;&#x51FD;&#x6570;</h3><hr>
+<p>&#x7A97;&#x53E3;&#x6392;&#x5E8F;&#x51FD;&#x6570;&#x63D0;&#x4F9B;&#x4E86;&#x6570;&#x636E;&#x7684;&#x6392;&#x5E8F;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&#x884C;&#x53F7;&#x548C;&#x6392;&#x540D;&#x3002;&#x5728;&#x4E00;&#x4E2A;&#x5206;&#x7EC4;&#x7684;&#x5185;&#x90E8;&#x5C06;&#x884C;&#x53F7;&#x6216;&#x8005;&#x6392;&#x540D;&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x8FDB;&#x884C;&#x8FD4;&#x56DE;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x6392;&#x5E8F;&#x51FD;&#x6570;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li><p>row_number&#xFF1A;&#x6839;&#x636E;&#x5177;&#x4F53;&#x7684;&#x5206;&#x7EC4;&#x548C;&#x6392;&#x5E8F;&#xFF0C;&#x4E3A;&#x6BCF;&#x884C;&#x6570;&#x636E;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x8D77;&#x59CB;&#x503C;&#x7B49;&#x4E8E;1&#x7684;&#x552F;&#x4E00;&#x5E8F;&#x5217;&#x6570;</p>
+</li>
+<li><p>rank&#xFF1A;&#x5BF9;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6392;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x540D;&#x6B21;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x6392;&#x540D;&#x4E5F;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x4E0B;&#x4E00;&#x4E2A;&#x540D;&#x6B21;&#x7684;&#x6392;&#x540D;&#x5E8F;&#x53F7;&#x4F1A;&#x51FA;&#x73B0;&#x4E0D;&#x8FDE;&#x7EED;&#x3002;&#x6BD4;&#x5982;&#x67E5;&#x627E;&#x5177;&#x4F53;&#x6761;&#x4EF6;&#x7684;topN&#x884C;</p>
+</li>
+<li><p>dense_rank&#xFF1A;dense_rank&#x51FD;&#x6570;&#x7684;&#x529F;&#x80FD;&#x4E0E;rank&#x51FD;&#x6570;&#x7C7B;&#x4F3C;&#xFF0C;dense_rank&#x51FD;&#x6570;&#x5728;&#x751F;&#x6210;&#x5E8F;&#x53F7;&#x65F6;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#xFF0C;&#x800C;rank&#x51FD;&#x6570;&#x751F;&#x6210;&#x7684;&#x5E8F;&#x53F7;&#x6709;&#x53EF;&#x80FD;&#x4E0D;&#x8FDE;&#x7EED;&#x3002;&#x5F53;&#x51FA;&#x73B0;&#x540D;&#x6B21;&#x76F8;&#x540C;&#x65F6;&#xFF0C;&#x5219;&#x6392;&#x540D;&#x5E8F;&#x53F7;&#x4E5F;&#x76F8;&#x540C;&#x3002;&#x800C;&#x4E0B;&#x4E00;&#x4E2A;&#x6392;&#x540D;&#x7684;&#x5E8F;&#x53F7;&#x4E0E;&#x4E0A;&#x4E00;&#x4E2A;&#x6392;&#x540D;&#x5E8F;&#x53F7;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#x3002;</p>
+</li>
+<li><p>percent_rank&#xFF1A;&#x6392;&#x540D;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x4E3A;&#xFF1A;(current rank - 1)/(total number of rows - 1)</p>
+</li>
+<li><p>ntile&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5212;&#x5206;&#x4E3A;&#x591A;&#x4E2A;&#x6876;(bucket)&#xFF0C;&#x5E76;&#x4E3A;&#x6BCF;&#x884C;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x9002;&#x5F53;&#x7684;&#x6876;&#x6570;&#x3002;&#x5B83;&#x53EF;&#x7528;&#x4E8E;&#x5C06;&#x6570;&#x636E;&#x5212;&#x5206;&#x4E3A;&#x76F8;&#x7B49;&#x7684;&#x5C0F;&#x5207;&#x7247;&#xFF0C;&#x4E3A;&#x6BCF;&#x4E00;&#x884C;&#x5206;&#x914D;&#x8BE5;&#x5C0F;&#x5207;&#x7247;&#x7684;&#x6570;&#x5B57;&#x5E8F;&#x53F7;&#x3002;</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x4F1A;&#x5458;&#x6700;&#x65E9;&#x52A0;&#x5165;&#x7684;&#x90A3;&#x6761;&#x8BB0;&#x5F55;</li>
+</ul>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> channel,memberNo,mobile</span><br><span class="line"><span class="keyword">from</span> (</span><br><span class="line">    <span class="keyword">select</span> channel,memberNo,mobile,row_number() <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> memberNo <span class="keyword">order</span> <span class="keyword">by</span> join_date) <span class="keyword">as</span> rn</span><br><span class="line">    <span class="keyword">from</span> <span class="keyword">member</span></span><br><span class="line">)mbr</span><br><span class="line"><span class="keyword">where</span> rn=<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x6E20;&#x9053;&#x6700;&#x65E9;&#x4E00;&#x6279;&#x6570;&#x636E;</li>
+</ul>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> channel,memberNo,mobile</span><br><span class="line"><span class="keyword">from</span> (</span><br><span class="line">    <span class="keyword">select</span> channel,memberNo,mobile,<span class="keyword">rank</span>() <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> channel <span class="keyword">order</span> <span class="keyword">by</span> batch_date <span class="keyword">desc</span>) <span class="keyword">as</span> rn</span><br><span class="line">    <span class="keyword">from</span> <span class="keyword">member</span></span><br><span class="line">)mbr</span><br><span class="line"><span class="keyword">where</span> rn=<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="&#x7EDF;&#x8BA1;&#x548C;&#x6BD4;&#x8F83;&#x51FD;&#x6570;"><a href="#&#x7EDF;&#x8BA1;&#x548C;&#x6BD4;&#x8F83;&#x51FD;&#x6570;" class="headerlink" title="&#x7EDF;&#x8BA1;&#x548C;&#x6BD4;&#x8F83;&#x51FD;&#x6570;"></a>&#x7EDF;&#x8BA1;&#x548C;&#x6BD4;&#x8F83;&#x51FD;&#x6570;</h3><hr>
+<p>&#x5E38;&#x7528;&#x7684;&#x5206;&#x6790;&#x51FD;&#x6570;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li><p>cume_dist&#xFF1A;&#x5982;&#x679C;&#x6309;&#x5347;&#x5E8F;&#x6392;&#x5217;&#xFF0C;&#x5219;&#x7EDF;&#x8BA1;&#xFF1A;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x503C;&#x7684;&#x884C;&#x6570;/&#x603B;&#x884C;&#x6570;(number of rows &#x2264; current row)/(total number of rows&#xFF09;&#x3002;&#x5982;&#x679C;&#x662F;&#x964D;&#x5E8F;&#x6392;&#x5217;&#xFF0C;&#x5219;&#x7EDF;&#x8BA1;&#xFF1A;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x503C;&#x7684;&#x884C;&#x6570;/&#x603B;&#x884C;&#x6570;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x7EDF;&#x8BA1;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x5DE5;&#x8D44;&#x7684;&#x4EBA;&#x6570;&#x5360;&#x603B;&#x4EBA;&#x6570;&#x7684;&#x6BD4;&#x4F8B; &#xFF0C;&#x7528;&#x4E8E;&#x7D2F;&#x8BA1;&#x7EDF;&#x8BA1;&#x3002;</p>
+</li>
+<li><p>lead(value_expr[,offset[,default]])&#xFF1A;&#x7528;&#x4E8E;&#x7EDF;&#x8BA1;&#x7A97;&#x53E3;&#x5185;&#x5F80;&#x4E0B;&#x7B2C;n&#x884C;&#x503C;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5217;&#x540D;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5F80;&#x4E0B;&#x7B2C;n&#x884C;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1&#xFF09;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#xFF08;&#x5F53;&#x5F80;&#x4E0B;&#x7B2C;n&#x884C;&#x4E3A;NULL&#x65F6;&#x5019;&#xFF0C;&#x53D6;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5982;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;&#x5219;&#x4E3A;NULL</p>
+</li>
+<li><p>lag(value_expr[,offset[,default]])&#xFF1A;&#x4E0E;lead&#x76F8;&#x53CD;&#xFF0C;&#x7528;&#x4E8E;&#x7EDF;&#x8BA1;&#x7A97;&#x53E3;&#x5185;&#x5F80;&#x4E0A;&#x7B2C;n&#x884C;&#x503C;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5217;&#x540D;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5F80;&#x4E0A;&#x7B2C;n&#x884C;&#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1&#xFF09;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#xFF08;&#x5F53;&#x5F80;&#x4E0A;&#x7B2C;n&#x884C;&#x4E3A;NULL&#x65F6;&#x5019;&#xFF0C;&#x53D6;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5982;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;&#x5219;&#x4E3A;NULL&#xFF09;</p>
+</li>
+<li><p>first_value&#xFF1A;&#x53D6;&#x5206;&#x7EC4;&#x5185;&#x6392;&#x5E8F;&#x540E;&#xFF0C;&#x622A;&#x6B62;&#x5230;&#x5F53;&#x524D;&#x884C;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;</p>
+</li>
+<li><p>last_value&#xFF1A;&#x53D6;&#x5206;&#x7EC4;&#x5185;&#x6392;&#x5E8F;&#x540E;&#xFF0C;&#x622A;&#x6B62;&#x5230;&#x5F53;&#x524D;&#x884C;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x503C;</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>&#x7EDF;&#x8BA1;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x5DE5;&#x8D44;&#x7684;&#x4EBA;&#x6570;&#x5360;&#x603B;&#x4EBA;&#x6570;&#x7684;&#x6BD4;&#x4F8B;</li>
+</ul>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line"> <span class="keyword">name</span>,</span><br><span class="line"> dept_num <span class="keyword">as</span> deptno,</span><br><span class="line"> salary,</span><br><span class="line"> <span class="keyword">cume_dist</span>() <span class="keyword">OVER</span> (<span class="keyword">ORDER</span> <span class="keyword">BY</span> salary <span class="keyword">desc</span>) <span class="keyword">as</span> cume</span><br><span class="line"><span class="keyword">FROM</span> employee;</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>&#x7EDF;&#x8BA1;&#x6309;&#x7167;&#x90E8;&#x95E8;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x5DE5;&#x8D44;&#x7684;&#x4EBA;&#x6570;&#x5360;&#x90E8;&#x95E8;&#x603B;&#x4EBA;&#x6570;&#x7684;&#x6BD4;&#x4F8B;</li>
+</ul>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line"> <span class="keyword">name</span>,</span><br><span class="line"> dept_num <span class="keyword">as</span> deptno,</span><br><span class="line"> salary,</span><br><span class="line"> <span class="keyword">cume_dist</span>() <span class="keyword">OVER</span> (<span class="keyword">PARTITION</span> <span class="keyword">BY</span> dept_num <span class="keyword">ORDER</span> <span class="keyword">BY</span> salary) <span class="keyword">as</span> cume</span><br><span class="line"><span class="keyword">FROM</span> employee;</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>&#x7EDF;&#x8BA1;&#x6BCF;&#x4E2A;&#x90E8;&#x95E8;&#x5458;&#x5DE5;&#x5DE5;&#x8D44;&#x4EE5;&#x53CA;&#x8BE5;&#x90E8;&#x95E8;&#x6700;&#x9AD8;&#x7684;&#x5458;&#x5DE5;&#x5DE5;&#x8D44;</li>
+</ul>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line"> <span class="keyword">name</span>,</span><br><span class="line"> dept_num <span class="keyword">as</span> deptno,</span><br><span class="line"> salary,</span><br><span class="line"> <span class="keyword">last_value</span>(salary) <span class="keyword">OVER</span> (<span class="keyword">PARTITION</span> <span class="keyword">BY</span> dept_num <span class="keyword">ORDER</span> <span class="keyword">BY</span> salary <span class="keyword">RANGE</span></span><br><span class="line"><span class="keyword">BETWEEN</span> <span class="keyword">UNBOUNDED</span> <span class="keyword">PRECEDING</span> <span class="keyword">AND</span> <span class="keyword">UNBOUNDED</span> <span class="keyword">FOLLOWING</span>) <span class="keyword">as</span> lval</span><br><span class="line"><span class="keyword">FROM</span> employee;</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;last_value&#x9ED8;&#x8BA4;&#x7684;&#x7A97;&#x53E3;&#x662F;RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW&#xFF0C;&#x8868;&#x793A;&#x5F53;&#x524D;&#x884C;&#x6C38;&#x8FDC;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x9700;&#x6539;&#x6210;RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING&#x3002;</p>
+<p><img src="/uploads/Hive/hive_functions_window_expression_compress.png" alt="window_expression" title="window_expression"></p>
+<ul>
+<li><p>RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW<br>&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5373;&#x5F53;&#x6307;&#x5B9A;&#x4E86;ORDER BY&#x4ECE;&#x53E5;&#xFF0C;&#x800C;&#x7701;&#x7565;&#x4E86;window&#x4ECE;&#x53E5; &#xFF0C;&#x8868;&#x793A;&#x4ECE;&#x5F00;&#x59CB;&#x5230;&#x5F53;&#x524D;&#x884C;&#x3002;</p>
+</li>
+<li><p>RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING<br>&#x8868;&#x793A;&#x4ECE;&#x5F53;&#x524D;&#x884C;&#x5230;&#x6700;&#x540E;&#x4E00;&#x884C;</p>
+</li>
+<li><p>RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING<br>&#x8868;&#x793A;&#x6240;&#x6709;&#x884C;</p>
+</li>
+<li><p>n PRECEDING  m FOLLOWING<br>&#x8868;&#x793A;&#x7A97;&#x53E3;&#x7684;&#x8303;&#x56F4;&#x662F;&#xFF1A;[&#xFF08;&#x5F53;&#x524D;&#x884C;&#x7684;&#x884C;&#x6570;&#xFF09;- n, &#xFF08;&#x5F53;&#x524D;&#x884C;&#x7684;&#x884C;&#x6570;&#xFF09;+m]</p>
+</li>
+</ul>
+<h3 id="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"><a href="#&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;" class="headerlink" title="&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;"></a>&#x589E;&#x5F3A;&#x805A;&#x5408;&#x51FD;&#x6570;</h3><p><a href="https://cwiki.apache.org/confluence/display/Hive/Enhanced+Aggregation%2C+Cube%2C+Grouping+and+Rollup" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x5730;&#x5740;</a></p>
+<h4 id="GROUPING-SETS"><a href="#GROUPING-SETS" class="headerlink" title="GROUPING SETS"></a>GROUPING SETS</h4><p>&#x5B9E;&#x73B0;&#x540C;&#x4E00;&#x6570;&#x636E;&#x96C6;&#x7684;&#x591A;&#x91CD;group by&#x64CD;&#x4F5C;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;GROUPING SETS&#x662F;&#x591A;&#x4E2A;GROUP BY&#x8FDB;&#x884C;UNION ALL&#x64CD;&#x4F5C;&#x7684;&#x7B80;&#x5355;&#x8868;&#x8FBE;&#x3002;</p>
+<ul>
+<li>&#x7EDF;&#x8BA1;&#x603B;&#x7684;&#x9500;&#x552E;&#x8BB0;&#x5F55;&#x548C;&#x6BCF;&#x5929;&#x6BCF;&#x4E2A;&#x6E20;&#x9053;&#x6BCF;&#x4E2A;&#x533A;&#x57DF;&#x7684;&#x9500;&#x552E;&#x8BB0;&#x5F55;</li>
+</ul>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">coalesce</span>(join_date,<span class="string">&apos;1999-01-01&apos;</span>) <span class="keyword">as</span> join_date,<span class="keyword">coalesce</span>(channel,<span class="string">&apos;&#x603B;&#x8BA1;&apos;</span>) <span class="keyword">as</span> channel,<span class="keyword">coalesce</span>(area,<span class="string">&apos;&#x5176;&#x4ED6;&apos;</span>) <span class="keyword">as</span> area,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> cnt</span><br><span class="line"><span class="keyword">from</span> sale_info</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> join_date,channel,area</span><br><span class="line"><span class="keyword">grouping</span> <span class="keyword">sets</span>((),(join_date,channel,area))</span><br></pre></td></tr></tbody></table></figure>
+<p>&#x4E0A;&#x9762;sql&#x8BED;&#x53E5;&#x7B49;&#x540C;&#x4E8E;</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="string">&apos;1999-01-01&apos;</span> <span class="keyword">as</span> join_date,<span class="string">&apos;&#x603B;&#x8BA1;&apos;</span> <span class="keyword">as</span> channel,<span class="string">&apos;&#x5176;&#x4ED6;&apos;</span> <span class="keyword">as</span> area,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> cnt</span><br><span class="line"><span class="keyword">from</span> sale_info</span><br><span class="line"><span class="keyword">union</span> <span class="keyword">all</span> </span><br><span class="line"><span class="keyword">select</span> <span class="keyword">coalesce</span>(join_date,<span class="string">&apos;1999-01-01&apos;</span>) <span class="keyword">as</span> join_date,<span class="keyword">coalesce</span>(channel,<span class="string">&apos;&#x603B;&#x8BA1;&apos;</span>) <span class="keyword">as</span> channel,<span class="keyword">coalesce</span>(area,<span class="string">&apos;&#x5176;&#x4ED6;&apos;</span>) <span class="keyword">as</span> area,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> cnt</span><br><span class="line"><span class="keyword">from</span> sale_info</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> join_date,channel,area</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="CUBE"><a href="#CUBE" class="headerlink" title="CUBE"></a>CUBE</h4><p>&#x6839;&#x636E;GROUP BY&#x7684;&#x7EF4;&#x5EA6;&#x7684;&#x6240;&#x6709;&#x7EC4;&#x5408;&#x8FDB;&#x884C;&#x805A;&#x5408;&#x3002;</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">coalesce</span>(join_date,<span class="string">&apos;1999-01-01&apos;</span>) <span class="keyword">as</span> join_date,<span class="keyword">coalesce</span>(channel,<span class="string">&apos;&#x603B;&#x8BA1;&apos;</span>) <span class="keyword">as</span> channel,<span class="keyword">coalesce</span>(area,<span class="string">&apos;&#x5176;&#x4ED6;&apos;</span>) <span class="keyword">as</span> area,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> cnt</span><br><span class="line"><span class="keyword">from</span> sale_info</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> join_date,channel,area </span><br><span class="line"><span class="keyword">with</span> <span class="keyword">cube</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#x4EE5;&#x4E0A;sql&#x8BED;&#x53E5;&#x7B49;&#x540C;&#x4E8E;</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">coalesce</span>(join_date,<span class="string">&apos;1999-01-01&apos;</span>) <span class="keyword">as</span> join_date,<span class="keyword">coalesce</span>(channel,<span class="string">&apos;&#x603B;&#x8BA1;&apos;</span>) <span class="keyword">as</span> channel,<span class="keyword">coalesce</span>(area,<span class="string">&apos;&#x5176;&#x4ED6;&apos;</span>) <span class="keyword">as</span> area,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> cnt</span><br><span class="line"><span class="keyword">from</span> sale_info</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> join_date,channel,area</span><br><span class="line"><span class="keyword">grouping</span> <span class="keyword">sets</span>((join_date,channel,area),(join_date,area),(join_date,channel),(channel,area),(channel,join_date),(area,channel),(area,join_date),())</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="ROLLUP"><a href="#ROLLUP" class="headerlink" title="ROLLUP"></a>ROLLUP</h4><p>CUBE&#x7684;&#x5B50;&#x96C6;&#xFF0C;&#x4EE5;&#x6700;&#x5DE6;&#x4FA7;&#x7684;&#x7EF4;&#x5EA6;&#x4E3A;&#x4E3B;&#xFF0C;&#x4ECE;&#x8BE5;&#x7EF4;&#x5EA6;&#x8FDB;&#x884C;&#x5C42;&#x7EA7;&#x805A;&#x5408;&#x3002;</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">coalesce</span>(join_date,<span class="string">&apos;1999-01-01&apos;</span>) <span class="keyword">as</span> join_date,<span class="keyword">coalesce</span>(channel,<span class="string">&apos;&#x603B;&#x8BA1;&apos;</span>) <span class="keyword">as</span> channel,<span class="keyword">coalesce</span>(area,<span class="string">&apos;&#x5176;&#x4ED6;&apos;</span>) <span class="keyword">as</span> area,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> cnt</span><br><span class="line"><span class="keyword">from</span> sale_info</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> join_date,channel,area </span><br><span class="line"><span class="keyword">with</span> <span class="keyword">rollup</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#x4EE5;&#x4E0A;sql&#x8BED;&#x53E5;&#x7B49;&#x540C;&#x4E8E;</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">coalesce</span>(join_date,<span class="string">&apos;1999-01-01&apos;</span>) <span class="keyword">as</span> join_date,<span class="keyword">coalesce</span>(channel,<span class="string">&apos;&#x603B;&#x8BA1;&apos;</span>) <span class="keyword">as</span> channel,<span class="keyword">coalesce</span>(area,<span class="string">&apos;&#x5176;&#x4ED6;&apos;</span>) <span class="keyword">as</span> area,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> cnt</span><br><span class="line"><span class="keyword">from</span> sale_info</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> join_date,channel,area</span><br><span class="line"><span class="keyword">grouping</span> <span class="keyword">sets</span>((join_date,channel,area),(join_date,channel),(join_date),())</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"><a href="#&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;" class="headerlink" title="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"></a>&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</h3><p><a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x5730;&#x5740;</a></p>
+<p>&#x6301;&#x7EED;&#x66F4;&#x65B0;&#x4E2D;&#x3002;&#x3002;&#x3002;&#x3002;</p>
+<h3 id="&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;"><a href="#&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;" class="headerlink" title="&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;"></a>&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;</h3><h4 id="parse-url"><a href="#parse-url" class="headerlink" title="parse_url"></a>parse_url</h4><p>&#x7528;&#x4E8E;&#x89E3;&#x6790;url&#x76F8;&#x5173;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">http_url,</span><br><span class="line">parse_url(http_url, <span class="string">&apos;HOST&apos;</span>) <span class="keyword">as</span> url_host, <span class="comment">--&#x89E3;&#x6790;host</span></span><br><span class="line">parse_url(http_url, <span class="string">&apos;PATH&apos;</span>) <span class="keyword">as</span> url_path, <span class="comment">--&#x89E3;&#x6790;path</span></span><br><span class="line">parse_url(http_url, <span class="string">&apos;QUERY&apos;</span>) <span class="keyword">as</span> url_query<span class="comment">--&#x89E3;&#x6790;&#x8BF7;&#x6C42;&#x53C2;&#x6570;</span></span><br><span class="line"><span class="keyword">from</span> url_info</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="collect-set-collect-list"><a href="#collect-set-collect-list" class="headerlink" title="collect_set/collect_list"></a>collect_set/collect_list</h4><p>&#x5C06;&#x5206;&#x7EC4;&#x5185;&#x7684;&#x6570;&#x636E;&#x653E;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x4E2D;&#xFF0C;&#x5177;&#x6709;&#x53BB;&#x91CD;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<ul>
+<li>&#x7EDF;&#x8BA1;&#x6BCF;&#x4E2A;&#x6E20;&#x9053;&#x6709;&#x54EA;&#x4E9B;&#x9500;&#x552E;&#x533A;&#x57DF;</li>
+</ul>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">  channel,</span><br><span class="line">  collect_set(area) <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> channel) <span class="keyword">as</span> area_set </span><br><span class="line"><span class="keyword">from</span> sale_info</span><br></pre></td></tr></tbody></table></figure>
+<p>collect_list&#xFF1A;&#x7528;&#x6CD5;&#x548C;collect_set&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x4F1A;&#x53BB;&#x91CD;&#x3002;</p>
+<h4 id="regex-replace"><a href="#regex-replace" class="headerlink" title="regex_replace"></a>regex_replace</h4><p>&#x6B63;&#x5219;&#x5339;&#x914D;&#x6587;&#x672C;&#x5185;&#x5BB9;</p>
+<ul>
+<li>&#x83B7;&#x53D6;&#x57CB;&#x70B9;&#x6570;&#x636E;&#x4E2D;&#x7684;unionid&#x503C;<br>&#x6837;&#x4F8B;&#x6570;&#x636E;&#x503C;&#xFF1A;[{&#x201C;k&#x201D;:&#x201D;a_channel&#x201D;,&#x201D;v&#x201D;:&#x201D;1211&#x201D;,&#x201D;t&#x201D;:null},{&#x201C;k&#x201D;:&#x201D;b_channel&#x201D;,&#x201D;v&#x201D;:&#x201D;2&#x201D;,&#x201D;t&#x201D;:null},,{&#x201C;k&#x201D;:&#x201D;unionId&#x201D;,&#x201D;v&#x201D;:&#x201D;aada12-ixcnudfrtbal&#x201D;,&#x201D;t&#x201D;:null}]</li>
+</ul>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> regexp_replace(regexp_extract(regexp_extract(te, <span class="string">&apos;(unionId*.*?[:$]&quot;.*?[&quot;])&apos;</span>,<span class="number">0</span>),<span class="string">&apos;[^:?=&quot;]*.?$&apos;</span>,<span class="number">0</span>),<span class="string">&apos;&quot;&apos;</span>,<span class="string">&apos;&apos;</span>) <span class="keyword">as</span> unionid</span><br><span class="line"><span class="keyword">from</span> tracking_info</span><br></pre></td></tr></tbody></table></figure>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <tags>
+        <tag>Hadoop</tag>
+        <tag>Hive</tag>
+        <tag>Spark</tag>
       </tags>
   </entry>
   <entry>
@@ -1177,10 +1275,10 @@ U2FsdGVkX1+1ayQxzUUJIEUiNOR02BT+IoBbUbd36hLvyW3el4gpj2pONvxdMBsgccq0TnIKR3PsSy0w
           });
       </script>]]></content>
       <tags>
-        <tag>Hive</tag>
-        <tag>Hadoop</tag>
         <tag>大数据</tag>
         <tag>数仓</tag>
+        <tag>Hadoop</tag>
+        <tag>Hive</tag>
         <tag>Sqoop</tag>
       </tags>
   </entry>
