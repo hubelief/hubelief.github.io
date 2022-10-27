@@ -93,7 +93,7 @@
 <meta property="og:description" content="&amp;#x5E38;&amp;#x89C1;&amp;#x5206;&amp;#x6790;&amp;#x51FD;&amp;#x6570; Aggregate Functions: &amp;#x805A;&amp;#x5408;&amp;#x51FD;&amp;#x6570;,&amp;#x6BD4;&amp;#x5982;&amp;#xFF1A;sum(&amp;#x2026;)&amp;#x3001; max(&amp;#x2026;)&amp;#x3001;min(&amp;#x2026;)&amp;#x3001;avg(&amp;#x20">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.hushaohui.site/uploads/Hive/hive_functions_window_expression_compress.png">
-<meta property="og:updated_time" content="2022-10-27T10:26:49.273Z">
+<meta property="og:updated_time" content="2022-10-27T10:36:22.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hive窗口分析函数">
 <meta name="twitter:description" content="&amp;#x5E38;&amp;#x89C1;&amp;#x5206;&amp;#x6790;&amp;#x51FD;&amp;#x6570; Aggregate Functions: &amp;#x805A;&amp;#x5408;&amp;#x51FD;&amp;#x6570;,&amp;#x6BD4;&amp;#x5982;&amp;#xFF1A;sum(&amp;#x2026;)&amp;#x3001; max(&amp;#x2026;)&amp;#x3001;min(&amp;#x2026;)&amp;#x3001;avg(&amp;#x20">
@@ -511,6 +511,14 @@
 <p>&#x4EE5;&#x4E0A;sql&#x8BED;&#x53E5;&#x7B49;&#x540C;&#x4E8E;</p>
 <figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">coalesce</span>(join_date,<span class="string">&apos;1999-01-01&apos;</span>) <span class="keyword">as</span> join_date,<span class="keyword">coalesce</span>(channel,<span class="string">&apos;&#x603B;&#x8BA1;&apos;</span>) <span class="keyword">as</span> channel,<span class="keyword">coalesce</span>(area,<span class="string">&apos;&#x5176;&#x4ED6;&apos;</span>) <span class="keyword">as</span> area,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> cnt</span><br><span class="line"><span class="keyword">from</span> sale_info</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> join_date,channel,area</span><br><span class="line"><span class="keyword">grouping</span> <span class="keyword">sets</span>((join_date,channel,area),(join_date,channel),(join_date),())</span><br></pre></td></tr></tbody></table></figure>
 <h3 id="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"><a href="#&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;" class="headerlink" title="&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;"></a>&#x56DB;&#x79CD;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</h3><p><a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SortBy" target="_blank" rel="noopener">&#x5B98;&#x7F51;&#x5730;&#x5740;</a></p>
+<hr>
+<ol>
+<li>order by (&#x5168;&#x5C40;&#x6392;&#x5E8F;)</li>
+<li>sort by (&#x5206;&#x533A;&#x5185;&#x6392;&#x5E8F;)</li>
+<li>distribute by (&#x6570;&#x636E;&#x5206;&#x53D1;)</li>
+<li>cluster by</li>
+</ol>
+<hr>
 <p>&#x6301;&#x7EED;&#x66F4;&#x65B0;&#x4E2D;&#x3002;&#x3002;&#x3002;&#x3002;</p>
 <h3 id="&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;"><a href="#&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;" class="headerlink" title="&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;"></a>&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x51FD;&#x6570;</h3><h4 id="parse-url"><a href="#parse-url" class="headerlink" title="parse_url"></a>parse_url</h4><p>&#x7528;&#x4E8E;&#x89E3;&#x6790;url&#x76F8;&#x5173;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
 <figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">http_url,</span><br><span class="line">parse_url(http_url, <span class="string">&apos;HOST&apos;</span>) <span class="keyword">as</span> url_host, <span class="comment">--&#x89E3;&#x6790;host</span></span><br><span class="line">parse_url(http_url, <span class="string">&apos;PATH&apos;</span>) <span class="keyword">as</span> url_path, <span class="comment">--&#x89E3;&#x6790;path</span></span><br><span class="line">parse_url(http_url, <span class="string">&apos;QUERY&apos;</span>) <span class="keyword">as</span> url_query<span class="comment">--&#x89E3;&#x6790;&#x8BF7;&#x6C42;&#x53C2;&#x6570;</span></span><br><span class="line"><span class="keyword">from</span> url_info</span><br></pre></td></tr></tbody></table></figure>
