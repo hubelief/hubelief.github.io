@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="SpringMVC&amp;#x7B80;&amp;#x4ECB;Spring MVC &amp;#x878D;&amp;#x5408;&amp;#x5728; Spring Web Flow &amp;#x91CC;&amp;#x9762;&amp;#x3002; &amp;#x4F7F;&amp;#x7528; Spring &amp;#x53EF;&amp;#x63D2;&amp;#x5165;&amp;#x7684; MVC &amp;#x67B6;&amp;#x6784;&amp;#xFF0C;&amp;#x53EF;&amp;#x4E">
+<meta name="description" content="SpringMVC简介Spring MVC 融合在 Spring Web Flow 里面。 使用 Spring 可插入的 MVC 架构，可以选择是使用内置的 Spring Web 框架还是 Struts 这样的 Web框架，MVC 已经是现代Web开发中的一个很重要的部分。与许多其他Web框架一样，Spring MVC围绕前端控制器模式设计，其中中央 Servlet DispatcherServl">
 <meta name="keywords" content="Spring,SpringMVC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringMVC核心（一）：核心业务流程">
 <meta property="og:url" content="http://www.hushaohui.site/SpringMVC核心（一）：核心业务流程/index.html">
 <meta property="og:site_name" content="hu&#39;s BlOG">
-<meta property="og:description" content="SpringMVC&amp;#x7B80;&amp;#x4ECB;Spring MVC &amp;#x878D;&amp;#x5408;&amp;#x5728; Spring Web Flow &amp;#x91CC;&amp;#x9762;&amp;#x3002; &amp;#x4F7F;&amp;#x7528; Spring &amp;#x53EF;&amp;#x63D2;&amp;#x5165;&amp;#x7684; MVC &amp;#x67B6;&amp;#x6784;&amp;#xFF0C;&amp;#x53EF;&amp;#x4E">
+<meta property="og:description" content="SpringMVC简介Spring MVC 融合在 Spring Web Flow 里面。 使用 Spring 可插入的 MVC 架构，可以选择是使用内置的 Spring Web 框架还是 Struts 这样的 Web框架，MVC 已经是现代Web开发中的一个很重要的部分。与许多其他Web框架一样，Spring MVC围绕前端控制器模式设计，其中中央 Servlet DispatcherServl">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.hushaohui.site/uploads/SpringMVC核心/SpringMVC核心流程.jpg">
 <meta property="og:updated_time" content="2022-05-17T06:21:44.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringMVC核心（一）：核心业务流程">
-<meta name="twitter:description" content="SpringMVC&amp;#x7B80;&amp;#x4ECB;Spring MVC &amp;#x878D;&amp;#x5408;&amp;#x5728; Spring Web Flow &amp;#x91CC;&amp;#x9762;&amp;#x3002; &amp;#x4F7F;&amp;#x7528; Spring &amp;#x53EF;&amp;#x63D2;&amp;#x5165;&amp;#x7684; MVC &amp;#x67B6;&amp;#x6784;&amp;#xFF0C;&amp;#x53EF;&amp;#x4E">
+<meta name="twitter:description" content="SpringMVC简介Spring MVC 融合在 Spring Web Flow 里面。 使用 Spring 可插入的 MVC 架构，可以选择是使用内置的 Spring Web 框架还是 Struts 这样的 Web框架，MVC 已经是现代Web开发中的一个很重要的部分。与许多其他Web框架一样，Spring MVC围绕前端控制器模式设计，其中中央 Servlet DispatcherServl">
 <meta name="twitter:image" content="http://www.hushaohui.site/uploads/SpringMVC核心/SpringMVC核心流程.jpg">
 
 
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  1.2k
                 </span>
               
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  4
                 </span>
               
             </div>
@@ -428,65 +428,65 @@
       
 
       
-        <h1 id="SpringMVC&#x7B80;&#x4ECB;"><a href="#SpringMVC&#x7B80;&#x4ECB;" class="headerlink" title="SpringMVC&#x7B80;&#x4ECB;"></a>SpringMVC&#x7B80;&#x4ECB;</h1><p>Spring MVC &#x878D;&#x5408;&#x5728; Spring Web Flow &#x91CC;&#x9762;&#x3002; &#x4F7F;&#x7528; Spring &#x53EF;&#x63D2;&#x5165;&#x7684; <code>MVC</code> &#x67B6;&#x6784;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x662F;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7684; Spring Web &#x6846;&#x67B6;&#x8FD8;&#x662F; Struts &#x8FD9;&#x6837;&#x7684; Web&#x6846;&#x67B6;&#xFF0C;MVC &#x5DF2;&#x7ECF;&#x662F;&#x73B0;&#x4EE3;Web&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x90E8;&#x5206;&#x3002;&#x4E0E;&#x8BB8;&#x591A;&#x5176;&#x4ED6;Web&#x6846;&#x67B6;&#x4E00;&#x6837;&#xFF0C;Spring MVC&#x56F4;&#x7ED5;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x6A21;&#x5F0F;&#x8BBE;&#x8BA1;&#xFF0C;&#x5176;&#x4E2D;&#x4E2D;&#x592E; Servlet DispatcherServlet &#x4E3A;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x63D0;&#x4F9B;&#x5171;&#x4EAB;&#x7B97;&#x6CD5;&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x7531;&#x53EF;&#x914D;&#x7F6E;&#x59D4;&#x6258;&#x7EC4;&#x4EF6;&#x6267;&#x884C;&#x3002;&#x8BE5;&#x6A21;&#x578B;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x3002;<br>Spring+SpringMVC&#x5F00;&#x53D1;&#x7684;&#x65F6;&#x5019;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E00;&#x822C;&#x6709; <code>web.xml</code>&#xFF08;&#x5FC5;&#x987B;&#xFF09;<br>&#x5FC5;&#x987B;&#x7684;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#xFF1A;&#x914D;&#x7F6E;<code>contexLoadListener</code>&#xFF0C;&#x914D;&#x7F6E;<code>DispatcherServlet</code>&#x62E6;&#x622A;&#x8BF7;&#x6C42; </p>
-<p><strong> &#x89E3;&#x6790;&#xFF1A;</strong></p>
+        <h1 id="SpringMVC简介"><a href="#SpringMVC简介" class="headerlink" title="SpringMVC简介"></a>SpringMVC简介</h1><p>Spring MVC 融合在 Spring Web Flow 里面。 使用 Spring 可插入的 <code>MVC</code> 架构，可以选择是使用内置的 Spring Web 框架还是 Struts 这样的 Web框架，MVC 已经是现代Web开发中的一个很重要的部分。与许多其他Web框架一样，Spring MVC围绕前端控制器模式设计，其中中央 Servlet DispatcherServlet 为请求处理提供共享算法，而实际工作由可配置委托组件执行。该模型非常灵活，支持多种工作流程。<br>Spring+SpringMVC开发的时候配置文件一般有 <code>web.xml</code>（必须）<br>必须的原因在于：配置<code>contexLoadListener</code>，配置<code>DispatcherServlet</code>拦截请求 </p>
+<p><strong> 解析：</strong></p>
 <ol>
-<li><p>MVC&#x67B6;&#x6784;&#x6A21;&#x5F0F;&#x7684;&#x601D;&#x60F3;&#xFF1A;&#x5C06;Web&#x5C42;&#x8FDB;&#x884C;&#x6307;&#x8D23;&#x89E3;&#x8026;</p>
+<li><p>MVC架构模式的思想：将Web层进行指责解耦</p>
 </li>
-<li><p>&#x57FA;&#x4E8E;&#x8BF7;&#x6C42;&#x9A71;&#x52A8;&#xFF1A;&#x8BF7;&#x6C42;-&#x76F8;&#x5E94;&#x6A21;&#x578B;</p>
+<li><p>基于请求驱动：请求-相应模型</p>
 </li>
-<li><p>&#x6846;&#x67B6;&#x7684;&#x76EE;&#x7684;&#xFF1A;&#x7B80;&#x5316;&#x5F00;&#x53D1;</p>
+<li><p>框架的目的：简化开发</p>
 </li>
 </ol>
-<p><strong>SpringMVC&#x7684;&#x75DB;&#x75D2;&#x70B9;&#x6709;&#x4E09;&#x4E2A;:</strong></p>
-<p>&#xFF08;1&#xFF09;&#x5C06;Web&#x9875;&#x9762;&#x7684;&#x8BF7;&#x6C42;&#x4F20;&#x7ED9;&#x670D;&#x52A1;&#x5668; </p>
-<p>&#xFF08;2&#xFF09;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7684;&#x903B;&#x8F91;&#x9875;&#x9762; </p>
-<p>&#xFF08;3&#xFF09;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x5E76;&#x8DF3;&#x8F6C;&#x9875;&#x9762; </p>
-<h1 id="springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;"><a href="#springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;" class="headerlink" title="springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;"></a>springMVC&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;</h1><p>&#x4E0A;&#x9762;&#x8BF4;&#x7684;<code>&#x5176;&#x4E2D;&#x4E2D;&#x592E;Servlet DispatcherServlet&#x4E3A;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x63D0;&#x4F9B;&#x5171;&#x4EAB;&#x7B97;&#x6CD5;&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x7531;&#x53EF;&#x914D;&#x7F6E;&#x59D4;&#x6258;&#x7EC4;&#x4EF6;&#x6267;&#x884C;</code> &#x6211;&#x4EEC;&#x6765;&#x7528;&#x56FE;&#x4F8B;&#x770B;&#x4E00;&#x4E0B;&#xFF1A;</p>
-<p><img src="/uploads/SpringMVC&#x6838;&#x5FC3;/SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;.jpg" alt="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;" title="SpringMVC&#x6838;&#x5FC3;&#x6D41;&#x7A0B;"></p>
-<p><strong>&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#xFF1A;</strong></p>
+<p><strong>SpringMVC的痛痒点有三个:</strong></p>
+<p>（1）将Web页面的请求传给服务器 </p>
+<p>（2）根据不同的请求处理不同的逻辑页面 </p>
+<p>（3）返回处理结果数据并跳转页面 </p>
+<h1 id="springMVC核心业务流程"><a href="#springMVC核心业务流程" class="headerlink" title="springMVC核心业务流程"></a>springMVC核心业务流程</h1><p>上面说的<code>其中中央Servlet DispatcherServlet为请求处理提供共享算法，而实际工作由可配置委托组件执行</code> 我们来用图例看一下：</p>
+<p><img src="/uploads/SpringMVC核心/SpringMVC核心流程.jpg" alt="SpringMVC核心流程" title="SpringMVC核心流程"></p>
+<p><strong>具体步骤：</strong></p>
 <ol>
-<li><p>&#x9996;&#x5148;&#x7528;&#x6237;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x2014;&gt;DispatcherServlet&#xFF0C;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#x81EA;&#x5DF1;&#x4E0D;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x662F;&#x59D4;&#x6258;&#x7ED9;&#x5176;&#x4ED6;&#x7684;&#x89E3;&#x6790;&#x5668;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x4F5C;&#x4E3A;&#x7EDF;&#x4E00;&#x8BBF;&#x95EE;&#x70B9;&#xFF0C;&#x8FDB;&#x884C;&#x5168;&#x5C40;&#x7684;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#xFF1B;</p>
+<li><p>首先用户发送请求—&gt;DispatcherServlet，前端控制器收到请求后自己不进行处理，而是委托给其他的解析器进行处理，作为统一访问点，进行全局的流程控制；</p>
 </li>
-<li><p>DispatcherServlet&#x2014;&gt;HandlerMapping&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x8BF7;&#x6C42;&#x6620;&#x5C04;&#x4E3A; HandlerExecutionChain &#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x542B;&#x4E00;&#x4E2A; Handler &#x5904;&#x7406;&#x5668;&#xFF08;&#x9875;&#x9762;&#x63A7;&#x5236;&#x5668;&#xFF09;&#x5BF9;&#x8C61;&#x3001;&#x591A;&#x4E2A; HandlerInterceptor &#x62E6;&#x622A;&#x5668;&#xFF09;&#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x6620;&#x5C04;&#x7B56;&#x7565;&#xFF1B;</p>
+<li><p>DispatcherServlet—&gt;HandlerMapping，它将会把请求映射为 HandlerExecutionChain 对象（包含一个 Handler 处理器（页面控制器）对象、多个 HandlerInterceptor 拦截器）对象，通过这种策略模式，很容易添加新的映射策略；</p>
 </li>
-<li><p>DispatcherServlet&#x2014;&gt;HandlerAdapter&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x628A;&#x5904;&#x7406;&#x5668;&#x5305;&#x88C5;&#x4E3A;&#x9002;&#x914D;&#x5668;&#xFF0C;&#x4ECE;&#x800C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x5373;<code>&#x9002;&#x914D;&#x5668;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</code>&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4ECE;&#x800C;&#x5F88;&#x5BB9;&#x6613;&#x652F;&#x6301;&#x5F88;&#x591A;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF1B;</p>
+<li><p>DispatcherServlet—&gt;HandlerAdapter，它将会把处理器包装为适配器，从而支持多种类型的处理器，即<code>适配器设计模式</code>的应用，从而很容易支持很多类型的处理器；</p>
 </li>
-<li><p>HandlerAdapter&#x2014;&gt;&#x5904;&#x7406;&#x5668;&#x529F;&#x80FD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x6839;&#x636E;&#x9002;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x8C03;&#x7528;&#x771F;&#x6B63;&#x7684;&#x5904;&#x7406;&#x5668;&#x7684;&#x529F;&#x80FD;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x5B8C;&#x6210;&#x529F;&#x80FD;&#x5904;&#x7406;&#xFF08;&#x5904;&#x7406;&#x5668;&#x5728;&#x8FD9;&#x91CC;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#x5668;&#x7684;&#x5904;&#x7406;&#x3001;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x5668;&#x7684;&#x5904;&#x7406;&#x7B49;&#x7B49;&#xFF09;&#xFF1B;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; ModelAndView &#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x542B;&#x6A21;&#x578B;&#x6570;&#x636E;&#x3001;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#xFF09;&#xFF1B;</p>
+<li><p>HandlerAdapter—&gt;处理器功能处理方法的调用，它将会根据适配的结果调用真正的处理器的功能处理方法，完成功能处理（处理器在这里进行拦截器的处理、异常处理器的处理等等）；并返回一个 ModelAndView 对象（包含模型数据、逻辑视图名）；</p>
 </li>
-<li><p>ModelAndView &#x7684;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#x2014;&gt; ViewResolver&#xFF0C; &#x5B83;&#x5C06;&#x628A;&#x903B;&#x8F91;&#x89C6;&#x56FE;&#x540D;&#x89E3;&#x6790;&#x4E3A;&#x5177;&#x4F53;&#x7684; View&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x66F4;&#x6362;&#x5176;&#x4ED6;&#x89C6;&#x56FE;&#x6280;&#x672F;&#xFF1B;</p>
+<li><p>ModelAndView 的逻辑视图名—&gt; ViewResolver， 它将把逻辑视图名解析为具体的 View，通过这种策略模式，很容易更换其他视图技术；</p>
 </li>
-<li><p>View&#x2014;&gt;&#x6E32;&#x67D3;&#xFF0C;&#x5B83;&#x4F1A;&#x6839;&#x636E;&#x4F20;&#x8FDB;&#x6765;&#x7684; Model &#x6A21;&#x578B;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#xFF0C;&#x6B64;&#x5904;&#x7684; Model &#x5B9E;&#x9645;&#x662F;&#x4E00;&#x4E2A; Map &#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x56E0;&#x6B64;&#x5F88;&#x5BB9;&#x6613;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x89C6;&#x56FE;&#x6280;&#x672F;&#xFF1B;</p>
+<li><p>View—&gt;渲染，它会根据传进来的 Model 模型数据进行渲染，此处的 Model 实际是一个 Map 数据结构，因此很容易支持其他视图技术；</p>
 </li>
-<li><p>&#x8FD4;&#x56DE;&#x63A7;&#x5236;&#x6743;&#x7ED9; DispatcherServlet&#xFF0C;&#x7531; DispatcherServlet &#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x7ED9;&#x7528;&#x6237;&#xFF0C;&#x5230;&#x6B64;&#x4E00;&#x4E2A;&#x6D41;&#x7A0B;&#x7ED3;&#x675F;&#x3002;&#xFF08;&#x58F0;&#x660E;:&#x56FE;&#x4E2D;&#x7684;View&#x6307;&#x5411;&#x7528;&#x6237;&#x53EA;&#x662F;&#x5355;&#x7EAF;&#x65B9;&#x4FBF;&#x7406;&#x89E3;&#xFF09;</p>
+<li><p>返回控制权给 DispatcherServlet，由 DispatcherServlet 返回响应给用户，到此一个流程结束。（声明:图中的View指向用户只是单纯方便理解）</p>
 </li>
 </ol>
 <hr>
-<h1 id="&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><a href="#&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;" class="headerlink" title="&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"></a>&#x7EC4;&#x4EF6;&#x540D;&#x8BCD;&#x89E3;&#x91CA;</h1><ol>
-<li>DispatcherServlet: &#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;</li>
+<h1 id="组件名词解释"><a href="#组件名词解释" class="headerlink" title="组件名词解释"></a>组件名词解释</h1><ol>
+<li>DispatcherServlet: 前端控制器</li>
 </ol>
-<p>&#x7B49;&#x540C;&#x4E8E;&#x4EE5;&#x524D;&#x7684;Controller&#xFF0C; &#x662F;&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x7684;&#x4E2D;&#x5FC3;&#xFF0C; &#x8D1F;&#x8D23;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x3002;<br>&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#xFF08;DispatcherServlet&#xFF09;&#xFF1A;&#x8FD9;&#x4E2A;&#x662F; SpringMVC&#x7684;&#x5165;&#x53E3;&#xFF08;&#x5B9E;&#x9645;&#x4E0A;&#x5462;&#x5C31;&#x662F;&#x4E00;&#x4E2A;Servlet&#x5BF9;&#x8C61;&#xFF09;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x8981;&#x901A;&#x8FC7;&#x5B83;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x4E2A;Servlet&#x6240;&#x4EE5;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x7684;&#x4F60;&#x8981;&#x5728;web.xml&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
+<p>等同于以前的Controller， 是整个流程的中心， 负责调用其他组件。<br>前端控制器（DispatcherServlet）：这个是 SpringMVC的入口（实际上呢就是一个Servlet对象），所有的请求都要通过它，因为是个Servlet所以不可避免的你要在web.xml进行配置。</p>
 <ol start="2">
-<li>HandlerMapping&#xFF1A; &#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;</li>
+<li>HandlerMapping： 处理器映射器</li>
 </ol>
-<p>&#x8D1F;&#x8D23;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x627E;&#x5230;Handler&#xFF08;&#x5904;&#x7406;&#x5668;&#xFF09;&#xFF0C;springMVC&#x4E2D;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x6620;&#x5C04;&#x5668;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x6620;&#x5C04;&#xFF0C;&#x6BD4;&#x5982; xml&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#xFF0C;&#x6CE8;&#x89E3;&#x65B9;&#x5F0F;&#xFF0C;&#x63A5;&#x53E3;&#x65B9;&#x5F0F;&#x7B49;&#x3002;<br>&#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;(HandlerMapper)&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x627E;&#x5230;&#x5904;&#x7406;&#x5668;&#xFF08;Handler&#xFF09;&#xFF0C;&#x5B83;&#x652F;&#x6301;&#x7684;&#x6709;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5F62;&#x5F0F;&#xFF0C;&#x63A5;&#x53E3;&#x5F62;&#x5F0F;&#xFF0C;&#x6CE8;&#x89E3;&#x5F62;&#x5F0F;&#x7B49;&#x7B49;&#x3002;</p>
+<p>负责根据请求找到Handler（处理器），springMVC中可以根据不同的映射器实现不同映射，比如 xml配置方式，注解方式，接口方式等。<br>处理器映射器(HandlerMapper)，这个就是根据不同的方式找到处理器（Handler），它支持的有配置文件形式，接口形式，注解形式等等。</p>
 <ol start="3">
-<li>HandlerAdapter&#xFF1A;&#x5904;&#x7406;&#x5668;&#x9002;&#x914D;&#x5668;</li>
+<li>HandlerAdapter：处理器适配器</li>
 </ol>
-<p>&#x5904;&#x7406;Handler&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5904;&#x7406;&#x5668;&#x8FDB;&#x884C;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x662F;&#x5BF9;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;&#x7684;&#x5E94;&#x7528;&#x4F53;&#x73B0;&#x3002;<br>&#x5904;&#x7406;&#x5668;&#x9002;&#x914D;&#x5668;&#xFF08;HandlAdapter&#xFF09;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x5206;&#x6790;&#x5904;&#x7406;&#x5668;&#x662F;&#x90A3;&#x79CD;&#x65B9;&#x5F0F;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF08;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x63A5;&#x53E3;&#x3001;&#x6CE8;&#x89E3;&#x7B49;&#x5F62;&#x5F0F;&#xFF09;&#x7136;&#x540E;&#x6267;&#x884C;Handler&#x3002;</p>
+<p>处理Handler，可以对多种类型的处理器进行执行，这是对适配器模式的应用体现。<br>处理器适配器（HandlAdapter）这个就是分析处理器是那种方式的处理器（配置文件，接口、注解等形式）然后执行Handler。</p>
 <ol start="4">
-<li>Handler&#xFF1A;&#x540E;&#x7AEF;&#x63A7;&#x5236;&#x5668;</li>
+<li>Handler：后端控制器</li>
 </ol>
-<p>&#x5728;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#x7684;&#x63A7;&#x5236;&#x4E0B;&#x5BF9;&#x5177;&#x4F53;&#x7684;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x8FDB;&#x884C;&#x6839;&#x636E;&#x9700;&#x6C42;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x3002;</p>
+<p>在前端控制器的控制下对具体的用户请求进行处理，所以一般情况下都需要开发者进行根据需求进行开发。</p>
 <ol start="5">
-<li>ViewResolver: &#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;</li>
+<li>ViewResolver: 视图解析器</li>
 </ol>
-<p>&#x8D1F;&#x8D23;&#x5C06;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x751F;&#x6210;view&#x89C6;&#x56FE;&#x3001;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x5F00;&#x53D1;view;SpringMVC&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x89C6;&#x56FE;&#xFF0C;&#x6BD4;&#x5982;jstlView&#x3001;freemarkerView&#x3001;pdfView&#xFF08;<code>&#x540E;&#x9762;&#x66F4;&#x65B0;</code>&#xFF09;&#x7B49;&#x3002;</p>
+<p>负责将处理结果生成view视图、开发者可以根据需要开发view;SpringMVC提供了很多视图，比如jstlView、freemarkerView、pdfView（<code>后面更新</code>）等。</p>
 <blockquote>
-<p>SpringMVC&#x4E2D;&#x7684;&#x4E09;&#x5927;&#x7EC4;&#x4EF6;&#x5206;&#x522B;&#x662F;&#xFF1A;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x5904;&#x7406;&#x5668;&#x6620;&#x5C04;&#x5668;&#xFF0C;&#x89C6;&#x56FE;&#x89E3;&#x6790;&#x5668;&#xFF1B;&#x7528;&#x6237;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x7684;&#x90E8;&#x4EF6;&#x662F;&#xFF1A;Handler&#x548C;view</p>
+<p>SpringMVC中的三大组件分别是：前端控制器，处理器映射器，视图解析器；用户需要开发的部件是：Handler和view</p>
 </blockquote>
 <blockquote>
-<p>ModelAndView &#x5C01;&#x88C5;&#x4E86;&#x6570;&#x636E;&#x548C;&#x89C6;&#x56FE;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x8FD9;&#x4E2A;&#x662F;&#x8FDB;&#x884C;&#x4F20;&#x8F93;&#xFF0C;&#x6570;&#x636E;&#x7684;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x662F;Request&#x57DF;&#x3002;</p>
+<p>ModelAndView 封装了数据和视图信息，如果想进行页面的数据交互，可以选择这个是进行传输，数据的存放位置，默认的是Request域。</p>
 </blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -797,16 +797,12 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21k</span>
+    <span title="Site words total count">19k</span>
   
 </div>
 
 <!--
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-
-
-  <span class="post-meta-divider">|</span>
 
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v</div>

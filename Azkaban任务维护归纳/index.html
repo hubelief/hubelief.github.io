@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="&amp;#x7B80;&amp;#x4ECB;Azkaban&amp;#x5B98;&amp;#x7F51;Azkaban&amp;#x662F;&amp;#x5E38;&amp;#x89C1;&amp;#x7684;&amp;#x5B9A;&amp;#x65F6;&amp;#x4EFB;&amp;#x52A1;&amp;#x7BA1;&amp;#x7406;&amp;#x5668;&amp;#xFF08;&amp;#x5206;&amp;#x5E03;&amp;#x5F0F;&amp;#x5DE5;&amp;#x4F5C;&amp;#x6D41;&amp;#x7BA1;&amp;#">
+<meta name="description" content="简介Azkaban官网Azkaban是常见的定时任务管理器（分布式工作流管理器），大多数的定时ETL处理任务都会用到。 Azkaban 配置方面 Azkaban默认的最大并发线程数为25，最大同时执行25个flow；可以通过jetty.maxThreads来合理配置Azkaban可以同时进行的任务数量。修改时需注意每个job初始内存/最大内存的配置 Azkaban默认没有限制任务创建权限，为方便管">
 <meta name="keywords" content="Azkaban,Workflow Manager,Cron">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Azkaban任务维护归纳">
 <meta property="og:url" content="http://www.hushaohui.site/Azkaban任务维护归纳/index.html">
 <meta property="og:site_name" content="hu&#39;s BlOG">
-<meta property="og:description" content="&amp;#x7B80;&amp;#x4ECB;Azkaban&amp;#x5B98;&amp;#x7F51;Azkaban&amp;#x662F;&amp;#x5E38;&amp;#x89C1;&amp;#x7684;&amp;#x5B9A;&amp;#x65F6;&amp;#x4EFB;&amp;#x52A1;&amp;#x7BA1;&amp;#x7406;&amp;#x5668;&amp;#xFF08;&amp;#x5206;&amp;#x5E03;&amp;#x5F0F;&amp;#x5DE5;&amp;#x4F5C;&amp;#x6D41;&amp;#x7BA1;&amp;#">
+<meta property="og:description" content="简介Azkaban官网Azkaban是常见的定时任务管理器（分布式工作流管理器），大多数的定时ETL处理任务都会用到。 Azkaban 配置方面 Azkaban默认的最大并发线程数为25，最大同时执行25个flow；可以通过jetty.maxThreads来合理配置Azkaban可以同时进行的任务数量。修改时需注意每个job初始内存/最大内存的配置 Azkaban默认没有限制任务创建权限，为方便管">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.hushaohui.site/uploads/Azkaban/flexible-scheduling.png">
 <meta property="og:updated_time" content="2022-07-07T06:59:27.672Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Azkaban任务维护归纳">
-<meta name="twitter:description" content="&amp;#x7B80;&amp;#x4ECB;Azkaban&amp;#x5B98;&amp;#x7F51;Azkaban&amp;#x662F;&amp;#x5E38;&amp;#x89C1;&amp;#x7684;&amp;#x5B9A;&amp;#x65F6;&amp;#x4EFB;&amp;#x52A1;&amp;#x7BA1;&amp;#x7406;&amp;#x5668;&amp;#xFF08;&amp;#x5206;&amp;#x5E03;&amp;#x5F0F;&amp;#x5DE5;&amp;#x4F5C;&amp;#x6D41;&amp;#x7BA1;&amp;#">
+<meta name="twitter:description" content="简介Azkaban官网Azkaban是常见的定时任务管理器（分布式工作流管理器），大多数的定时ETL处理任务都会用到。 Azkaban 配置方面 Azkaban默认的最大并发线程数为25，最大同时执行25个flow；可以通过jetty.maxThreads来合理配置Azkaban可以同时进行的任务数量。修改时需注意每个job初始内存/最大内存的配置 Azkaban默认没有限制任务创建权限，为方便管">
 <meta name="twitter:image" content="http://www.hushaohui.site/uploads/Azkaban/flexible-scheduling.png">
 
 
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.1k
+                  1.8k
                 </span>
               
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  13
+                  8
                 </span>
               
             </div>
@@ -428,121 +428,121 @@
       
 
       
-        <h3 id="&#x7B80;&#x4ECB;"><a href="#&#x7B80;&#x4ECB;" class="headerlink" title="&#x7B80;&#x4ECB;"></a>&#x7B80;&#x4ECB;</h3><p><a href="https://azkaban.github.io" target="_blank" rel="noopener">Azkaban&#x5B98;&#x7F51;</a><br>Azkaban&#x662F;&#x5E38;&#x89C1;&#x7684;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x7BA1;&#x7406;&#x5668;&#xFF08;&#x5206;&#x5E03;&#x5F0F;&#x5DE5;&#x4F5C;&#x6D41;&#x7BA1;&#x7406;&#x5668;&#xFF09;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x7684;&#x5B9A;&#x65F6;ETL&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x90FD;&#x4F1A;&#x7528;&#x5230;&#x3002;</p>
-<h3 id="Azkaban-&#x914D;&#x7F6E;&#x65B9;&#x9762;"><a href="#Azkaban-&#x914D;&#x7F6E;&#x65B9;&#x9762;" class="headerlink" title="Azkaban &#x914D;&#x7F6E;&#x65B9;&#x9762;"></a>Azkaban &#x914D;&#x7F6E;&#x65B9;&#x9762;</h3><ol>
-<li>Azkaban&#x9ED8;&#x8BA4;&#x7684;&#x6700;&#x5927;&#x5E76;&#x53D1;&#x7EBF;&#x7A0B;&#x6570;&#x4E3A;25&#xFF0C;&#x6700;&#x5927;&#x540C;&#x65F6;&#x6267;&#x884C;25&#x4E2A;flow&#xFF1B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>jetty.maxThreads</code>&#x6765;&#x5408;&#x7406;&#x914D;&#x7F6E;Azkaban&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x8FDB;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x6570;&#x91CF;&#x3002;<strong>&#x4FEE;&#x6539;&#x65F6;&#x9700;&#x6CE8;&#x610F;&#x6BCF;&#x4E2A;job&#x521D;&#x59CB;&#x5185;&#x5B58;/&#x6700;&#x5927;&#x5185;&#x5B58;&#x7684;&#x914D;&#x7F6E;</strong></li>
-<li>Azkaban&#x9ED8;&#x8BA4;&#x6CA1;&#x6709;&#x9650;&#x5236;&#x4EFB;&#x52A1;&#x521B;&#x5EFA;&#x6743;&#x9650;&#xFF0C;&#x4E3A;&#x65B9;&#x4FBF;&#x7BA1;&#x7406;&#x4E00;&#x822C;&#x9700;&#x8981;&#x5F00;&#x542F;<code>lockdown.create.projects</code>&#x6765;&#x5408;&#x7406;&#x5206;&#x914D;&#x62E5;&#x6709;<code>admin</code>&#x8D26;&#x6237;&#x7684;&#x56E2;&#x961F;&#x3002;</li>
-<li>Azkaban&#x6267;&#x884C;&#x65E5;&#x5FD7;&#x9ED8;&#x8BA4;&#x4F1A;&#x4FDD;&#x7559;12&#x5468;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>execution.logs.retention.ms</code>&#x6765;&#x8C03;&#x6574;&#x5408;&#x7406;&#x7684;&#x65E5;&#x5FD7;&#x7559;&#x5B58;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#x3002;</li>
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://azkaban.github.io" target="_blank" rel="noopener">Azkaban官网</a><br>Azkaban是常见的定时任务管理器（分布式工作流管理器），大多数的定时ETL处理任务都会用到。</p>
+<h3 id="Azkaban-配置方面"><a href="#Azkaban-配置方面" class="headerlink" title="Azkaban 配置方面"></a>Azkaban 配置方面</h3><ol>
+<li>Azkaban默认的最大并发线程数为25，最大同时执行25个flow；可以通过<code>jetty.maxThreads</code>来合理配置Azkaban可以同时进行的任务数量。<strong>修改时需注意每个job初始内存/最大内存的配置</strong></li>
+<li>Azkaban默认没有限制任务创建权限，为方便管理一般需要开启<code>lockdown.create.projects</code>来合理分配拥有<code>admin</code>账户的团队。</li>
+<li>Azkaban执行日志默认会保留12周的时间，可以通过<code>execution.logs.retention.ms</code>来调整合理的日志留存时间，以毫秒为单位。</li>
 </ol>
-<h3 id="Azkaban-&#x5B9A;&#x65F6;Cron&#x8868;&#x8FBE;&#x5F0F;"><a href="#Azkaban-&#x5B9A;&#x65F6;Cron&#x8868;&#x8FBE;&#x5F0F;" class="headerlink" title="Azkaban &#x5B9A;&#x65F6;Cron&#x8868;&#x8FBE;&#x5F0F;"></a>Azkaban &#x5B9A;&#x65F6;Cron&#x8868;&#x8FBE;&#x5F0F;</h3><p>Azkaban&#x652F;&#x6301;&#x7684;Cron&#x8868;&#x8FBE;&#x683C;&#x5F0F;&#xFF1A;<code>Minutes Hours DayofMonth Month DayofWeek</code></p>
-<p><img src="/uploads/Azkaban/flexible-scheduling.png" alt="Azkaban&#x5B9A;&#x65F6;&#x8C03;&#x5EA6;&#x914D;&#x7F6E;&#x56FE;" title="Azkaban&#x5B9A;&#x65F6;&#x8C03;&#x5EA6;&#x914D;&#x7F6E;&#x56FE;"></p>
-<h4 id="Cron&#x8868;&#x8FBE;&#x5F0F;&#x652F;&#x6301;&#x7684;&#x7B26;&#x53F7;"><a href="#Cron&#x8868;&#x8FBE;&#x5F0F;&#x652F;&#x6301;&#x7684;&#x7B26;&#x53F7;" class="headerlink" title="Cron&#x8868;&#x8FBE;&#x5F0F;&#x652F;&#x6301;&#x7684;&#x7B26;&#x53F7;"></a>Cron&#x8868;&#x8FBE;&#x5F0F;&#x652F;&#x6301;&#x7684;&#x7B26;&#x53F7;</h4><ul>
-<li><code>*</code> &#x8868;&#x793A;&#x6240;&#x6709;&#x503C;</li>
-<li><code>?</code> &#x8868;&#x793A;&#x672A;&#x8BF4;&#x660E;&#x7684;&#x503C;&#xFF0C;&#x5373;&#x4E0D;&#x5173;&#x5FC3;&#x5B83;&#x4E3A;&#x4F55;&#x503C;&#xFF1B;&#x53EA;&#x80FD;&#x7528;&#x5728;DayofMonth&#x548C;DayofWeek&#x4E24;&#x4E2A;&#x57DF;<ul>
-<li>&#x5B83;&#x4E5F;&#x5339;&#x914D;&#x57DF;&#x7684;&#x4EFB;&#x610F;&#x503C;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0D;&#x4F1A;&#xFF1B;&#x56E0;&#x4E3A;DayofMonth&#x548C;DayofWeek&#x4F1A;&#x76F8;&#x4E92;&#x5F71;&#x54CD;&#x3002;&#x4F8B;&#x5982;&#x60F3;&#x5728;&#x6BCF;&#x6708;&#x7684;20&#x65E5;&#x89E6;&#x53D1;&#x8C03;&#x5EA6;&#xFF0C;&#x4E0D;&#x7BA1;20&#x65E5;&#x5230;&#x5E95;&#x662F;&#x661F;&#x671F;&#x51E0;&#xFF0C;&#x5219;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x5199;&#x6CD5;&#xFF1A;<code>13 13 15 20 * ?</code>, &#x5176;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4F4D;&#x53EA;&#x80FD;&#x7528; <code>&#xFF1F;</code>&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; <code>*</code>&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;*&#x8868;&#x793A;&#x4E0D;&#x7BA1;&#x661F;&#x671F;&#x51E0;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5E76;&#x4E0D;&#x662F;&#x8FD9;&#x6837;&#x3002;</li>
+<h3 id="Azkaban-定时Cron表达式"><a href="#Azkaban-定时Cron表达式" class="headerlink" title="Azkaban 定时Cron表达式"></a>Azkaban 定时Cron表达式</h3><p>Azkaban支持的Cron表达格式：<code>Minutes Hours DayofMonth Month DayofWeek</code></p>
+<p><img src="/uploads/Azkaban/flexible-scheduling.png" alt="Azkaban定时调度配置图" title="Azkaban定时调度配置图"></p>
+<h4 id="Cron表达式支持的符号"><a href="#Cron表达式支持的符号" class="headerlink" title="Cron表达式支持的符号"></a>Cron表达式支持的符号</h4><ul>
+<li><code>*</code> 表示所有值</li>
+<li><code>?</code> 表示未说明的值，即不关心它为何值；只能用在DayofMonth和DayofWeek两个域<ul>
+<li>它也匹配域的任意值，但实际不会；因为DayofMonth和DayofWeek会相互影响。例如想在每月的20日触发调度，不管20日到底是星期几，则只能使用如下写法：<code>13 13 15 20 * ?</code>, 其中最后一位只能用 <code>？</code>，而不能使用 <code>*</code>，如果使用*表示不管星期几都会触发，实际上并不是这样。</li>
 </ul>
 </li>
-<li><code>-</code> &#x8868;&#x793A;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x8303;&#x56F4;<ul>
-<li>&#x4F8B;&#x5982;&#xFF1A;&#x5728;Minutes&#x57DF;&#x4F7F;&#x7528; <code>5-20</code>&#xFF0C;&#x8868;&#x793A;&#x4ECE;5&#x5206;&#x5230;20&#x5206;&#x949F;&#x6BCF;&#x5206;&#x949F;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x3002;</li>
+<li><code>-</code> 表示一个指定的范围<ul>
+<li>例如：在Minutes域使用 <code>5-20</code>，表示从5分到20分钟每分钟触发一次。</li>
 </ul>
 </li>
-<li><code>,</code> &#x8868;&#x793A;&#x5217;&#x51FA;&#x679A;&#x4E3E;&#x503C;<ul>
-<li>&#x4F8B;&#x5982;&#xFF1A;&#x5728;Minutes&#x57DF;&#x4F7F;&#x7528; <code>5,20</code>&#xFF0C;&#x5219;&#x610F;&#x5473;&#x7740;&#x5728;5&#x548C;20&#x5206;&#x6BCF;&#x5206;&#x949F;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x3002;</li>
+<li><code>,</code> 表示列出枚举值<ul>
+<li>例如：在Minutes域使用 <code>5,20</code>，则意味着在5和20分每分钟触发一次。</li>
 </ul>
 </li>
-<li><code>/</code> &#x7B26;&#x53F7;&#x524D;&#x8868;&#x793A;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#xFF0C;&#x7B26;&#x53F7;&#x540E;&#x8868;&#x793A;&#x6BCF;&#x6B21;&#x9012;&#x589E;&#x7684;&#x503C;<ul>
-<li>&#x8D77;&#x59CB;&#x65F6;&#x95F4;&#x5F00;&#x59CB;&#x89E6;&#x53D1;&#xFF0C;&#x7136;&#x540E;&#x6BCF;&#x9694;&#x56FA;&#x5B9A;&#x65F6;&#x95F4;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x3002;&#x4F8B;&#x5982;&#x5728;Minutes&#x57DF;&#x4F7F;&#x7528; <code>5/20</code>,&#x5219;&#x610F;&#x5473;&#x7740;&#x4ECE;5&#x5206;&#x5F00;&#x59CB;&#x6BCF;20&#x5206;&#x949F;&#x89E6;&#x53D1;&#x4E00;&#x6B21; <code>00:05 00:25 00:45 01:05</code>&#x3002;</li>
+<li><code>/</code> 符号前表示开始时间，符号后表示每次递增的值<ul>
+<li>起始时间开始触发，然后每隔固定时间触发一次。例如在Minutes域使用 <code>5/20</code>,则意味着从5分开始每20分钟触发一次 <code>00:05 00:25 00:45 01:05</code>。</li>
 </ul>
 </li>
 <li><code>L</code>(last)<ul>
-<li>&#x7528;&#x5728;day-of-month&#x4E2D;&#x610F;&#x601D;&#x662F; &#x201C;&#x8FD9;&#x4E2A;&#x6708;&#x6700;&#x540E;&#x4E00;&#x5929;&#x201D;&#xFF1B;&#x7528;&#x5728; day-of-week&#x4E2D;&#x610F;&#x601D;&#x662F; <code>7</code> &#x6216;&#x8005; <code>SAT</code>&#x3002;</li>
-<li>&#x5982;&#x679C;&#x5728;day-of-week&#x5B57;&#x6BB5;&#x91CC;&#x548C;&#x6570;&#x5B57;&#x8054;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x5B83;&#x7684;&#x610F;&#x601D;&#x5C31;&#x662F; &#x201C;&#x8FD9;&#x4E2A;&#x6708;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x661F;&#x671F;&#x51E0;&#x201D;&#xFF1B;&#x4F8B;&#x5982;&#xFF1A; <code>6L</code> &#x610F;&#x601D;&#x662F;&#x8FD9;&#x4E2A;&#x6708;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x661F;&#x671F;&#x4E94;&#x3002;</li>
-<li><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x6700;&#x540E;&#x5F53;&#x6211;&#x4EEC;&#x7528;<code>L</code>&#x65F6;&#xFF0C;&#x4E0D;&#x6307;&#x660E;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x503C;&#x6216;&#x8005;&#x8303;&#x56F4;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x4E0D;&#x7136;&#x7684;&#x8BDD;&#x4F1A;&#x5BFC;&#x81F4;&#x903B;&#x8F91;&#x95EE;&#x9898;&#x3002;</li>
+<li>用在day-of-month中意思是 “这个月最后一天”；用在 day-of-week中意思是 <code>7</code> 或者 <code>SAT</code>。</li>
+<li>如果在day-of-week字段里和数字联合使用，它的意思就是 “这个月的最后一个星期几”；例如： <code>6L</code> 意思是这个月的最后一个星期五。</li>
+<li><strong>注意</strong>：最后当我们用<code>L</code>时，不指明一个列表值或者范围是很重要的，不然的话会导致逻辑问题。</li>
 </ul>
 </li>
-<li><code>W</code>(weekday) &#x53EA;&#x80FD;&#x7528;&#x5728;day-of-month&#x5B57;&#x6BB5;,&#x7528;&#x6765;&#x63CF;&#x53D9;&#x6700;&#x63A5;&#x8FD1;&#x6307;&#x5B9A;&#x5929;&#x7684;&#x5DE5;&#x4F5C;&#x65E5;&#xFF08;&#x5468;&#x4E00;&#x5230;&#x5468;&#x4E94;&#xFF09;<ul>
-<li>&#x5728;day-of-month&#x5B57;&#x6BB5;&#x7528;<code>15W</code>&#x6307; &#x201C;&#x6700;&#x63A5;&#x8FD1;&#x8FD9;&#x4E2A;&#x6708;&#x7B2C;15&#x5929;&#x7684;&#x5DE5;&#x4F5C;&#x65E5;&#x201D;&#xFF1B;&#x5373;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x6708;&#x7B2C;15&#x5929;&#x662F;&#x5468;&#x516D;&#xFF0C;&#x90A3;&#x4E48;&#x89E6;&#x53D1;&#x5668;&#x5C06;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x6708;&#x7B2C;14&#x5929;&#x5373;&#x5468;&#x4E94;&#x89E6;&#x53D1;&#xFF1B;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x6708;&#x7B2C;15&#x5929;&#x662F;&#x5468;&#x65E5;&#xFF0C;&#x90A3;&#x4E48;&#x89E6;&#x53D1;&#x5668;&#x5C06;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x6708;&#x7B2C;16&#x5929;&#x5373;&#x5468;&#x4E00;&#x89E6;&#x53D1;&#xFF1B;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x6708;&#x7B2C;15&#x5929;&#x662F;&#x5468;&#x4E8C;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5728;&#x89E6;&#x53D1;&#x5668;&#x5468;&#x4E8C;&#x8FD9;&#x5929;&#x89E6;&#x53D1;&#x3002;</li>
-<li><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x8FD9;&#x4E2A;&#x7528;&#x6CD5;&#x53EA;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x6708;&#x8BA1;&#x7B97;&#x503C;&#xFF0C;&#x4E0D;&#x4F1A;&#x8D8A;&#x8FC7;&#x5F53;&#x524D;&#x6708;&#xFF1B;<code>W</code>&#x5B57;&#x7B26;&#x4EC5;&#x80FD;&#x5728; day-of-month&#x6307;&#x660E;&#x4E00;&#x5929;&#xFF0C;&#x4E0D;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x8303;&#x56F4;&#x6216;&#x5217;&#x8868;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;<code>LW</code>&#x6765;&#x6307;&#x5B9A;&#x8FD9;&#x4E2A;&#x6708;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x65E5;&#x3002;</li>
+<li><code>W</code>(weekday) 只能用在day-of-month字段,用来描叙最接近指定天的工作日（周一到周五）<ul>
+<li>在day-of-month字段用<code>15W</code>指 “最接近这个月第15天的工作日”；即如果这个月第15天是周六，那么触发器将会在这个月第14天即周五触发；如果这个月第15天是周日，那么触发器将会在这个月第16天即周一触发；如果这个月第15天是周二，那么就在触发器周二这天触发。</li>
+<li><strong>注意</strong>：这个用法只会在当前月计算值，不会越过当前月；<code>W</code>字符仅能在 day-of-month指明一天，不能是一个范围或列表；也可以用<code>LW</code>来指定这个月的最后一个工作日。</li>
 </ul>
 </li>
-<li><code>#</code> &#x53EA;&#x80FD;&#x7528;&#x5728;day-of-week&#x5B57;&#x6BB5;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x8FD9;&#x4E2A;&#x6708;&#x7684;&#x7B2C;&#x51E0;&#x4E2A;&#x5468;&#x51E0;<ul>
-<li>&#x5728;day-of-week&#x5B57;&#x6BB5;&#x7528;<code>6#3</code>&#x6307;&#x8FD9;&#x4E2A;&#x6708;&#x7B2C;3&#x4E2A;&#x5468;&#x4E94;&#xFF08;6&#x6307;&#x5468;&#x4E94;&#xFF0C;3&#x6307;&#x7B2C;3&#x4E2A;&#xFF09;&#x3002;</li>
-<li><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;&#x65E5;&#x671F;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x89E6;&#x53D1;&#x5668;&#x5C31;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x3002;</li>
+<li><code>#</code> 只能用在day-of-week字段，用来指定这个月的第几个周几<ul>
+<li>在day-of-week字段用<code>6#3</code>指这个月第3个周五（6指周五，3指第3个）。</li>
+<li><strong>注意</strong>：如果指定的日期不存在，触发器就不会触发。</li>
 </ul>
 </li>
-<li><code>C</code> &#x6307;&#x548C;calendar&#x8054;&#x7CFB;&#x540E;&#x8BA1;&#x7B97;&#x8FC7;&#x7684;&#x503C;<ul>
-<li>&#x5728;day-of-month &#x5B57;&#x6BB5;&#x7528;<code>5C</code>&#x6307;&#x5728;&#x8FD9;&#x4E2A;&#x6708;&#x7B2C;5&#x5929;&#x6216;&#x4E4B;&#x540E;&#x5305;&#x62EC;calendar&#x7684;&#x7B2C;&#x4E00;&#x5929;&#xFF1B;&#x5728;day-of-week&#x5B57;&#x6BB5;&#x7528;<code>1C</code>&#x6307;&#x5728;&#x8FD9;&#x5468;&#x65E5;&#x6216;&#x4E4B;&#x540E;&#x5305;&#x62EC;calendar&#x7684;&#x7B2C;&#x4E00;&#x5929;&#x3002;</li>
+<li><code>C</code> 指和calendar联系后计算过的值<ul>
+<li>在day-of-month 字段用<code>5C</code>指在这个月第5天或之后包括calendar的第一天；在day-of-week字段用<code>1C</code>指在这周日或之后包括calendar的第一天。</li>
 </ul>
 </li>
 </ul>
-<h4 id="&#x57DF;&#x53D6;&#x503C;"><a href="#&#x57DF;&#x53D6;&#x503C;" class="headerlink" title="&#x57DF;&#x53D6;&#x503C;"></a>&#x57DF;&#x53D6;&#x503C;</h4><p>&#x4E0B;&#x8868;&#x4E3A;Cron&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x516D;&#x4E2A;&#x57DF;&#x80FD;&#x591F;&#x53D6;&#x7684;&#x503C;&#x4EE5;&#x53CA;&#x652F;&#x6301;&#x7684;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x3002;</p>
+<h4 id="域取值"><a href="#域取值" class="headerlink" title="域取值"></a>域取值</h4><p>下表为Cron表达式中六个域能够取的值以及支持的特殊字符。</p>
 <table>
 <thead>
 <tr>
-<th>&#x57DF;</th>
-<th>&#x662F;&#x5426;&#x5FC5;&#x9700;</th>
-<th>&#x53D6;&#x503C;&#x8303;&#x56F4;</th>
-<th>&#x7279;&#x6B8A;&#x5B57;&#x7B26;</th>
+<th>域</th>
+<th>是否必需</th>
+<th>取值范围</th>
+<th>特殊字符</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>&#x79D2;</td>
-<td>&#x662F;</td>
+<td>秒</td>
+<td>是</td>
 <td>[0, 59]</td>
 <td>* , - /</td>
 </tr>
 <tr>
-<td>&#x5206;&#x949F;</td>
-<td>&#x662F;</td>
+<td>分钟</td>
+<td>是</td>
 <td>[0, 59]</td>
 <td>* , - /</td>
 </tr>
 <tr>
-<td>&#x5C0F;&#x65F6;</td>
-<td>&#x662F;</td>
+<td>小时</td>
+<td>是</td>
 <td>[0, 23]</td>
 <td>* , - /</td>
 </tr>
 <tr>
-<td>&#x65E5;&#x671F;</td>
-<td>&#x662F;</td>
+<td>日期</td>
+<td>是</td>
 <td>[1, 31]</td>
 <td>* , - / ? L W</td>
 </tr>
 <tr>
-<td>&#x6708;&#x4EFD;</td>
-<td>&#x662F;</td>
-<td>[1, 12]&#x6216;[JAN, DEC]</td>
+<td>月份</td>
+<td>是</td>
+<td>[1, 12]或[JAN, DEC]</td>
 <td>* , - /</td>
 </tr>
 <tr>
-<td>&#x661F;&#x671F;</td>
-<td>&#x662F;</td>
-<td>[1, 7]&#x6216;[MON, SUN]&#x3002;&#x82E5;&#x60A8;&#x4F7F;&#x7528;[1, 7]&#x8868;&#x8FBE;&#x65B9;&#x5F0F;&#xFF0C;1&#x4EE3;&#x8868;&#x661F;&#x671F;&#x4E00;&#xFF0C;7&#x4EE3;&#x8868;&#x661F;&#x671F;&#x65E5;</td>
+<td>星期</td>
+<td>是</td>
+<td>[1, 7]或[MON, SUN]。若您使用[1, 7]表达方式，1代表星期一，7代表星期日</td>
 <td>* , - / ? L #</td>
 </tr>
 <tr>
-<td>&#x5E74;</td>
-<td>&#x5426;</td>
-<td>[&#x5F53;&#x524D;&#x5E74;&#x4EFD;&#xFF0C;2099]</td>
+<td>年</td>
+<td>否</td>
+<td>[当前年份，2099]</td>
 <td>* , - /</td>
 </tr>
 </tbody>
 </table>
-<h4 id="e-g"><a href="#e-g" class="headerlink" title="e.g."></a><strong>e.g.</strong></h4><p>corn&#x8868;&#x8FBE;&#x5F0F;&#x7ED3;&#x6784;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#xFF08;&#x7528;&#x7A7A;&#x683C;&#x9694;&#x5F00;&#xFF09;&#xFF1A;<code>&#x79D2; &#x5206; &#x5C0F;&#x65F6; &#x6708;&#x4EFD;&#x4E2D;&#x7684;&#x65E5;&#x671F; &#x6708;&#x4EFD; &#x661F;&#x671F;&#x4E2D;&#x7684;&#x65E5;&#x671F; &#x5E74;&#x4EFD;</code><br><code>0 */1 * * * ?</code> &#x6BCF;&#x9694;1&#x5206;&#x949F;&#x6267;&#x884C;&#x4E00;&#x6B21;<br><code>30 10 1 * * ?</code> &#x6BCF;&#x5929;1&#x70B9;10&#x5206;30&#x79D2;&#x89E6;&#x53D1;&#x4EFB;&#x52A1;<br><code>0 0 23 L * ?</code> &#x6BCF;&#x6708;&#x6700;&#x540E;&#x4E00;&#x5929;23&#x70B9;&#x6267;&#x884C;&#x4E00;&#x6B21;</p>
-<h3 id="Azkaban-API&#x81EA;&#x52A8;&#x5316;&#x5E94;&#x7528;"><a href="#Azkaban-API&#x81EA;&#x52A8;&#x5316;&#x5E94;&#x7528;" class="headerlink" title="Azkaban API&#x81EA;&#x52A8;&#x5316;&#x5E94;&#x7528;"></a>Azkaban API&#x81EA;&#x52A8;&#x5316;&#x5E94;&#x7528;</h3><p>Azkaban &#x6709;&#x4E00;&#x4E9B;&#x516C;&#x5F00;&#x7684; ajax &#x8C03;&#x7528;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; curl &#x6216;&#x5176;&#x4ED6;&#x4E00;&#x4E9B; HTTP &#x8BF7;&#x6C42;&#x5BA2;&#x6237;&#x7AEF;&#x8BBF;&#x95EE;&#x3002;</p>
-<h4 id="&#x81EA;&#x52A8;&#x5316;&#x7B2C;&#x4E00;&#x6B65;"><a href="#&#x81EA;&#x52A8;&#x5316;&#x7B2C;&#x4E00;&#x6B65;" class="headerlink" title="&#x81EA;&#x52A8;&#x5316;&#x7B2C;&#x4E00;&#x6B65;"></a>&#x81EA;&#x52A8;&#x5316;&#x7B2C;&#x4E00;&#x6B65;</h4><p>&#x76F4;&#x63A5;&#x6284;&#x5B98;&#x7F51;&#x7684;&#x8BDD;&#xFF1A;&#x5E94;&#x8BE5;&#x4E3A;&#x51E0;&#x4E4E;&#x6240;&#x6709; API &#x8C03;&#x7528;&#xFF08;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x9664;&#x5916;&#xFF09;&#x63D0;&#x4F9B; <code>session.id</code>&#x3002; <code>session.id</code> &#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x5730;&#x9644;&#x52A0;&#x4E3A;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x4E4B;&#x4E00;&#xFF0C;&#x6216;&#x901A;&#x8FC7; cookie &#x8BBE;&#x7F6E;&#xFF1A;<code>azkaban.browser.session.id</code>&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4E24;&#x4E2A; HTTP &#x8BF7;&#x6C42;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF1A;</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># a) &#x76F4;&#x63A5;&#x63D0;&#x4F9B; `seeeion.id` &#x53C2;&#x6570;</span></span><br><span class="line">curl -k --get --data <span class="string">&quot;session.id=bca1d75d-6bae-4163-a5b0-378a7d7b5a91&amp;ajax=fetchflowgraph&amp;project=azkaban-test-project&amp;flow=test&quot;</span> https://localhost:8443/manager</span><br><span class="line"></span><br><span class="line"><span class="comment"># b) &#x63D0;&#x4F9B;cookie `azkaban.browser.session.id`</span></span><br><span class="line">curl -k --get -b <span class="string">&quot;azkaban.browser.session.id=bca1d75d-6bae-4163-a5b0-378a7d7b5a91&quot;</span> --data <span class="string">&quot;ajax=fetchflowgraph&amp;project=azkaban-test-project&amp;flow=test&quot;</span> https://localhost:8443/manager</span><br></pre></td></tr></tbody></table></figure>
-<p>All API calls require a proper authentication first.&#xFF08;&#x6240;&#x6709;API&#x8BBF;&#x95EE;&#x9996;&#x5148;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x6B63;&#x786E;&#x7684;&#x8EAB;&#x4EFD;&#x6388;&#x6743;[session|cookie &#x7B49;&#x4EF7;]&#xFF09;&#x3002;</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># &#x8BF7;&#x6C42;&#x8EAB;&#x4EFD;&#x6388;&#x6743;&#x4FE1;&#x606F;</span></span><br><span class="line">curl -k -X POST --data <span class="string">&quot;action=login&amp;username=azkaban&amp;password=azkaban&quot;</span> https://localhost:8443</span><br></pre></td></tr></tbody></table></figure>
-<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line">// &#x8EAB;&#x4EFD;&#x6388;&#x6743;&#x4FE1;&#x606F;&#x83B7;&#x53D6;&#x6210;&#x529F;</span><br><span class="line">{</span><br><span class="line"><span class="attr">&quot;status&quot;</span> : <span class="string">&quot;success&quot;</span>,</span><br><span class="line"><span class="attr">&quot;session.id&quot;</span> : <span class="string">&quot;c001aba5-a90f-4daf-8f11-62330d034c0a&quot;</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>&#xA0;<br>&#xA0;</p>
-<h4 id="&#x81EA;&#x52A8;&#x5316;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;"><a href="#&#x81EA;&#x52A8;&#x5316;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;" class="headerlink" title="&#x81EA;&#x52A8;&#x5316;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;"></a>&#x81EA;&#x52A8;&#x5316;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</h4><p><strong>&#x81EA;&#x52A8;&#x5316;&#x5E94;&#x7528;&#x5C31;&#x662F;&#x628A;&#x8FD9;&#x4E9B;&#x516C;&#x5F00;&#x7684;API&#x63A5;&#x53E3;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x7A0B;&#x5E8F;&#x6216;&#x811A;&#x672C;&#x7F1D;&#x5408;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5B8C;&#x6210;&#x9700;&#x6C42;&#x7684;&#x5B9E;&#x73B0;&#x3002;</strong></p>
-<h5 id="&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5E94;&#x7528;"><a href="#&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5E94;&#x7528;" class="headerlink" title="&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5E94;&#x7528;"></a>&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5E94;&#x7528;</h5><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"></span><br><span class="line"><span class="comment"># Variables</span></span><br><span class="line">application=<span class="string">&quot;<span class="variable">$1</span>&quot;</span></span><br><span class="line">project=<span class="string">&quot;<span class="variable">$2</span>&quot;</span></span><br><span class="line">env=<span class="string">&quot;<span class="variable">$3</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Load config properties</span></span><br><span class="line">work_dir=$(</span><br><span class="line">  <span class="built_in">cd</span> <span class="string">&quot;<span class="variable">$(dirname &quot;$0&quot;)</span>&quot;</span></span><br><span class="line">  <span class="built_in">pwd</span></span><br><span class="line">)</span><br><span class="line"><span class="built_in">source</span> <span class="string">&quot;<span class="variable">${work_dir}</span>&quot;</span>/<span class="string">&quot;<span class="variable">${env}</span>&quot;</span>.env</span><br><span class="line"></span><br><span class="line"><span class="comment"># shellcheck disable=SC2076</span></span><br><span class="line"><span class="comment"># shellcheck disable=SC2049</span></span><br><span class="line"><span class="keyword">if</span> [[ <span class="string">&quot;<span class="variable">${application}</span>&quot;</span> =~ <span class="string">&apos;/&apos;</span> ]] || [[ <span class="string">&quot;<span class="variable">${application}</span>&quot;</span> =~ <span class="string">&apos;*&apos;</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&apos;Project name contains illegal character!&apos;</span></span><br><span class="line">  <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Build azkaban project, step like below:</span></span><br><span class="line"><span class="comment">#   1. remove orgin project dir.</span></span><br><span class="line"><span class="comment">#   2. remove orign project azkaban zip.</span></span><br><span class="line"><span class="comment">#   3. copy project dir from application to deploy dir.</span></span><br><span class="line"><span class="comment">#   4. consutruct azkaban zip from new project dir.</span></span><br><span class="line"><span class="comment"># shellcheck disable=SC2115</span></span><br><span class="line">project_path=<span class="string">&quot;<span class="variable">${dir}</span>/<span class="variable">${application}</span>-<span class="variable">${env}</span>/azkaban/<span class="variable">${project}</span>&quot;</span></span><br><span class="line">project_deploy_path=<span class="string">&quot;<span class="variable">${application}</span>/<span class="variable">${project}</span>/<span class="variable">${project}</span>&quot;</span></span><br><span class="line">rm -rf <span class="string">&quot;<span class="variable">${project_deploy_path}</span>&quot;</span></span><br><span class="line">rm -rf <span class="string">&quot;<span class="variable">${project_deploy_path}</span>.zip&quot;</span></span><br><span class="line">cp -r <span class="string">&quot;<span class="variable">${project_path}</span>&quot;</span> <span class="string">&quot;<span class="variable">${project_deploy_path}</span>&quot;</span></span><br><span class="line">zip -r <span class="string">&quot;<span class="variable">${project_deploy_path}</span>&quot;</span>.zip <span class="string">&quot;<span class="variable">${project_deploy_path}</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Apply for session_id from server</span></span><br><span class="line">login_response=$(curl -s -k -X POST --data <span class="string">&quot;action=login&amp;username=<span class="variable">${username}</span>&amp;password=<span class="variable">${password}</span>&quot;</span> <span class="string">&quot;<span class="variable">${host}</span>&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> [[ <span class="string">&quot;<span class="variable">$login_response</span>&quot;</span> =~ <span class="string">&quot;error&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Login failure &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;Login response: <span class="variable">${login_response}</span>&quot;</span></span><br><span class="line"><span class="keyword">elif</span> [[ <span class="string">&quot;<span class="variable">$login_response</span>&quot;</span> =~ <span class="string">&quot;success&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Login success &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</span></span><br><span class="line">  session_id=$(python -c <span class="string">&quot;import json,sys; data = json.dumps(<span class="variable">${login_response}</span>);data = json.loads(data); print (data[&apos;session.id&apos;]);&quot;</span>)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;Applied session_id: <span class="variable">${session_id}</span>&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Upload project</span></span><br><span class="line">upload_response=$(curl -i -k -H <span class="string">&apos;Content-Type: multipart/mixed&apos;</span> -X POST --form <span class="string">&quot;session.id=<span class="variable">${session_id}</span>&quot;</span> --form <span class="string">&apos;ajax=upload&apos;</span> --form <span class="string">&quot;file=@<span class="variable">${project_deploy_path}</span>.zip;type=application/zip&quot;</span> --form <span class="string">&quot;project=<span class="variable">${project}</span>&quot;</span> <span class="string">&quot;<span class="variable">${host}</span>&quot;</span>/manager)</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;Upload response: <span class="variable">${upload_response}</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Schedule func</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">schedule</span></span>() {</span><br><span class="line">  <span class="built_in">local</span> flow=<span class="variable">$1</span></span><br><span class="line">  <span class="built_in">local</span> cronExpression=<span class="variable">$2</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;Start schedule the flow <span class="variable">${flow}</span> of project <span class="variable">${project}</span>, cronExpression: <span class="variable">${cronExpression}</span>&quot;</span></span><br><span class="line">  <span class="built_in">local</span> schedule_response</span><br><span class="line">  schedule_response=$(curl -k -d <span class="string">&quot;ajax=scheduleCronFlow&quot;</span> -d <span class="string">&quot;projectName=<span class="variable">${project}</span>&quot;</span> -d <span class="string">&quot;flow=<span class="variable">${flow//\&quot;/}</span>&quot;</span> --data-urlencode <span class="string">&quot;cronExpression=<span class="variable">${cronExpression//\&quot;/}</span>&quot;</span> -b <span class="string">&quot;azkaban.browser.session.id=<span class="variable">${session_id}</span>&quot;</span> <span class="string">&quot;<span class="variable">${host}</span>&quot;</span>/schedule)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;Schedule response: <span class="variable">${schedule_response}</span>&quot;</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment"># Schedule</span></span><br><span class="line"><span class="keyword">if</span> [[ -f <span class="string">&quot;<span class="variable">${project_deploy_path}</span>-schedule.csv&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="keyword">while</span> <span class="built_in">read</span> -r line; <span class="keyword">do</span></span><br><span class="line">    flow=$(awk <span class="string">&apos;BEGIN{split(ARGV[1],var,&quot;;&quot;);print var[1]}&apos;</span> <span class="string">&quot;<span class="variable">${line}</span>&quot;</span>)</span><br><span class="line">    cronExpression=$(awk <span class="string">&apos;BEGIN{split(ARGV[1],var,&quot;;&quot;);print var[2]}&apos;</span> <span class="string">&quot;<span class="variable">${line}</span>&quot;</span>)</span><br><span class="line">    schedule <span class="string">&quot;<span class="variable">${flow}</span>&quot;</span> <span class="string">&quot;<span class="variable">${cronExpression}</span>&quot;</span></span><br><span class="line">  <span class="keyword">done</span> &lt;<span class="string">&quot;<span class="variable">${project_deploy_path}</span>-schedule.csv&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Deploy success &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</span></span><br></pre></td></tr></tbody></table></figure>
-<p>&#xA0;<br>&#xA0;</p>
-<h5 id="&#x5B9E;&#x65F6;&#x63A5;&#x53E3;ETL&#x8054;&#x52A8;&#x5E94;&#x7528;"><a href="#&#x5B9E;&#x65F6;&#x63A5;&#x53E3;ETL&#x8054;&#x52A8;&#x5E94;&#x7528;" class="headerlink" title="&#x5B9E;&#x65F6;&#x63A5;&#x53E3;ETL&#x8054;&#x52A8;&#x5E94;&#x7528;"></a>&#x5B9E;&#x65F6;&#x63A5;&#x53E3;ETL&#x8054;&#x52A8;&#x5E94;&#x7528;</h5><p>&#x4EE3;&#x7801;&#x592A;&#x591A;&#xFF0C;&#x6301;&#x7EED;&#x66F4;&#x65B0;&#x4E2D;&#x2026;.</p>
-<p>&#xA0;<br>&#xA0;</p>
+<h4 id="e-g"><a href="#e-g" class="headerlink" title="e.g."></a><strong>e.g.</strong></h4><p>corn表达式结构从左到右（用空格隔开）：<code>秒 分 小时 月份中的日期 月份 星期中的日期 年份</code><br><code>0 */1 * * * ?</code> 每隔1分钟执行一次<br><code>30 10 1 * * ?</code> 每天1点10分30秒触发任务<br><code>0 0 23 L * ?</code> 每月最后一天23点执行一次</p>
+<h3 id="Azkaban-API自动化应用"><a href="#Azkaban-API自动化应用" class="headerlink" title="Azkaban API自动化应用"></a>Azkaban API自动化应用</h3><p>Azkaban 有一些公开的 ajax 调用，可通过 curl 或其他一些 HTTP 请求客户端访问。</p>
+<h4 id="自动化第一步"><a href="#自动化第一步" class="headerlink" title="自动化第一步"></a>自动化第一步</h4><p>直接抄官网的话：应该为几乎所有 API 调用（身份验证除外）提供 <code>session.id</code>。 <code>session.id</code> 可以简单地附加为请求参数之一，或通过 cookie 设置：<code>azkaban.browser.session.id</code>。下面的两个 HTTP 请求是等价的：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># a) 直接提供 `seeeion.id` 参数</span></span><br><span class="line">curl -k --get --data <span class="string">"session.id=bca1d75d-6bae-4163-a5b0-378a7d7b5a91&amp;ajax=fetchflowgraph&amp;project=azkaban-test-project&amp;flow=test"</span> https://localhost:8443/manager</span><br><span class="line"></span><br><span class="line"><span class="comment"># b) 提供cookie `azkaban.browser.session.id`</span></span><br><span class="line">curl -k --get -b <span class="string">"azkaban.browser.session.id=bca1d75d-6bae-4163-a5b0-378a7d7b5a91"</span> --data <span class="string">"ajax=fetchflowgraph&amp;project=azkaban-test-project&amp;flow=test"</span> https://localhost:8443/manager</span><br></pre></td></tr></tbody></table></figure>
+<p>All API calls require a proper authentication first.（所有API访问首先需要获取正确的身份授权[session|cookie 等价]）。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 请求身份授权信息</span></span><br><span class="line">curl -k -X POST --data <span class="string">"action=login&amp;username=azkaban&amp;password=azkaban"</span> https://localhost:8443</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line">// 身份授权信息获取成功</span><br><span class="line">{</span><br><span class="line"><span class="attr">"status"</span> : <span class="string">"success"</span>,</span><br><span class="line"><span class="attr">"session.id"</span> : <span class="string">"c001aba5-a90f-4daf-8f11-62330d034c0a"</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>&nbsp;<br>&nbsp;</p>
+<h4 id="自动化应用实例"><a href="#自动化应用实例" class="headerlink" title="自动化应用实例"></a>自动化应用实例</h4><p><strong>自动化应用就是把这些公开的API接口通过其他程序或脚本缝合在一起，完成需求的实现。</strong></p>
+<h5 id="一键部署应用"><a href="#一键部署应用" class="headerlink" title="一键部署应用"></a>一键部署应用</h5><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"></span><br><span class="line"><span class="comment"># Variables</span></span><br><span class="line">application=<span class="string">"<span class="variable">$1</span>"</span></span><br><span class="line">project=<span class="string">"<span class="variable">$2</span>"</span></span><br><span class="line">env=<span class="string">"<span class="variable">$3</span>"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Load config properties</span></span><br><span class="line">work_dir=$(</span><br><span class="line">  <span class="built_in">cd</span> <span class="string">"<span class="variable">$(dirname "$0")</span>"</span></span><br><span class="line">  <span class="built_in">pwd</span></span><br><span class="line">)</span><br><span class="line"><span class="built_in">source</span> <span class="string">"<span class="variable">${work_dir}</span>"</span>/<span class="string">"<span class="variable">${env}</span>"</span>.env</span><br><span class="line"></span><br><span class="line"><span class="comment"># shellcheck disable=SC2076</span></span><br><span class="line"><span class="comment"># shellcheck disable=SC2049</span></span><br><span class="line"><span class="keyword">if</span> [[ <span class="string">"<span class="variable">${application}</span>"</span> =~ <span class="string">'/'</span> ]] || [[ <span class="string">"<span class="variable">${application}</span>"</span> =~ <span class="string">'*'</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">'Project name contains illegal character!'</span></span><br><span class="line">  <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Build azkaban project, step like below:</span></span><br><span class="line"><span class="comment">#   1. remove orgin project dir.</span></span><br><span class="line"><span class="comment">#   2. remove orign project azkaban zip.</span></span><br><span class="line"><span class="comment">#   3. copy project dir from application to deploy dir.</span></span><br><span class="line"><span class="comment">#   4. consutruct azkaban zip from new project dir.</span></span><br><span class="line"><span class="comment"># shellcheck disable=SC2115</span></span><br><span class="line">project_path=<span class="string">"<span class="variable">${dir}</span>/<span class="variable">${application}</span>-<span class="variable">${env}</span>/azkaban/<span class="variable">${project}</span>"</span></span><br><span class="line">project_deploy_path=<span class="string">"<span class="variable">${application}</span>/<span class="variable">${project}</span>/<span class="variable">${project}</span>"</span></span><br><span class="line">rm -rf <span class="string">"<span class="variable">${project_deploy_path}</span>"</span></span><br><span class="line">rm -rf <span class="string">"<span class="variable">${project_deploy_path}</span>.zip"</span></span><br><span class="line">cp -r <span class="string">"<span class="variable">${project_path}</span>"</span> <span class="string">"<span class="variable">${project_deploy_path}</span>"</span></span><br><span class="line">zip -r <span class="string">"<span class="variable">${project_deploy_path}</span>"</span>.zip <span class="string">"<span class="variable">${project_deploy_path}</span>"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Apply for session_id from server</span></span><br><span class="line">login_response=$(curl -s -k -X POST --data <span class="string">"action=login&amp;username=<span class="variable">${username}</span>&amp;password=<span class="variable">${password}</span>"</span> <span class="string">"<span class="variable">${host}</span>"</span>)</span><br><span class="line"><span class="keyword">if</span> [[ <span class="string">"<span class="variable">$login_response</span>"</span> =~ <span class="string">"error"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Login failure &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"Login response: <span class="variable">${login_response}</span>"</span></span><br><span class="line"><span class="keyword">elif</span> [[ <span class="string">"<span class="variable">$login_response</span>"</span> =~ <span class="string">"success"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Login success &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span></span><br><span class="line">  session_id=$(python -c <span class="string">"import json,sys; data = json.dumps(<span class="variable">${login_response}</span>);data = json.loads(data); print (data['session.id']);"</span>)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"Applied session_id: <span class="variable">${session_id}</span>"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Upload project</span></span><br><span class="line">upload_response=$(curl -i -k -H <span class="string">'Content-Type: multipart/mixed'</span> -X POST --form <span class="string">"session.id=<span class="variable">${session_id}</span>"</span> --form <span class="string">'ajax=upload'</span> --form <span class="string">"file=@<span class="variable">${project_deploy_path}</span>.zip;type=application/zip"</span> --form <span class="string">"project=<span class="variable">${project}</span>"</span> <span class="string">"<span class="variable">${host}</span>"</span>/manager)</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Upload response: <span class="variable">${upload_response}</span>"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Schedule func</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">schedule</span></span>() {</span><br><span class="line">  <span class="built_in">local</span> flow=<span class="variable">$1</span></span><br><span class="line">  <span class="built_in">local</span> cronExpression=<span class="variable">$2</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"Start schedule the flow <span class="variable">${flow}</span> of project <span class="variable">${project}</span>, cronExpression: <span class="variable">${cronExpression}</span>"</span></span><br><span class="line">  <span class="built_in">local</span> schedule_response</span><br><span class="line">  schedule_response=$(curl -k -d <span class="string">"ajax=scheduleCronFlow"</span> -d <span class="string">"projectName=<span class="variable">${project}</span>"</span> -d <span class="string">"flow=<span class="variable">${flow//\"/}</span>"</span> --data-urlencode <span class="string">"cronExpression=<span class="variable">${cronExpression//\"/}</span>"</span> -b <span class="string">"azkaban.browser.session.id=<span class="variable">${session_id}</span>"</span> <span class="string">"<span class="variable">${host}</span>"</span>/schedule)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"Schedule response: <span class="variable">${schedule_response}</span>"</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment"># Schedule</span></span><br><span class="line"><span class="keyword">if</span> [[ -f <span class="string">"<span class="variable">${project_deploy_path}</span>-schedule.csv"</span> ]]; <span class="keyword">then</span></span><br><span class="line">  <span class="keyword">while</span> <span class="built_in">read</span> -r line; <span class="keyword">do</span></span><br><span class="line">    flow=$(awk <span class="string">'BEGIN{split(ARGV[1],var,";");print var[1]}'</span> <span class="string">"<span class="variable">${line}</span>"</span>)</span><br><span class="line">    cronExpression=$(awk <span class="string">'BEGIN{split(ARGV[1],var,";");print var[2]}'</span> <span class="string">"<span class="variable">${line}</span>"</span>)</span><br><span class="line">    schedule <span class="string">"<span class="variable">${flow}</span>"</span> <span class="string">"<span class="variable">${cronExpression}</span>"</span></span><br><span class="line">  <span class="keyword">done</span> &lt;<span class="string">"<span class="variable">${project_deploy_path}</span>-schedule.csv"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Deploy success &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&nbsp;<br>&nbsp;</p>
+<h5 id="实时接口ETL联动应用"><a href="#实时接口ETL联动应用" class="headerlink" title="实时接口ETL联动应用"></a>实时接口ETL联动应用</h5><p>代码太多，持续更新中….</p>
+<p>&nbsp;<br>&nbsp;</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -854,16 +854,12 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21k</span>
+    <span title="Site words total count">19k</span>
   
 </div>
 
 <!--
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-
-
-  <span class="post-meta-divider">|</span>
 
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v</div>

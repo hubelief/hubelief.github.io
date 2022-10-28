@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="&amp;#x5EFA;&amp;#x8BAE;&amp;#x4F7F;&amp;#x7528;&amp;#x5173;&amp;#x952E;&amp;#x5B57;&amp;#x641C;&amp;#x7D22;&amp;#x67E5;&amp;#x627E;&amp;#x6240;&amp;#x9700;&amp;#x914D;&amp;#x7F6E; Hive &amp;#x5E38;&amp;#x7528;&amp;#x6307;&amp;#x4EE4;&amp;#x914D;&amp;#x7F6E;mapred.child.java.opts=-Xm">
+<meta name="description" content="建议使用关键字搜索查找所需配置 Hive 常用指令配置mapred.child.java.opts=-Xmx1024m 手工load时出现 java heap outofmemory 调整该设置以申请更大的内存资源 hive.compute.query.using.stats 当hive.compute.query.using.stats=true时，select count(*) from 将直">
 <meta name="keywords" content="大数据,数仓,Hadoop,Hive,Spark">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hive、Spark常用技巧">
 <meta property="og:url" content="http://www.hushaohui.site/Hive、Spark常用配置项/index.html">
 <meta property="og:site_name" content="hu&#39;s BlOG">
-<meta property="og:description" content="&amp;#x5EFA;&amp;#x8BAE;&amp;#x4F7F;&amp;#x7528;&amp;#x5173;&amp;#x952E;&amp;#x5B57;&amp;#x641C;&amp;#x7D22;&amp;#x67E5;&amp;#x627E;&amp;#x6240;&amp;#x9700;&amp;#x914D;&amp;#x7F6E; Hive &amp;#x5E38;&amp;#x7528;&amp;#x6307;&amp;#x4EE4;&amp;#x914D;&amp;#x7F6E;mapred.child.java.opts=-Xm">
+<meta property="og:description" content="建议使用关键字搜索查找所需配置 Hive 常用指令配置mapred.child.java.opts=-Xmx1024m 手工load时出现 java heap outofmemory 调整该设置以申请更大的内存资源 hive.compute.query.using.stats 当hive.compute.query.using.stats=true时，select count(*) from 将直">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2022-06-21T03:10:19.905Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hive、Spark常用技巧">
-<meta name="twitter:description" content="&amp;#x5EFA;&amp;#x8BAE;&amp;#x4F7F;&amp;#x7528;&amp;#x5173;&amp;#x952E;&amp;#x5B57;&amp;#x641C;&amp;#x7D22;&amp;#x67E5;&amp;#x627E;&amp;#x6240;&amp;#x9700;&amp;#x914D;&amp;#x7F6E; Hive &amp;#x5E38;&amp;#x7528;&amp;#x6307;&amp;#x4EE4;&amp;#x914D;&amp;#x7F6E;mapred.child.java.opts=-Xm">
+<meta name="twitter:description" content="建议使用关键字搜索查找所需配置 Hive 常用指令配置mapred.child.java.opts=-Xmx1024m 手工load时出现 java heap outofmemory 调整该设置以申请更大的内存资源 hive.compute.query.using.stats 当hive.compute.query.using.stats=true时，select count(*) from 将直">
 
 
 
@@ -389,7 +389,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  948
+                  876
                 </span>
               
 
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  3
                 </span>
               
             </div>
@@ -426,61 +426,61 @@
       
 
       
-        <p><strong>&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5173;&#x952E;&#x5B57;&#x641C;&#x7D22;&#x67E5;&#x627E;&#x6240;&#x9700;&#x914D;&#x7F6E;</strong></p>
-<h2 id="Hive-&#x5E38;&#x7528;&#x6307;&#x4EE4;&#x914D;&#x7F6E;"><a href="#Hive-&#x5E38;&#x7528;&#x6307;&#x4EE4;&#x914D;&#x7F6E;" class="headerlink" title="Hive &#x5E38;&#x7528;&#x6307;&#x4EE4;&#x914D;&#x7F6E;"></a>Hive &#x5E38;&#x7528;&#x6307;&#x4EE4;&#x914D;&#x7F6E;</h2><figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">mapred.child.java.opts=-Xmx1024m</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x624B;&#x5DE5;load&#x65F6;&#x51FA;&#x73B0; <strong>java heap outofmemory</strong> &#x8C03;&#x6574;&#x8BE5;&#x8BBE;&#x7F6E;&#x4EE5;&#x7533;&#x8BF7;&#x66F4;&#x5927;&#x7684;&#x5185;&#x5B58;&#x8D44;&#x6E90;</p>
+        <p><strong>建议使用关键字搜索查找所需配置</strong></p>
+<h2 id="Hive-常用指令配置"><a href="#Hive-常用指令配置" class="headerlink" title="Hive 常用指令配置"></a>Hive 常用指令配置</h2><figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">mapred.child.java.opts=-Xmx1024m</span><br></pre></td></tr></tbody></table></figure>
+<p>手工load时出现 <strong>java heap outofmemory</strong> 调整该设置以申请更大的内存资源</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">hive.compute.query.using.stats</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x5F53;hive.compute.query.using.stats=true&#x65F6;&#xFF0C;<code>select count(*) from</code> &#x5C06;&#x76F4;&#x63A5;&#x4ECE;&#x5143;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x4E2D;&#x83B7;&#x53D6;&#x8868;&#x4E2D;&#x8BB0;&#x5F55;&#x6761;&#x6570;&#xFF1B;<br>&#x5F53;hive.compute.query.using.stats=false&#x65F6;&#xFF0C;<code>select count(*) from</code> &#x5C06;&#x4F1A;&#x4EE5;&#x96C6;&#x7FA4;&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;<br><strong>&#x6CE8;</strong>: hadoop fs -put &#x8BE5;&#x65B9;&#x5F0F;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x5143;&#x6570;&#x636E;&#x4E2D;&#x83B7;&#x53D6;&#x8BB0;&#x5F55;&#x6570;&#xFF0C;&#x5982;&#x6709;&#x9700;&#x8981;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x8BE5;&#x914D;&#x7F6E;&#x4E3A;false</p>
+<p>当hive.compute.query.using.stats=true时，<code>select count(*) from</code> 将直接从元数据保存的统计信息中获取表中记录条数；<br>当hive.compute.query.using.stats=false时，<code>select count(*) from</code> 将会以集群模式运行返回结果<br><strong>注</strong>: hadoop fs -put 该方式无法通过元数据中获取记录数，如有需要需要设置该配置为false</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">hive.exec.dynamic.partition</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x7F3A;&#x7701;false&#xFF1B;&#x8BBE;&#x7F6E;&#x4E3A;true&#x5141;&#x8BB8;&#x4F7F;&#x7528;dynamic partition&#xFF0C;&#x5373;&#x52A8;&#x6001;&#x5206;&#x533A;</p>
+<p>缺省false；设置为true允许使用dynamic partition，即动态分区</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">hive.exec.dynamic.partition.mode</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x7F3A;&#x7701;strick&#xFF1B;&#x8BBE;&#x7F6E;dynamic partition&#x6A21;&#x5F0F;&#xFF08;nostrict&#x5141;&#x8BB8;&#x6240;&#x6709;partition&#x5217;&#x90FD;&#x4E3A;dynamic partition&#xFF0C;strict&#x4E0D;&#x5141;&#x8BB8;&#xFF09;</p>
+<p>缺省strick；设置dynamic partition模式（nostrict允许所有partition列都为dynamic partition，strict不允许）</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">hive.exec.max.dynamic.partitions.pernode</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x7F3A;&#x7701;100&#xFF1B;&#x6BCF;&#x4E00;&#x4E2A;mapreduce job&#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x7684;&#x5206;&#x533A;&#x7684;&#x6700;&#x5927;&#x6570;&#x91CF;&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x4E86;&#x8FD9;&#x4E2A;&#x6570;&#x91CF;&#x5C31;&#x4F1A;&#x62A5;&#x9519;</p>
+<p>缺省100；每一个mapreduce job允许创建的分区的最大数量，如果超过了这个数量就会报错</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">hive.exec.max.dynamic.partitions</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x7F3A;&#x7701;1000&#xFF1B;&#x4E00;&#x4E2A;dml&#x8BED;&#x53E5;&#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x7684;&#x6240;&#x6709;&#x5206;&#x533A;&#x7684;&#x6700;&#x5927;&#x6570;&#x91CF;</p>
+<p>缺省1000；一个dml语句允许创建的所有分区的最大数量</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">hive.exec.max.created.files</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x7F3A;&#x7701;100000&#xFF1B;&#x6240;&#x6709;&#x7684;mapreduce job&#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x5927;&#x6570;&#x91CF;</p>
+<p>缺省100000；所有的mapreduce job允许创建的文件的最大数量</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">hive.enforce.bucketing</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x9ED8;&#x8BA4;&#x4E3A;false;&#x542F;&#x7528;&#x5219;&#x5F3A;&#x5236; bucketing,&#x63A7;&#x5236;&#x8868;&#x662F;&#x5426;&#x8FDB;&#x884C;&#x5206;&#x6876;&#x7684;&#x8BBE;&#x7F6E;</p>
+<p>默认为false;启用则强制 bucketing,控制表是否进行分桶的设置</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">hive.cli.print.header</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x9ED8;&#x8BA4;&#x4E3A;false;&#x63A7;&#x5236;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x663E;&#x793A;&#x5217;&#x540D;</p>
+<p>默认为false;控制查询结果是否显示列名</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">mapreduce.job.queuename</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x6307;&#x5B9A;&#x8D44;&#x6E90;&#x961F;&#x5217;</p>
+<p>指定资源队列</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">hive.msck.path.validation=ignore</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x4FEE;&#x590D;&#x5206;&#x533A;&#x914D;&#x7F6E;&#xFF0C;&#x914D;&#x5408;<code>msck repair table dbname.tbname</code>&#x4F7F;&#x7528;</p>
+<p>修复分区配置，配合<code>msck repair table dbname.tbname</code>使用</p>
 <figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> lcoks [tab_name]</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x67E5;&#x770B;&#x8868;&#x9501;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x52A0;&#x8868;&#x540D;&#x4F7F;&#x7528;</p>
+<p>查看表锁，也可以不加表名使用</p>
 <figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">unlock</span> <span class="keyword">table</span> tab_name [<span class="keyword">partition</span> (xx=xxxx)]</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x91CA;&#x653E;&#x8868;&#x9501;&#xFF0C;<strong>&#x8868;&#x9501;</strong> &#x548C; <strong>&#x5206;&#x533A;&#x9501;</strong> &#x7EA7;&#x522B;&#x4E0D;&#x540C;&#xFF0C;&#x72EC;&#x5360;&#x9501;&#x5728;&#x67D0;&#x4E2A;&#x5206;&#x533A;&#x65F6;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x76EE;&#x6807;&#x5206;&#x533A;&#x91CA;&#x653E;</p>
+<p>释放表锁，<strong>表锁</strong> 和 <strong>分区锁</strong> 级别不同，独占锁在某个分区时需要指定目标分区释放</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">hive.support.concurrency=false</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x9047;&#x5230;&#x65E0;&#x6CD5;&#x91CA;&#x653E;&#x7684;&#x6B7B;&#x9501;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x6682;&#x65F6;&#x5173;&#x95ED;&#x5E76;&#x53D1;&#x9501;&#x8BBE;&#x7F6E;&#xFF08;&#x614E;&#x7528;&#xFF09;</p>
+<p>遇到无法释放的死锁时，可以尝试暂时关闭并发锁设置（慎用）</p>
 <ul>
-<li><p>hive&#x5185;&#x90E8;&#x8868;&#x4E0E;&#x5916;&#x90E8;&#x8868;&#x4E92;&#x76F8;&#x8F6C;&#x6362;</p>
+<li><p>hive内部表与外部表互相转换</p>
 <ul>
-<li><p>&#x8F6C;&#x6362;&#x5916;&#x90E8;&#x8868;</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tablename <span class="keyword">SET</span> TBLPROPERTIES (<span class="string">&apos;EXTERNAL&apos;</span> = <span class="string">&apos;true&apos;</span>);</span><br><span class="line"><span class="comment">-- &#x4FEE;&#x6539;&#x5B8C;&#x6210;&#x540E;,&#x67E5;&#x770B;MySQL&#x5143;&#x6570;&#x636E;TBLS&#x8868;,&#x53D1;&#x73B0;&#x8BE5;&#x8868;&#x8FD9;&#x6761;&#x6570;&#x636E;&#x5BF9;&#x5E94;&#x7684;TBL_TYPE&#x5B57;&#x6BB5;&#x53D8;&#x6210;&#x4E86; EXTERNAL_TABLE</span></span><br><span class="line"><span class="comment">-- &#x5C1D;&#x8BD5;DROP&#x8FD9;&#x4E2A;table&#x4E4B;&#x540E;,&#x8BE5;&#x8868;&#x5728;hdfs&#x4E0A;&#x9762;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x88AB;&#x5220;&#x9664;;&#x4F46;&#x662F;&#x5143;&#x6570;&#x636E;&#x8868;TBLS&#x91CC;&#x9762;&#x5173;&#x4E8E;&#x8BE5;&#x8868;&#x7684;&#x4FE1;&#x606F;&#x8FD8;&#x662F;&#x4F1A;&#x88AB;&#x5220;&#x9664;</span></span><br></pre></td></tr></tbody></table></figure>
+<li><p>转换外部表</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tablename <span class="keyword">SET</span> TBLPROPERTIES (<span class="string">'EXTERNAL'</span> = <span class="string">'true'</span>);</span><br><span class="line"><span class="comment">-- 修改完成后,查看MySQL元数据TBLS表,发现该表这条数据对应的TBL_TYPE字段变成了 EXTERNAL_TABLE</span></span><br><span class="line"><span class="comment">-- 尝试DROP这个table之后,该表在hdfs上面的数据不会被删除;但是元数据表TBLS里面关于该表的信息还是会被删除</span></span><br></pre></td></tr></tbody></table></figure>
 </li>
-<li><p>&#x8F6C;&#x6362;&#x5185;&#x90E8;&#x8868;</p>
-<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tablename <span class="keyword">SET</span> TBLPROPERTIES (<span class="string">&apos;EXTERNAL&apos;</span> = <span class="string">&apos;false&apos;</span>);</span><br><span class="line"><span class="comment">-- &#x4FEE;&#x6539;&#x5B8C;&#x6210;&#x540E;,&#x67E5;&#x770B;MySQL&#x5143;&#x6570;&#x636E;TBLS&#x8868;,&#x53D1;&#x73B0;&#x8BE5;&#x8868;&#x8FD9;&#x6761;&#x6570;&#x636E;&#x5BF9;&#x5E94;&#x7684;TBL_TYPE&#x5B57;&#x6BB5;&#x53D8;&#x6210;&#x4E86; MANAGED_TABLE</span></span><br><span class="line"><span class="comment">-- DROP&#x8FD9;&#x4E2A;table&#x4E4B;&#x540E;&#xFF0C;hdfs&#x4E0A;&#x7684;&#x6570;&#x636E;&#x548C;&#x5143;&#x6570;&#x636E;&#x8868;&#x7684;&#x4FE1;&#x606F;&#x90FD;&#x5C06;&#x88AB;&#x5220;&#x9664;</span></span><br></pre></td></tr></tbody></table></figure>
+<li><p>转换内部表</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tablename <span class="keyword">SET</span> TBLPROPERTIES (<span class="string">'EXTERNAL'</span> = <span class="string">'false'</span>);</span><br><span class="line"><span class="comment">-- 修改完成后,查看MySQL元数据TBLS表,发现该表这条数据对应的TBL_TYPE字段变成了 MANAGED_TABLE</span></span><br><span class="line"><span class="comment">-- DROP这个table之后，hdfs上的数据和元数据表的信息都将被删除</span></span><br></pre></td></tr></tbody></table></figure>
 </li>
-<li><p><strong>&#x6CE8;&#x610F;</strong> &#xFF1A;&#x5728;HIVE 4.0.0&#x4E4B;&#x540E;&#x6709;&#x8FC7;&#x4FEE;&#x6539;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x5916;&#x90E8;&#x8868;&#x518D;&#x5220;&#x9664;&#x65F6;&#x540C;&#x65F6;&#x5220;&#x9664;&#x672C;&#x5730;&#x7CFB;&#x7EDF;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;<code>external.table.purge=true</code>&#xFF0C;<a href="https://issues.apache.org/jira/browse/HIVE-19981" target="_blank" rel="noopener">&#x53C2;&#x8003;&#x5730;&#x5740;</a></p>
+<li><p><strong>注意</strong> ：在HIVE 4.0.0之后有过修改，如果需要设置外部表再删除时同时删除本地系统的数据，可以设置<code>external.table.purge=true</code>，<a href="https://issues.apache.org/jira/browse/HIVE-19981" target="_blank" rel="noopener">参考地址</a></p>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="Spark-&#x5E38;&#x7528;&#x6307;&#x4EE4;&#x914D;&#x7F6E;"><a href="#Spark-&#x5E38;&#x7528;&#x6307;&#x4EE4;&#x914D;&#x7F6E;" class="headerlink" title="Spark &#x5E38;&#x7528;&#x6307;&#x4EE4;&#x914D;&#x7F6E;"></a>Spark &#x5E38;&#x7528;&#x6307;&#x4EE4;&#x914D;&#x7F6E;</h2><figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line">refresh table tab_name</span><br></pre></td></tr></tbody></table></figure>
-<p>spark&#x7F13;&#x5B58;&#x5237;&#x65B0;</p>
+<h2 id="Spark-常用指令配置"><a href="#Spark-常用指令配置" class="headerlink" title="Spark 常用指令配置"></a>Spark 常用指令配置</h2><figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line">refresh table tab_name</span><br></pre></td></tr></tbody></table></figure>
+<p>spark缓存刷新</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">spark.driver.maxResultSize=1g</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x8BBE;&#x7F6E;&#x5E8F;&#x5217;&#x5316;&#x7ED3;&#x679C;&#x7684;&#x603B;&#x5927;&#x5C0F;&#x9650;&#x5236;&#xFF08;&#x4EE5;&#x5B57;&#x8282;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#xFF0C;&#x53EF;&#x7528;&#x540E;&#x7F00;&#x5355;&#x4F4D; (&#x201C;k&#x201D;, &#x201C;m&#x201D;, &#x201C;g&#x201D; or &#x201C;t&#x201D;) (e.g. 512m, 2g)</p>
+<p>设置序列化结果的总大小限制（以字节为单位），可用后缀单位 (“k”, “m”, “g” or “t”) (e.g. 512m, 2g)</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">spark.app.name</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x8BBE;&#x7F6E;&#x63D0;&#x4EA4;&#x7684;spark task&#x540D;&#x79F0;</p>
+<p>设置提交的spark task名称</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">spark.executor.memory</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x6BCF;&#x4E2A;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#x91CF;&#xFF0C;&#x4E0E;&#x5177;&#x6709;&#x5927;&#x5C0F;&#x5355;&#x4F4D;&#x7684; JVM &#x5185;&#x5B58;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x76F8;&#x540C;&#xFF1B;&#x53EF;&#x7528;&#x540E;&#x7F00;&#x5355;&#x4F4D; (&#x201C;k&#x201D;, &#x201C;m&#x201D;, &#x201C;g&#x201D; or &#x201C;t&#x201D;) (e.g. 512m, 2g)</p>
+<p>每个执行程序进程使用的内存量，与具有大小单位的 JVM 内存字符串格式相同；可用后缀单位 (“k”, “m”, “g” or “t”) (e.g. 512m, 2g)</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">spark.driver.cores</span><br></pre></td></tr></tbody></table></figure>
-<p>&#x96C6;&#x7FA4;&#x6A21;&#x5F0F;&#x4E0B;&#x53EF;&#x7533;&#x8BF7;&#x7684;&#x8BA1;&#x7B97;&#x5185;&#x6838;&#x6570;</p>
+<p>集群模式下可申请的计算内核数</p>
 <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">spark.driver.memory</span><br></pre></td></tr></tbody></table></figure>
-<p>client&#x6A21;&#x5F0F;&#x4E0B;&#x65E0;&#x6548;&#xFF1B;&#x521D;&#x59CB;&#x5316;SparkContext&#x8FDB;&#x7A0B;&#x7684;&#x9A71;&#x52A8;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x53EF;&#x7528;&#x540E;&#x7F00;&#x5355;&#x4F4D; (&#x201C;k&#x201D;, &#x201C;m&#x201D;, &#x201C;g&#x201D; or &#x201C;t&#x201D;) (e.g. 512m, 2g)</p>
+<p>client模式下无效；初始化SparkContext进程的驱动内存大小，可用后缀单位 (“k”, “m”, “g” or “t”) (e.g. 512m, 2g)</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -796,16 +796,12 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21k</span>
+    <span title="Site words total count">19k</span>
   
 </div>
 
 <!--
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-
-
-  <span class="post-meta-divider">|</span>
 
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v</div>

@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="&amp;#x524D;&amp;#x9762;&amp;#x4E00;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x8BB2;&amp;#x5230;&amp;#xFF0C;&amp;#x5728;Spring&amp;#x6846;&amp;#x67B6;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6211;&amp;#x4EEC;SpringMVC&amp;#x7684;&amp;#x52A0;&amp;#x8F7D;&amp;#x662F;&amp;#x901A;&amp;#x8FC7;S">
+<meta name="description" content="前面一篇文章中讲到，在Spring框架中，我们SpringMVC的加载是通过Servlet容器解析Web.xml来加载初始化SpringIOC容器与SpringMVC的基础环境参数的。  以下文章中用到的web.xml与日志信息都保存在我的CSDN（点击跳转）上面。 关于Web.xml 中的配置加载顺序在我们的Servlet/WEB容器加载后，紧接着就是找到我们项目War包中WEB-INF下的We">
 <meta name="keywords" content="Spring,SpringMVC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringMVC核心（二）：根据启动日志学原理">
 <meta property="og:url" content="http://www.hushaohui.site/SpringMVC核心（二）：根据启动日志学原理/index.html">
 <meta property="og:site_name" content="hu&#39;s BlOG">
-<meta property="og:description" content="&amp;#x524D;&amp;#x9762;&amp;#x4E00;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x8BB2;&amp;#x5230;&amp;#xFF0C;&amp;#x5728;Spring&amp;#x6846;&amp;#x67B6;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6211;&amp;#x4EEC;SpringMVC&amp;#x7684;&amp;#x52A0;&amp;#x8F7D;&amp;#x662F;&amp;#x901A;&amp;#x8FC7;S">
+<meta property="og:description" content="前面一篇文章中讲到，在Spring框架中，我们SpringMVC的加载是通过Servlet容器解析Web.xml来加载初始化SpringIOC容器与SpringMVC的基础环境参数的。  以下文章中用到的web.xml与日志信息都保存在我的CSDN（点击跳转）上面。 关于Web.xml 中的配置加载顺序在我们的Servlet/WEB容器加载后，紧接着就是找到我们项目War包中WEB-INF下的We">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.hushaohui.site/uploads/SpringMVC核心/DispatcherServlet_ExtendsRelationship.png">
 <meta property="og:updated_time" content="2022-05-17T06:21:34.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringMVC核心（二）：根据启动日志学原理">
-<meta name="twitter:description" content="&amp;#x524D;&amp;#x9762;&amp;#x4E00;&amp;#x7BC7;&amp;#x6587;&amp;#x7AE0;&amp;#x4E2D;&amp;#x8BB2;&amp;#x5230;&amp;#xFF0C;&amp;#x5728;Spring&amp;#x6846;&amp;#x67B6;&amp;#x4E2D;&amp;#xFF0C;&amp;#x6211;&amp;#x4EEC;SpringMVC&amp;#x7684;&amp;#x52A0;&amp;#x8F7D;&amp;#x662F;&amp;#x901A;&amp;#x8FC7;S">
+<meta name="twitter:description" content="前面一篇文章中讲到，在Spring框架中，我们SpringMVC的加载是通过Servlet容器解析Web.xml来加载初始化SpringIOC容器与SpringMVC的基础环境参数的。  以下文章中用到的web.xml与日志信息都保存在我的CSDN（点击跳转）上面。 关于Web.xml 中的配置加载顺序在我们的Servlet/WEB容器加载后，紧接着就是找到我们项目War包中WEB-INF下的We">
 <meta name="twitter:image" content="http://www.hushaohui.site/uploads/SpringMVC核心/DispatcherServlet_ExtendsRelationship.png">
 
 
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.6k
+                  2.4k
                 </span>
               
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  16
+                  9
                 </span>
               
             </div>
@@ -428,167 +428,167 @@
       
 
       
-        <p>&#x524D;&#x9762;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x8BB2;&#x5230;&#xFF0C;&#x5728;Spring&#x6846;&#x67B6;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;SpringMVC&#x7684;&#x52A0;&#x8F7D;&#x662F;&#x901A;&#x8FC7;Servlet&#x5BB9;&#x5668;&#x89E3;&#x6790;Web.xml&#x6765;&#x52A0;&#x8F7D;&#x521D;&#x59CB;&#x5316;SpringIOC&#x5BB9;&#x5668;&#x4E0E;SpringMVC&#x7684;&#x57FA;&#x7840;&#x73AF;&#x5883;&#x53C2;&#x6570;&#x7684;&#x3002; </p>
-<p>&#x4EE5;&#x4E0B;&#x6587;&#x7AE0;&#x4E2D;&#x7528;&#x5230;&#x7684;web.xml&#x4E0E;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x90FD;&#x4FDD;&#x5B58;&#x5728;&#x6211;&#x7684;<a href="https://blog.csdn.net/hu_belif/article/details/88625867" target="_blank" rel="noopener">CSDN&#xFF08;&#x70B9;&#x51FB;&#x8DF3;&#x8F6C;&#xFF09;</a>&#x4E0A;&#x9762;&#x3002;</p>
-<h1 id="&#x5173;&#x4E8E;Web-xml-&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;"><a href="#&#x5173;&#x4E8E;Web-xml-&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;" class="headerlink" title="&#x5173;&#x4E8E;Web.xml &#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;"></a>&#x5173;&#x4E8E;Web.xml &#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;</h1><p>&#x5728;&#x6211;&#x4EEC;&#x7684;Servlet/WEB&#x5BB9;&#x5668;&#x52A0;&#x8F7D;&#x540E;&#xFF0C;&#x7D27;&#x63A5;&#x7740;&#x5C31;&#x662F;&#x627E;&#x5230;&#x6211;&#x4EEC;&#x9879;&#x76EE;War&#x5305;&#x4E2D;WEB-INF&#x4E0B;&#x7684;<code>Web.xml</code>&#x6587;&#x4EF6;&#xFF0C;&#x52A0;&#x8F7D;&#x89E3;&#x6790;&#x8BE5;&#x6765;&#x542F;&#x52A8;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x6211;&#x4EEC;&#x7684;Spring&#x5BB9;&#x5668;(IOC&#x5BB9;&#x5668;)&#x3002;</p>
-<p>&#x5728;web.xml&#x6587;&#x4EF6;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;&#x4E0E;&#x5B83;&#x4EEC;&#x5728; web.xml &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;<code>&#x65E0;&#x5173;</code>&#x3002;<br>&#x52A0;&#x8F7D;&#x7684;&#x987A;&#x5E8F;&#x662F;&#xFF1A;<strong>context-param-&gt;listener -&gt; filter -&gt; servletContext-param-&gt;&#x5176;&#x4ED6;web&#x914D;&#x7F6E;</strong>&#xFF0C;&#x5B83;&#x7528;&#x4E8E;&#x5411; ServletContext &#x63D0;&#x4F9B;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x5373;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0A;&#x4E0B;&#x6587;&#x4FE1;&#x606F;(&#x662F;&#x6574;&#x4E2A;&#x5BB9;&#x5668;&#x7684;&#x6839;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x8BB2;&#x5230;)&#x3002;</p>
-<p>&#x6211;&#x4EEC;&#x7684; listener, filter &#x7B49;&#x5728;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x4F1A;&#x7528;&#x5230;&#x8FD9;&#x4E9B;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#xFF1B;&#x7136;&#x800C;&#x5BF9;&#x4E8E;&#x67D0;&#x4E9B;&#x914D;&#x7F6E;&#x8282;&#x70B9;&#x800C;&#x8A00;&#xFF0C;&#x5B83;&#x4EEC;&#x51FA;&#x73B0;&#x7684;&#x987A;&#x5E8F;&#x662F;&#x6709;&#x5148;&#x540E;&#x5173;&#x8054;&#x7684;&#xFF1B;&#x4EE5; filter &#x4E3A;&#x4F8B;&#xFF0C;web.xml &#x4E2D;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x591A;&#x4E2A; filter&#xFF0C;&#x4E0E; filter &#x76F8;&#x5173;&#x7684;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x8282;&#x662F; filter-mapping&#xFF0C;&#x8FD9;&#x91CC;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#xFF1A;&#x5BF9;&#x4E8E;&#x62E5;&#x6709;&#x76F8;&#x540C; filter-name &#x7684; filter &#x548C; filter-mapping &#x914D;&#x7F6E;&#x8282;&#x70B9;&#x800C;&#x8A00;&#xFF0C;filter-mapping &#x5FC5;&#x987B;&#x51FA;&#x73B0;&#x5728; filter &#x4E4B;&#x540E;&#xFF0C;<em>&#x5426;&#x5219;&#x5F53;&#x89E3;&#x6790;&#x5230; filter-mapping &#x65F6;&#xFF0C;&#x5B83;&#x6240;&#x5BF9;&#x5E94;&#x7684; filter-name &#x8FD8;&#x672A;&#x5B9A;&#x4E49;</em>&#x3002;</p>
-<p>web &#x5BB9;&#x5668;&#x542F;&#x52A8;&#x65F6;&#x521D;&#x59CB;&#x5316;&#x6BCF;&#x4E2A; filter &#x65F6;&#xFF0C;&#x662F;&#x6309;&#x7167; filter &#x914D;&#x7F6E;&#x8282;&#x70B9;&#x51FA;&#x73B0;&#x7684;&#x987A;&#x5E8F;&#x6765;&#x521D;&#x59CB;&#x5316;&#x7684;&#xFF0C;&#x5F53;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x5339;&#x914D;&#x591A;&#x4E2A; filter-mapping &#x65F6;&#xFF0C;filter &#x62E6;&#x622A;&#x8D44;&#x6E90;&#x662F;&#x6309;&#x7167; filter-mapping &#x914D;&#x7F6E;&#x8282;&#x51FA;&#x73B0;&#x7684;&#x987A;&#x5E8F;&#x6765;&#x4F9D;&#x6B21;&#x8C03;&#x7528; <code>doFilter()</code> &#x65B9;&#x6CD5;&#x7684;&#x3002;</p>
-<p>servlet &#x540C; filter &#x7C7B;&#x4F3C; &#xFF0C;&#x6B64;&#x5904;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;(&#x6587;&#x7AE0;&#x6700;&#x540E;&#x518D;&#x5570;&#x55E6;)&#x3002;&#x800C;&#x540C;&#x4E2A;&#x7C7B;&#x578B;&#x4E4B;&#x95F4;&#x7684;&#x5B9E;&#x9645;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x7684;&#x987A;&#x5E8F;&#x662F;&#x6839;&#x636E;&#x5BF9;&#x5E94;&#x7684; mapping &#x7684;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x8C03;&#x7528;&#x7684;&#xFF08;mapping&#x7684;&#x7B49;&#x4E8E;&#x4E0A;&#x9762;&#x521D;&#x59CB;&#x5316;&#x7684;&#x987A;&#x5E8F;&#xFF09;&#x3002;</p>
+        <p>前面一篇文章中讲到，在Spring框架中，我们SpringMVC的加载是通过Servlet容器解析Web.xml来加载初始化SpringIOC容器与SpringMVC的基础环境参数的。 </p>
+<p>以下文章中用到的web.xml与日志信息都保存在我的<a href="https://blog.csdn.net/hu_belif/article/details/88625867" target="_blank" rel="noopener">CSDN（点击跳转）</a>上面。</p>
+<h1 id="关于Web-xml-中的配置加载顺序"><a href="#关于Web-xml-中的配置加载顺序" class="headerlink" title="关于Web.xml 中的配置加载顺序"></a>关于Web.xml 中的配置加载顺序</h1><p>在我们的Servlet/WEB容器加载后，紧接着就是找到我们项目War包中WEB-INF下的<code>Web.xml</code>文件，加载解析该来启动并初始化我们的Spring容器(IOC容器)。</p>
+<p>在web.xml文件中元素的加载顺序与它们在 web.xml 文件中的先后顺序<code>无关</code>。<br>加载的顺序是：<strong>context-param-&gt;listener -&gt; filter -&gt; servletContext-param-&gt;其他web配置</strong>，它用于向 ServletContext 提供键值对，即应用程序上下文信息(是整个容器的根，后面会讲到)。</p>
+<p>我们的 listener, filter 等在初始化时会用到这些上下文中的信息；然而对于某些配置节点而言，它们出现的顺序是有先后关联的；以 filter 为例，web.xml 中可以定义多个 filter，与 filter 相关的一个配置节是 filter-mapping，这里一定要注意：对于拥有相同 filter-name 的 filter 和 filter-mapping 配置节点而言，filter-mapping 必须出现在 filter 之后，<em>否则当解析到 filter-mapping 时，它所对应的 filter-name 还未定义</em>。</p>
+<p>web 容器启动时初始化每个 filter 时，是按照 filter 配置节点出现的顺序来初始化的，当请求资源匹配多个 filter-mapping 时，filter 拦截资源是按照 filter-mapping 配置节出现的顺序来依次调用 <code>doFilter()</code> 方法的。</p>
+<p>servlet 同 filter 类似 ，此处不再赘述(文章最后再啰嗦)。而同个类型之间的实际程序调用的时候的顺序是根据对应的 mapping 的顺序进行调用的（mapping的等于上面初始化的顺序）。</p>
 <hr>
-<p><strong>web.xml&#x5E38;&#x89C1;&#x914D;&#x7F6E;&#x8BE6;&#x89E3;:</strong></p>
+<p><strong>web.xml常见配置详解:</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">&#x5C5E;&#x6027;&#x503C;</th>
-<th style="text-align:left">&#x542B;&#x4E49;</th>
+<th style="text-align:center">属性值</th>
+<th style="text-align:left">含义</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">display-name</td>
-<td style="text-align:left">&#x5B9A;&#x4E49;&#x5F53;&#x524D;WEB&#x5E94;&#x7528;&#x7684;&#x540D;&#x5B57;</td>
+<td style="text-align:left">定义当前WEB应用的名字</td>
 </tr>
 <tr>
 <td style="text-align:center">description</td>
-<td style="text-align:left">&#x58F0;&#x660E;WEB&#x5E94;&#x7528;&#x7684;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;</td>
+<td style="text-align:left">声明WEB应用的描述信息</td>
 </tr>
 <tr>
 <td style="text-align:center">context-param</td>
-<td style="text-align:left">&#x5143;&#x7D20;&#x58F0;&#x660E;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x8303;&#x56F4;&#x5185;&#x7684;&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;&#x73AF;&#x5883;</td>
+<td style="text-align:left">元素声明整个应用范围内的初始化参数环境</td>
 </tr>
 <tr>
 <td style="text-align:center">filter</td>
-<td style="text-align:left">&#x8FC7;&#x6EE4;&#x5668;&#x5143;&#x7D20;&#x5C06;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#x4E0E;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;javax.servlet.Filter&#x63A5;&#x53E3;&#x7684;&#x7C7B;&#x76F8;&#x5173;&#x8054;</td>
+<td style="text-align:left">过滤器元素将一个名字与一个实现javax.servlet.Filter接口的类相关联</td>
 </tr>
 <tr>
 <td style="text-align:center">filter-mapping</td>
-<td style="text-align:left">&#x4E00;&#x65E6;&#x547D;&#x540D;&#x4E86;&#x4E00;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668;&#xFF0C;&#x5C31;&#x8981;&#x5229;&#x7528;filter-mapping&#x5143;&#x7D20;&#x628A;&#x5B83;&#x4E0E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;servlet&#x6216;JSP&#x9875;&#x9762;&#x76F8;&#x5173;&#x8054;</td>
+<td style="text-align:left">一旦命名了一个过滤器，就要利用filter-mapping元素把它与一个或多个servlet或JSP页面相关联</td>
 </tr>
 <tr>
 <td style="text-align:center">listener</td>
-<td style="text-align:left">&#x6355;&#x6349;&#x670D;&#x52A1;&#x5668;&#x7684;&#x542F;&#x52A8;&#x548C;&#x505C;&#x6B62;&#xFF0C;&#x89E6;&#x53D1;&#x76F8;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#xFF08;servlet&#x7684;&#x521D;&#x59CB;&#x5316;/&#x5904;&#x7406;&#x4E1A;&#x52A1;/&#x9500;&#x6BC1;&#xFF09;</td>
+<td style="text-align:left">捕捉服务器的启动和停止，触发相应的方法（servlet的初始化/处理业务/销毁）</td>
 </tr>
 <tr>
 <td style="text-align:center">servlet</td>
-<td style="text-align:left">&#x5728;&#x5411;servlet&#x6216;JSP&#x9875;&#x9762;&#x5236;&#x5B9A;&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;&#x6216;&#x5B9A;&#x5236;URL&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x9996;&#x5148;&#x547D;&#x540D;servlet&#x6216;JSP&#x9875;&#x9762;&#x3002;Servlet&#x5143;&#x7D20;&#x5C31;&#x662F;&#x7528;&#x6765;&#x5B8C;&#x6210;&#x6B64;&#x9879;&#x4EFB;&#x52A1;&#x7684;</td>
+<td style="text-align:left">在向servlet或JSP页面制定初始化参数或定制URL时，必须首先命名servlet或JSP页面。Servlet元素就是用来完成此项任务的</td>
 </tr>
 <tr>
 <td style="text-align:center">servlet-mapping</td>
-<td style="text-align:left">&#x670D;&#x52A1;&#x5668;&#x4E00;&#x822C;&#x4E3A;servlet&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x7F3A;&#x7701;&#x7684;URL&#xFF1A;<code>http://host/webAppPrefix/servlet/ServletName</code>&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5E38;&#x5E38;&#x4F1A;&#x66F4;&#x6539;&#x8FD9;&#x4E2A;URL&#xFF0C;&#x4EE5;&#x4FBF;servlet&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;&#x6216;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x5904;&#x7406;&#x76F8;&#x5BF9;URL&#x3002;&#x5728;&#x66F4;&#x6539;&#x7F3A;&#x7701;URL&#x65F6;&#xFF0C;&#x4F7F;&#x7528;servlet-mapping&#x5143;&#x7D20;&#x3002;</td>
+<td style="text-align:left">服务器一般为servlet提供一个缺省的URL：<code>http://host/webAppPrefix/servlet/ServletName</code>。但是，常常会更改这个URL，以便servlet可以访问初始化参数或更容易地处理相对URL。在更改缺省URL时，使用servlet-mapping元素。</td>
 </tr>
 <tr>
 <td style="text-align:center">session-config</td>
-<td style="text-align:left">&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x4F1A;&#x8BDD;&#x5728;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x5185;&#x672A;&#x88AB;&#x8BBF;&#x95EE;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x629B;&#x5F03;&#x5B83;&#x4EE5;&#x8282;&#x7701;&#x5185;&#x5B58;&#x3002; &#x53EF;&#x901A;&#x8FC7;&#x4F7F;&#x7528;HttpSession&#x7684;setMaxInactiveInterval&#x65B9;&#x6CD5;&#x660E;&#x786E;&#x8BBE;&#x7F6E;&#x5355;&#x4E2A;&#x4F1A;&#x8BDD;&#x5BF9;&#x8C61;&#x7684;&#x8D85;&#x65F6;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x53EF;&#x5229;&#x7528;session-config&#x5143;&#x7D20;&#x5236;&#x5B9A;&#x7F3A;&#x7701;&#x8D85;&#x65F6;&#x503C;&#xFF08;&#x672A;&#x8D85;&#x65F6;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x5728;&#x672C;&#x5730;&#xFF09;&#x3002;</td>
+<td style="text-align:left">如果某个会话在一定时间内未被访问，服务器可以抛弃它以节省内存。 可通过使用HttpSession的setMaxInactiveInterval方法明确设置单个会话对象的超时值，或者可利用session-config元素制定缺省超时值（未超时情况下可以存储在本地）。</td>
 </tr>
 <tr>
 <td style="text-align:center">welcome-file-list</td>
-<td style="text-align:left">&#x8BBE;&#x7F6E;&#x6B22;&#x8FCE;&#x9875;</td>
+<td style="text-align:left">设置欢迎页</td>
 </tr>
 <tr>
 <td style="text-align:center">error-page</td>
-<td style="text-align:left">&#x8FD4;&#x56DE;&#x7279;&#x5B9A;HTTP&#x72B6;&#x6001;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x6216;&#x8005;&#x7279;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x5F02;&#x5E38;&#x88AB;&#x629B;&#x51FA;&#x65F6;&#xFF0C;&#x80FD;&#x591F;&#x5236;&#x5B9A;&#x5C06;&#x8981;&#x663E;&#x793A;&#x7684;&#x9875;&#x9762;&#x3002;</td>
+<td style="text-align:left">返回特定HTTP状态代码时，或者特定类型的异常被抛出时，能够制定将要显示的页面。</td>
 </tr>
 <tr>
 <td style="text-align:center">resource-ref</td>
-<td style="text-align:left">&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x5DE5;&#x5382;&#x4F7F;&#x7528;&#x7684;&#x5916;&#x90E8;&#x8D44;&#x6E90;</td>
+<td style="text-align:left">声明一个资源工厂使用的外部资源</td>
 </tr>
 </tbody>
 </table>
-<h1 id="&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;&#x5206;&#x6790;"><a href="#&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;&#x5206;&#x6790;" class="headerlink" title="&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;&#x5206;&#x6790;"></a>&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;&#x5206;&#x6790;</h1><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">[INFO] create webapp with contextPath: </span><br><span class="line">&#x4E09;&#x6708; org.apache.coyote.AbstractProtocol init</span><br><span class="line">&#x4FE1;&#x606F;: Initializing ProtocolHandler [&quot;http-bio-8082&quot;]</span><br><span class="line">&#x4E09;&#x6708; org.apache.catalina.core.StandardService startInternal</span><br><span class="line">&#x4FE1;&#x606F;: Starting service Tomcat</span><br><span class="line">&#x4E09;&#x6708; org.apache.catalina.core.StandardEngine startInternal</span><br><span class="line">&#x4FE1;&#x606F;: Starting Servlet Engine: Apache Tomcat/7.0.47</span><br><span class="line">&#x4E09;&#x6708; org.apache.catalina.core.ApplicationContext log</span><br><span class="line">&#x4FE1;&#x606F;: No Spring WebApplicationInitializer types detected on classpath</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="初始化流程分析"><a href="#初始化流程分析" class="headerlink" title="初始化流程分析"></a>初始化流程分析</h1><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">[INFO] create webapp with contextPath: </span><br><span class="line">三月 org.apache.coyote.AbstractProtocol init</span><br><span class="line">信息: Initializing ProtocolHandler ["http-bio-8082"]</span><br><span class="line">三月 org.apache.catalina.core.StandardService startInternal</span><br><span class="line">信息: Starting service Tomcat</span><br><span class="line">三月 org.apache.catalina.core.StandardEngine startInternal</span><br><span class="line">信息: Starting Servlet Engine: Apache Tomcat/7.0.47</span><br><span class="line">三月 org.apache.catalina.core.ApplicationContext log</span><br><span class="line">信息: No Spring WebApplicationInitializer types detected on classpath</span><br></pre></td></tr></tbody></table></figure>
 <ul>
-<li>&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x662F;tomcat&#x542F;&#x52A8;&#x521B;&#x5EFA;Servlet&#x5BB9;&#x5668;&#x5E76;&#x6839;&#x636E;Web.xml&#x52A0;&#x8F7D;Spring&#x5BB9;&#x5668;&#x7684;&#x65E5;&#x5FD7;&#x3002;</li>
+<li>上面这段是tomcat启动创建Servlet容器并根据Web.xml加载Spring容器的日志。</li>
 </ul>
 <figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [servletConfigInitParams] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [servletContextInitParams] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [jndiProperties] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [systemProperties] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [systemEnvironment] PropertySource with lowest search precedenceInitialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]</span><br></pre></td></tr></tbody></table></figure>
 <ul>
-<li>&#x8FD9;&#x91CC;&#x662F;tomcat&#x6839;&#x636E;web.xml&#x89E3;&#x6790;&#x52A0;&#x8F7D;spring&#x540E;&#xFF0C;springWeb&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65E5;&#x5FD7;&#x3002;<br>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;WebApplicationContext&#x5DF2;&#x7ECF;&#x7B97;&#x662F;&#x52A0;&#x8F7D;&#x597D;&#x4E86;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x52A0;&#x8F7D;&#x4E86;&#x6807;&#x51C6;&#x7684;ServletContext&#x7684;&#x53C2;&#x6570;&#x73AF;&#x5883;&#x5728;SpringIOC&#xFF08;&#x7B49;&#x4E8E;&#x8BF4;&#x662F;&#x5168;&#x5C40;&#x7684;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x73AF;&#x5883;&#xFF09;&#x73AF;&#x5883;&#x4E2D;&#x3002;</li>
+<li>这里是tomcat根据web.xml解析加载spring后，springWeb模块中的初始化的日志。<br>这个时候WebApplicationContext已经算是加载好了，相当于加载了标准的ServletContext的参数环境在SpringIOC（等于说是全局的一个参数环境）环境中。</li>
 </ul>
-<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#x4E00;&#x4E0B;&#x8FD9;&#x4E2A;WebApplicationContext&#x5BB9;&#x5668;&#x7684;&#x521B;&#x5EFA;&#x4E0E;&#x52A0;&#x8F7D;&#x3002;</p>
+<p>下面我们简单来说一下这个WebApplicationContext容器的创建与加载。</p>
 <ul>
-<li>&#x9996;&#x5148;&#x770B;&#x4E00;&#x4E0B;&#x6E90;&#x7801;<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> {</span><br><span class="line">               <span class="keyword">if</span> (<span class="keyword">this</span>.context == <span class="keyword">null</span>) {</span><br><span class="line">                   <span class="keyword">this</span>.context = <span class="keyword">this</span>.createWebApplicationContext(servletContext);</span><br><span class="line">               }</span><br><span class="line"></span><br><span class="line">               <span class="keyword">if</span> (<span class="keyword">this</span>.context <span class="keyword">instanceof</span> ConfigurableWebApplicationContext) {</span><br><span class="line">                   ConfigurableWebApplicationContext cwac = (ConfigurableWebApplicationContext)<span class="keyword">this</span>.context;</span><br><span class="line">                   <span class="keyword">if</span> (!cwac.isActive()) {</span><br><span class="line">                       <span class="keyword">if</span> (cwac.getParent() == <span class="keyword">null</span>) {</span><br><span class="line">                           ApplicationContext parent = <span class="keyword">this</span>.loadParentContext(servletContext);</span><br><span class="line">                           cwac.setParent(parent);</span><br><span class="line">                       }</span><br><span class="line"></span><br><span class="line">                       <span class="keyword">this</span>.configureAndRefreshWebApplicationContext(cwac, servletContext);</span><br><span class="line">                   }</span><br><span class="line">               }</span><br><span class="line"></span><br><span class="line">               servletContext.setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, <span class="keyword">this</span>.context);</span><br><span class="line">               ClassLoader ccl = Thread.currentThread().getContextClassLoader();</span><br></pre></td></tr></tbody></table></figure>
+<li>首先看一下源码<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> {</span><br><span class="line">               <span class="keyword">if</span> (<span class="keyword">this</span>.context == <span class="keyword">null</span>) {</span><br><span class="line">                   <span class="keyword">this</span>.context = <span class="keyword">this</span>.createWebApplicationContext(servletContext);</span><br><span class="line">               }</span><br><span class="line"></span><br><span class="line">               <span class="keyword">if</span> (<span class="keyword">this</span>.context <span class="keyword">instanceof</span> ConfigurableWebApplicationContext) {</span><br><span class="line">                   ConfigurableWebApplicationContext cwac = (ConfigurableWebApplicationContext)<span class="keyword">this</span>.context;</span><br><span class="line">                   <span class="keyword">if</span> (!cwac.isActive()) {</span><br><span class="line">                       <span class="keyword">if</span> (cwac.getParent() == <span class="keyword">null</span>) {</span><br><span class="line">                           ApplicationContext parent = <span class="keyword">this</span>.loadParentContext(servletContext);</span><br><span class="line">                           cwac.setParent(parent);</span><br><span class="line">                       }</span><br><span class="line"></span><br><span class="line">                       <span class="keyword">this</span>.configureAndRefreshWebApplicationContext(cwac, servletContext);</span><br><span class="line">                   }</span><br><span class="line">               }</span><br><span class="line"></span><br><span class="line">               servletContext.setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, <span class="keyword">this</span>.context);</span><br><span class="line">               ClassLoader ccl = Thread.currentThread().getContextClassLoader();</span><br></pre></td></tr></tbody></table></figure>
 </li>
 </ul>
-<p>&#x4E0A;&#x9762;&#x7684;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x5019;&#x901A;&#x8FC7;createWebApplicationContext(servletContext);&#x58F0;&#x660E;&#x4E00;&#x4E2A;WebApplicationContext<br>&#x5E76;&#x8D4B;&#x503C;&#x7ED9;ServletContext&#x7684;org.springframework.web.context.WebApplicationContext.ROOT&#x5C5E;&#x6027;&#xFF0C;&#x4F5C;&#x4E3A;WebApplicationContext&#x7684;&#x6839;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;root WebapplicationContext&#xFF09;,&#x5E76;&#x653E;&#x5165;ServletContext&#x3002;</p>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">DEBUG (org.springframework.web.filter.CharacterEncodingFilter:<span class="number">177</span>) - Initializing filter <span class="string">&apos;CharacterEncodingFilter&apos;</span></span><br><span class="line">DEBUG (org.springframework.web.filter.CharacterEncodingFilter:<span class="number">202</span>) - Filter <span class="string">&apos;CharacterEncodingFilter&apos;</span> configured successfully</span><br></pre></td></tr></tbody></table></figure>
+<p>上面的部分代码可以看出，初始化时候通过createWebApplicationContext(servletContext);声明一个WebApplicationContext<br>并赋值给ServletContext的org.springframework.web.context.WebApplicationContext.ROOT属性，作为WebApplicationContext的根上下文（root WebapplicationContext）,并放入ServletContext。</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">DEBUG (org.springframework.web.filter.CharacterEncodingFilter:<span class="number">177</span>) - Initializing filter <span class="string">'CharacterEncodingFilter'</span></span><br><span class="line">DEBUG (org.springframework.web.filter.CharacterEncodingFilter:<span class="number">202</span>) - Filter <span class="string">'CharacterEncodingFilter'</span> configured successfully</span><br></pre></td></tr></tbody></table></figure>
 <ul>
-<li>&#x8FD9;&#x91CC;&#x52A0;&#x8F7D;&#x4E86;web.xml&#x4E2D;&#x7684;CharacterEncodingFilter&#x4E71;&#x7801;&#x8FC7;&#x6EE4;&#x5668;&#x3002;</li>
+<li>这里加载了web.xml中的CharacterEncodingFilter乱码过滤器。</li>
 </ul>
-<h1 id="DispatcherServlet"><a href="#DispatcherServlet" class="headerlink" title="DispatcherServlet"></a>DispatcherServlet</h1><p>&#x63A5;&#x4E0B;&#x6765;&#x662F;&#x6839;&#x636E;Web.xml&#x6765;&#x521D;&#x59CB;&#x5316;DispatcherServlet&#x3002;<br></p><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">DEBUG (org.springframework.web.servlet.DispatcherServlet:<span class="number">118</span>) - Initializing servlet <span class="string">&apos;DispatcherServlet&apos;</span></span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [servletConfigInitParams] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [servletContextInitParams] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [jndiProperties] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [systemProperties] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [systemEnvironment] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">124</span>) - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>&#x9996;&#x5148;&#x4ECE;Spring&#x7236;&#x5BB9;&#x5668;&#x4E2D;&#x62FF;&#x5230;spring&#x5DF2;&#x7ECF;&#x521D;&#x59CB;&#x5316;&#x597D;&#x7684;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x53CA;&#x53C2;&#x6570;&#x3002;<br>DispatcherServlet&#x4F5C;&#x4E3A;SpringMVC&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x5176;&#x4E2D;&#x5F88;&#x591A;&#x7684;&#x4E1C;&#x897F;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x6765;&#x6162;&#x6162;&#x63A8;&#x6572;&#x3002;<br>&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;<a href="http://www.hushaohui.site/SpringMVC&#x62D3;&#x5C55;&#xFF08;&#x4E00;&#xFF09;&#xFF1A;&#x4E5D;&#x5927;&#x7EC4;&#x4EF6;/">DispatcherServlet&#x7684;&#x4E5D;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF08;&#x4E5F;&#x662F;&#x5B83;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF09;</a>&#xFF0C;&#x8FD9;&#x91CC;&#x63D0;&#x4E00;&#x4E0B;Spring&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x2014;&gt;<code>BeanFactory</code>&#x3002;<br>&#x5269;&#x4E0B;&#x5173;&#x4E8E;&#x65E5;&#x5FD7;&#x8DDF;&#x8E2A;&#x7684;&#x6D41;&#x7A0B;&#x5DF2;&#x7ECF;&#x5728;&#x672C;&#x4EBA;&#x7684;<a href="https://blog.csdn.net/hu_belif/article/details/88625867" target="_blank" rel="noopener">CSDN</a>&#x4E2D;&#x52A0;&#x4E0A;&#x6CE8;&#x89E3;&#xFF0C;&#x5927;&#x5BB6;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x81EA;&#x5DF1;&#x53EF;&#x4EE5;&#x770B;&#x770B;&#x3002;</p>
+<h1 id="DispatcherServlet"><a href="#DispatcherServlet" class="headerlink" title="DispatcherServlet"></a>DispatcherServlet</h1><p>接下来是根据Web.xml来初始化DispatcherServlet。<br></p><figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">DEBUG (org.springframework.web.servlet.DispatcherServlet:<span class="number">118</span>) - Initializing servlet <span class="string">'DispatcherServlet'</span></span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [servletConfigInitParams] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [servletContextInitParams] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [jndiProperties] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [systemProperties] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">109</span>) - Adding [systemEnvironment] PropertySource with lowest search precedence</span><br><span class="line">DEBUG (org.springframework.web.context.support.StandardServletEnvironment:<span class="number">124</span>) - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>首先从Spring父容器中拿到spring已经初始化好的环境配置及参数。<br>DispatcherServlet作为SpringMVC的核心，其中很多的东西需要我们来慢慢推敲。<br>在这里我们先来看一下<a href="http://www.hushaohui.site/SpringMVC拓展（一）：九大组件/">DispatcherServlet的九个组件（也是它基础设施的初始化）</a>，这里提一下Spring的基础设施—&gt;<code>BeanFactory</code>。<br>剩下关于日志跟踪的流程已经在本人的<a href="https://blog.csdn.net/hu_belif/article/details/88625867" target="_blank" rel="noopener">CSDN</a>中加上注解，大家感兴趣的自己可以看看。</p>
 <hr>
-<p><img src="/uploads/SpringMVC&#x6838;&#x5FC3;/DispatcherServlet_ExtendsRelationship.png" alt="SpringMVC-Dispatcherservlet&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x56FE;" title="Dispatcherservlet&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x56FE;"></p>
-<p>&#x6211;&#x4EEC;&#x6839;&#x636E;&#x542F;&#x52A8;&#x65E5;&#x5FD7;&#x548C;Dispatcherservlet&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x56FE;&#x7EE7;&#x7EED;&#x6765;&#x7814;&#x7A76;SpringMVC&#x7684;&#x539F;&#x7406;&#x3002;&#xFF08;&#x540E;&#x9762;&#x4F1A;&#x7EE7;&#x7EED;&#x66F4;&#x65B0;Dispacherservlet&#xFF09;</p>
-<h2 id="Servlet&#x63A5;&#x53E3;"><a href="#Servlet&#x63A5;&#x53E3;" class="headerlink" title="Servlet&#x63A5;&#x53E3;"></a>Servlet&#x63A5;&#x53E3;</h2><p>&#x9996;&#x5148;&#x9700;&#x8981;&#x5F15;&#x5165;&#x4E00;&#x4E2A;servlet&#x7684;&#x57FA;&#x672C;&#x77E5;&#x8BC6;&#x3002;<br>Servlet&#x63A5;&#x53E3;&#x662F;&#x57FA;&#x4E8E;<code>HTTP</code>&#x534F;&#x8BAE;&#x7684;&#xFF0C;servlet&#x6846;&#x67B6;&#x4E3B;&#x8981;&#x7531;&#x4E24;&#x4E2A;java&#x5305;&#x7EC4;&#x6210;:<br><code>javax.servlet</code>&#xFF08;&#x63D0;&#x4F9B;&#x6240;&#x6709;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#x6216;&#x6269;&#x5C55;&#x7684;&#x901A;&#x7528;&#x63A5;&#x53E3;&#x548C;&#x7C7B;&#xFF09;&#x548C;<code>javax.servlet.http</code>&#xFF08;&#x5B9A;&#x4E49;&#x4E86;&#x91C7;&#x7528;HTTP&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#x7684;HttpServlet&#x7C7B;,&#x662F;DispatcherServlet&#x95F4;&#x63A5;&#x7236;&#x7C7B;&#xFF0C;&#x540C;&#x7EE7;&#x627F;&#x4E00;&#x4E2A;Servlet&#x63A5;&#x53E3;&#xFF09;</p>
-<p><strong>Servlet&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x662F;&#x7531;servlet&#x5BB9;&#x5668;&#x6765;&#x63A7;&#x5236;&#x7684;&#xFF0C;&#x5B83;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x9636;&#x6BB5;:</strong></p>
+<p><img src="/uploads/SpringMVC核心/DispatcherServlet_ExtendsRelationship.png" alt="SpringMVC-Dispatcherservlet继承关系图" title="Dispatcherservlet继承关系图"></p>
+<p>我们根据启动日志和Dispatcherservlet继承关系图继续来研究SpringMVC的原理。（后面会继续更新Dispacherservlet）</p>
+<h2 id="Servlet接口"><a href="#Servlet接口" class="headerlink" title="Servlet接口"></a>Servlet接口</h2><p>首先需要引入一个servlet的基本知识。<br>Servlet接口是基于<code>HTTP</code>协议的，servlet框架主要由两个java包组成:<br><code>javax.servlet</code>（提供所有必须实现或扩展的通用接口和类）和<code>javax.servlet.http</code>（定义了采用HTTP通信协议的HttpServlet类,是DispatcherServlet间接父类，同继承一个Servlet接口）</p>
+<p><strong>Servlet的生命周期是由servlet容器来控制的，它的生命周期分为三个阶段:</strong></p>
 <ol>
-<li>&#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5; &#x2013;init()</li>
+<li>初始化阶段 –init()</li>
 </ol>
 <ul>
-<li>servlet&#x5BB9;&#x5668;&#x52A0;&#x8F7D;servlet&#x7C7B;&#xFF0C;&#x5C06;.class&#x6587;&#x4EF6;&#x8BFB;&#x5165;&#x5185;&#x5B58;(JVM&#x7684;&#x77E5;&#x8BC6;&#x70B9;)&#xFF1B; </li>
-<li>&#x521B;&#x5EFA;ServletConfig&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x542B;&#x4E86;servlet&#x7684;&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF1B; </li>
-<li>&#x521B;&#x5EFA;servlet&#x5BF9;&#x8C61;&#xFF0C;&#x8C03;&#x7528;servlet&#x5BF9;&#x8C61;&#x7684;<code>init()</code>&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF1B; </li>
-<li>&#x521D;&#x59CB;&#x5316;&#x7684;&#x8FC7;&#x7A0B;&#x901A;&#x8FC7;&#x5C06;&#x5F53;&#x524D;&#x7684;servlet&#x7C7B;&#x578B;&#x8F6C;&#x5316;&#x4E3A;BeanWrapper&#x7C7B;&#x578B;&#x5B9E;&#x4F8B;&#xFF08;&#x5176;&#x76EE;&#x7684;&#x662F;&#x65B9;&#x4FBF;&#x5BF9;&#x5E94;&#x5C5E;&#x6027;&#x6CE8;&#x5165;&#xFF0C;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x5728;web.xml&#x4E2D;&#x901A;&#x8FC7;<context-param>&#x8FDB;&#x884C;&#x6CE8;&#x5165;&#xFF08;<code>Context-param&#x521B;&#x5EFA;&#x7684;bean&#x662F;&#x5168;&#x5C40;&#x5171;&#x4EAB;&#x7684;</code>&#xFF09;&#xFF0C;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x4F4D;&#x4E8E;&#x5176;&#x7236;&#x7C7B;FrameworkServlet&#x4E2D;&#xFF09;&#xFF1B;</context-param></li>
-<li>&#x5C5E;&#x6027;&#x6CE8;&#x5165;&#x7684;&#x6B65;&#x9AA4;&#xFF1A;&#x5C01;&#x88C5;&#x53CA;&#x9A8C;&#x8BC1;&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;&#x2013;&gt;&#x5C06;&#x5F53;&#x524D;servlet&#x5B9E;&#x4F8B;&#x8F6C;&#x5316;&#x4E3A;BeanWrapper&#x5B9E;&#x4F8B;&#x2013;&gt;&#x6CE8;&#x518C;&#x76F8;&#x5BF9;&#x4E8E;Resource&#xFF08;Resource&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;ResourceEditor&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF09;&#x7684;&#x5C5E;&#x6027;&#x7F16;&#x8F91;&#x5668;&#x2013;&gt;&#x5C5E;&#x6027;&#x6CE8;&#x5165;&#x2013;&gt;servletBean&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF08;&#x4E3B;&#x8981;&#x662F;&#x5BF9;webApplicationContext&#x5B9E;&#x4F8B;&#x8FDB;&#x884C;&#x586B;&#x5145;&#xFF09; &#x3002;</li>
+<li>servlet容器加载servlet类，将.class文件读入内存(JVM的知识点)； </li>
+<li>创建ServletConfig对象，包含了servlet的初始化配置信息； </li>
+<li>创建servlet对象，调用servlet对象的<code>init()</code>方法进行初始化； </li>
+<li>初始化的过程通过将当前的servlet类型转化为BeanWrapper类型实例（其目的是方便对应属性注入，属性可以在web.xml中通过<context-param>进行注入（<code>Context-param创建的bean是全局共享的</code>），其对应的属性位于其父类FrameworkServlet中）；</context-param></li>
+<li>属性注入的步骤：封装及验证初始化参数–&gt;将当前servlet实例转化为BeanWrapper实例–&gt;注册相对于Resource（Resource类型的属性将会使用ResourceEditor进行解析）的属性编辑器–&gt;属性注入–&gt;servletBean的初始化（主要是对webApplicationContext实例进行填充） 。</li>
 </ul>
 <ol start="2">
-<li>&#x8FD0;&#x884C;&#x9636;&#x6BB5; &#x2013;service()<br>DispatcherServlet&#x63A5;&#x53D7;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x9488;&#x5BF9;&#x8BF7;&#x6C42;&#x521B;&#x5EFA;servletRequest&#xFF0C;servletResponse&#xFF0C;&#x8C03;&#x7528;<code>service()</code>&#x65B9;&#x6CD5;&#xFF08;&#x901A;&#x8FC7;servletRequest&#x83B7;&#x5F97;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#xFF0C;&#x6839;&#x636E;servletResponse&#x751F;&#x6210;&#x76F8;&#x5E94;&#x7ED3;&#x679C;&#xFF09;&#xFF0C;&#x6700;&#x540E;&#x9500;&#x6BC1;servletRequest&#xFF0C;servletResponse&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;<br>servlet&#x88AB;&#x8BBE;&#x8BA1;&#x4E3A;&#x8BF7;&#x6C42;&#x9A71;&#x52A8;&#xFF0C;&#x8BF7;&#x6C42;&#x4F1A;&#x88AB;&#x5C01;&#x88C5;&#x4E3A;HttpServletRequest&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x4F20;&#x7ED9;&#x5BF9;&#x5E94;&#x670D;&#x52A1;&#x65B9;&#x6CD5;&#x3002;<br>&#x8BF7;&#x6C42;&#x7684;&#x7C7B;&#x578B;&#x4E00;&#x5171;&#x6709;&#x516B;&#x79CD;&#xFF1A;</li>
+<li>运行阶段 –service()<br>DispatcherServlet接受请求时，针对请求创建servletRequest，servletResponse，调用<code>service()</code>方法（通过servletRequest获得请求信息，根据servletResponse生成相应结果），最后销毁servletRequest，servletResponse两个对象。<br>servlet被设计为请求驱动，请求会被封装为HttpServletRequest对象，然后传给对应服务方法。<br>请求的类型一共有八种：</li>
 </ol>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">&#x5E8F;&#x53F7;</th>
-<th style="text-align:center">&#x65B9;&#x6CD5;</th>
-<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">方法</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">1</td>
 <td style="text-align:center">GET</td>
-<td style="text-align:left">&#x8BF7;&#x6C42;&#x6307;&#x5B9A;&#x7684;&#x9875;&#x9762;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5B9E;&#x4F53;&#x4E3B;&#x4F53;&#x3002;&#xFF08;read&#xFF09;</td>
+<td style="text-align:left">请求指定的页面信息，并返回实体主体。（read）</td>
 </tr>
 <tr>
 <td style="text-align:center">2</td>
 <td style="text-align:center">POST</td>
-<td style="text-align:left">&#x5411;&#x6307;&#x5B9A;&#x8D44;&#x6E90;&#x63D0;&#x4EA4;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#xFF08;&#x4F8B;&#x5982;&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x6216;&#x8005;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#xFF09;&#x3002;&#x6570;&#x636E;&#x88AB;&#x5305;&#x542B;&#x5728;&#x8BF7;&#x6C42;&#x4F53;&#x4E2D;&#x3002;POST&#x8BF7;&#x6C42;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x65B0;&#x7684;&#x8D44;&#x6E90;&#x7684;&#x5EFA;&#x7ACB;&#x548C;/&#x6216;&#x5DF2;&#x6709;&#x8D44;&#x6E90;&#x7684;&#x4FEE;&#x6539;&#x3002;(create)</td>
+<td style="text-align:left">向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。(create)</td>
 </tr>
 <tr>
 <td style="text-align:center">3</td>
 <td style="text-align:center">PUT</td>
-<td style="text-align:left">&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x5411;&#x670D;&#x52A1;&#x5668;&#x4F20;&#x9001;&#x7684;&#x6570;&#x636E;&#x53D6;&#x4EE3;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x6863;&#x7684;&#x5185;&#x5BB9;&#x3002;&#xFF08;update&#xFF09;</td>
+<td style="text-align:left">从客户端向服务器传送的数据取代指定的文档的内容。（update）</td>
 </tr>
 <tr>
 <td style="text-align:center">4</td>
 <td style="text-align:center">DELETE</td>
-<td style="text-align:left">&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x5668;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x9875;&#x9762;&#x3002;&#xFF08;delete&#xFF09;</td>
+<td style="text-align:left">请求服务器删除指定的页面。（delete）</td>
 </tr>
 <tr>
 <td style="text-align:center">5</td>
 <td style="text-align:center">HEAD</td>
-<td style="text-align:left">&#x7C7B;&#x4F3C;&#x4E8E;get&#x8BF7;&#x6C42;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x8FD4;&#x56DE;&#x7684;&#x54CD;&#x5E94;&#x4E2D;&#x6CA1;&#x6709;&#x5177;&#x4F53;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x62A5;&#x5934;</td>
+<td style="text-align:left">类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头</td>
 </tr>
 <tr>
 <td style="text-align:center">6</td>
 <td style="text-align:center">CONNECT</td>
-<td style="text-align:left">HTTP/1.1&#x534F;&#x8BAE;&#x4E2D;&#x9884;&#x7559;&#x7ED9;&#x80FD;&#x591F;&#x5C06;&#x8FDE;&#x63A5;&#x6539;&#x4E3A;&#x7BA1;&#x9053;&#x65B9;&#x5F0F;&#x7684;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x3002;</td>
+<td style="text-align:left">HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。</td>
 </tr>
 <tr>
 <td style="text-align:center">7</td>
 <td style="text-align:center">OPTIONS</td>
-<td style="text-align:left">&#x5141;&#x8BB8;&#x5BA2;&#x6237;&#x7AEF;&#x67E5;&#x770B;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6027;&#x80FD;&#x3002;</td>
+<td style="text-align:left">允许客户端查看服务器的性能。</td>
 </tr>
 <tr>
 <td style="text-align:center">8</td>
 <td style="text-align:center">TRACE</td>
-<td style="text-align:left">&#x56DE;&#x663E;&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x6216;&#x8BCA;&#x65AD;&#x3002;</td>
+<td style="text-align:left">回显服务器收到的请求，主要用于测试或诊断。</td>
 </tr>
 </tbody>
 </table>
-<p>&#x5173;&#x4E8E;RESTful Api&#x7684;&#x63A8;&#x8350;&#x6587;&#x7AE0;:(<a href="http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html</a>)</p>
+<p>关于RESTful Api的推荐文章:(<a href="http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html</a>)</p>
 <ol start="3">
-<li>&#x9500;&#x6BC1;&#x9636;&#x6BB5; &#x2013;destory()<br>&#x8C03;&#x7528;servlet&#x5BB9;&#x5668;&#x7684;<code>destory()</code>&#x65B9;&#x6CD5;&#x4E4B;&#x540E;&#x518D;&#x9500;&#x6BC1;servlet&#x5BF9;&#x8C61;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E9B;servlet&#x5360;&#x7528;&#x7684;&#x8D44;&#x6E90;&#x7684;&#x91CA;&#x653E; &#x653E;&#x5728;destroy()&#x65B9;&#x6CD5;&#x4E2D;&#x5B9E;&#x73B0;&#x4EE5;&#x4F18;&#x5316;&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x51CF;&#x5C11;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x3002;</li>
+<li>销毁阶段 –destory()<br>调用servlet容器的<code>destory()</code>方法之后再销毁servlet对象，我们可以将一些servlet占用的资源的释放 放在destroy()方法中实现以优化我们的代码，减少内存泄漏。</li>
 </ol>
-<p>&#x4E0B;&#x4E00;&#x7BC7;&#xFF1A;<a href="http://www.hushaohui.site/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9ADispatcherServlet/">DispatcherServlet</a><br><code>&#x672C;&#x6587;&#x82E5;&#x6709;&#x4EFB;&#x4F55;&#x9519;&#x8BEF;&#x8A00;&#x8BBA;&#xFF0C;&#x8BF7;&#x5927;&#x795E;&#x4E0D;&#x541D;&#x8D50;&#x6559;&#x7ED9;&#x4E88;&#x7EA0;&#x6B63;&#xFF0C;&#x907F;&#x514D;&#x8BEF;&#x5BFC;&#x4ED6;&#x4EBA;</code></p>
+<p>下一篇：<a href="http://www.hushaohui.site/SpringMVC%E6%A0%B8%E5%BF%83%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9ADispatcherServlet/">DispatcherServlet</a><br><code>本文若有任何错误言论，请大神不吝赐教给予纠正，避免误导他人</code></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -898,16 +898,12 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21k</span>
+    <span title="Site words total count">19k</span>
   
 </div>
 
 <!--
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-
-
-  <span class="post-meta-divider">|</span>
 
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v</div>
