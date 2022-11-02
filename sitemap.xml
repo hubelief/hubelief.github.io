@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.hushaohui.site/about/index.html</loc>
+    
+    <lastmod>2022-11-02T07:19:13.125Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.hushaohui.site/photo/index.html</loc>
     
     <lastmod>2022-11-02T07:11:17.822Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://www.hushaohui.site/tags/index.html</loc>
     
     <lastmod>2022-11-02T07:11:06.455Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.hushaohui.site/about/index.html</loc>
-    
-    <lastmod>2022-11-02T07:10:30.875Z</lastmod>
     
   </url>
   
