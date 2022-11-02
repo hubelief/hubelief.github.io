@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="wao BlOG">
 <meta property="og:description" content="我们大多数项目都会多多少少依赖于老版本的python包依赖，所以需要安装一个python2环境或者python3.6以下的版本；这个时候头疼的事情就来了，Mac自带的有python2和python3两个版本的本地python环境（虽然不怎么好用），但是加载进项目后发现总是缺少很多包项目，那么我们不如重新利用pyenv来配置下更容易管理的本地python环境。 Intel芯片安装步骤话不多说直接看命">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-11-02T06:32:49.039Z">
+<meta property="og:updated_time" content="2022-11-02T08:12:46.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac Intel&#x2F;M1安装python">
 <meta name="twitter:description" content="我们大多数项目都会多多少少依赖于老版本的python包依赖，所以需要安装一个python2环境或者python3.6以下的版本；这个时候头疼的事情就来了，Mac自带的有python2和python3两个版本的本地python环境（虽然不怎么好用），但是加载进项目后发现总是缺少很多包项目，那么我们不如重新利用pyenv来配置下更容易管理的本地python环境。 Intel芯片安装步骤话不多说直接看命">
@@ -437,7 +437,7 @@
 <li>Mac默认终端是bash，操作的是～.bashrc或者~.bash_profile，老款都是Intel芯片。</li>
 <li>M1的默认终端是zsh，所以操作的是～.zshrc或者～.zprofile；在这里面配置的，作为命令时才能被识别；M1是ARM架构芯片</li>
 </ul>
-<h3 id="设置Intel环境方式运行终端"><a href="#设置Intel环境方式运行终端" class="headerlink" title="设置Intel环境方式运行终端"></a>设置Intel环境方式运行终端</h3><p>访达-&gt;其他工具–终端–右键显示简介–Rosetta<br>用<code>uname -p</code>确认当前的环境是<code>x86_64</code>,然后就可以继续下面步骤了。</p>
+<h3 id="设置Intel环境方式运行终端"><a href="#设置Intel环境方式运行终端" class="headerlink" title="设置Intel环境方式运行终端"></a>设置Intel环境方式运行终端</h3><p>访达-&gt;其他工具–终端–右键显示简介–Rosetta<br>用<code>uname -p</code>确认当前的环境是<code>i386</code>,然后就可以继续下面步骤了。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="安装当前环境的brew"><a href="#安装当前环境的brew" class="headerlink" title="安装当前环境的brew"></a>安装当前环境的brew</h4><p>我这里切换到Intel环境运行终端后，brew依旧是可以正常运行的，那么暂时可以不做环境隔离；不需要的朋友可以直接跳过这里。</p>
 <figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">arch -x86_64 /bin/bash -c <span class="string">"<span class="variable">$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install.sh)</span>"</span></span><br><span class="line">brew -v</span><br></pre></td></tr></tbody></table></figure>
 <h4 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h4><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">brew install zlib bzip2 openssl pyenv pyenv-virtualenv</span><br><span class="line">brew link openssl --force</span><br><span class="line">pyenv global 2.7.13</span><br></pre></td></tr></tbody></table></figure>
