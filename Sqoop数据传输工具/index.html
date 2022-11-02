@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="hu&#39;s BlOG">
 <meta property="og:description" content="简介Sqoop 是一种开源的数据传输工具，用于在 Hadoop 和关系数据库（RDBMS）或其他数据主机之间传输数据的工具。 （该技术已于2021年下半年加入Apache Attic，但仍会发布新版本和修复bug）Sqoop 可以将数据从 MySQL 或 Oracle 或大型机等关系数据库管理系统 (RDBMS) 导入 Hadoop 分布式文件系统 (HDFS)，在 Hadoop MapReduc">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-06-22T04:13:38.190Z">
+<meta property="og:updated_time" content="2022-11-02T03:33:15.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sqoop数据传输工具">
 <meta name="twitter:description" content="简介Sqoop 是一种开源的数据传输工具，用于在 Hadoop 和关系数据库（RDBMS）或其他数据主机之间传输数据的工具。 （该技术已于2021年下半年加入Apache Attic，但仍会发布新版本和修复bug）Sqoop 可以将数据从 MySQL 或 Oracle 或大型机等关系数据库管理系统 (RDBMS) 导入 Hadoop 分布式文件系统 (HDFS)，在 Hadoop MapReduc">
@@ -316,7 +316,7 @@
     <link itemprop="mainEntityOfPage" href="http://www.hushaohui.site/Sqoop数据传输工具/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ShaoHui">
+      <meta itemprop="name" content="wao">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/uploads/avatar.jpeg">
     </span>
@@ -389,7 +389,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.1k
+                  2.2k
                 </span>
               
 
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  9
                 </span>
               
             </div>
@@ -479,6 +479,7 @@
 <p>导出参数常用的就是以上这部分，<a href="#导出样例">导出样例</a></p>
 <p>&nbsp;</p>
 <h3 id="常用数据模型转换"><a href="#常用数据模型转换" class="headerlink" title="常用数据模型转换"></a>常用数据模型转换</h3><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">--<span class="keyword">map</span>-column-hive col2=String,col3=String <span class="comment"># 导入列类型映射hive类型，通用转换，数组或者json转string后导入hive</span></span><br><span class="line">--<span class="keyword">map</span>-column-java col2=String,col3=String <span class="comment"># 导入列类型映射java类型，通用转换，数组或者json转string后导入hive</span></span><br><span class="line">--<span class="keyword">map</span>-column-hive col1=<span class="string">'DECIMAL(10%2C2)'</span> <span class="comment"># Decimal精度丢失问题配置hive精度转换（hive是double）</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="常用内存配置项"><a href="#常用内存配置项" class="headerlink" title="常用内存配置项"></a>常用内存配置项</h3><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">-D mapred.child.java.opts=-Xmx128M \ <span class="comment"># 子任务最大堆内存</span></span><br><span class="line">-D mapred.reduce.child.java.opts=-Xmx128M \ <span class="comment">#子任务最大reduce内存</span></span><br><span class="line">-D mapred.map.child.java.opts=-Xmx128M \ <span class="comment">#子任务最大map内存</span></span><br><span class="line">-D yarn.scheduler.minimum-allocation-mb=<span class="number">128</span> \ <span class="comment"># container申请的最小内存</span></span><br><span class="line">-D yarn.scheduler.maximum-allocation-mb=<span class="number">1024</span> \ <span class="comment"># container申请的最大内存</span></span><br><span class="line">-D mapreduce.map.memory.mb=<span class="number">128</span> \ <span class="comment"># map可用最大内存</span></span><br><span class="line">-D mapreduce.reduce.memory.mb=<span class="number">128</span> \ <span class="comment"># reduce可用最大内存</span></span><br></pre></td></tr></tbody></table></figure>
 <h3 id="常用样例"><a href="#常用样例" class="headerlink" title="常用样例"></a>常用样例</h3><h4 id="导入样例"><a href="#导入样例" class="headerlink" title="导入样例"></a>导入样例</h4><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">sqoop import \</span><br><span class="line">-D mapred.job.queue.name=hap.testqueue \</span><br><span class="line">--<span class="keyword">connect</span> <span class="string">"jdbc:postgresql://10.101.66.10:3601/testdb?currentSchema=public"</span> \</span><br><span class="line">--username admin \</span><br><span class="line">--password admin@1 \</span><br><span class="line">--table test_tab \</span><br><span class="line">--columns <span class="string">"col1,col2,col3"</span> \</span><br><span class="line">--where <span class="string">"increment_date='<span class="subst">${increment_date}</span>'"</span> \</span><br><span class="line">-<span class="keyword">m</span> <span class="number">3</span> \</span><br><span class="line">--fields-terminated-by <span class="string">"\001"</span> \</span><br><span class="line">--lines-terminated-by <span class="string">"\n"</span> \</span><br><span class="line">--<span class="keyword">delete</span>-target-dir \</span><br><span class="line">--null-string <span class="string">'\\N'</span>  \ <span class="comment"># NULL字符转空字符串</span></span><br><span class="line">--null-non-string <span class="string">'\\N'</span> \ <span class="comment"># 非String类型空值转空字符串</span></span><br><span class="line">--out-dir <span class="string">"<span class="subst">${home}</span>/.sqoop/"</span> \ <span class="comment"># 配置java编译文件输出目录</span></span><br><span class="line">--hive-delims-replacement <span class="string">""</span> \</span><br><span class="line">--<span class="keyword">map</span>-column-java col1=String,col2=String \ <span class="comment"># 数据类型转换</span></span><br><span class="line">--<span class="keyword">map</span>-column-hive col1=String,col2=String \ <span class="comment"># 数据类型转换</span></span><br><span class="line">--target-dir /DATA/TMP/test_tab_hive/date=${increment_date}</span><br></pre></td></tr></tbody></table></figure>
 <h4 id="导出样例"><a href="#导出样例" class="headerlink" title="导出样例"></a>导出样例</h4><figure class="highlight perl"><table><tbody><tr><td class="code"><pre><span class="line">sqoop export \</span><br><span class="line">-D mapred.job.queue.name=hap.testqueue \</span><br><span class="line">--<span class="keyword">connect</span> <span class="string">"jdbc:postgresql://10.101.66.10:3601/testdb?currentSchema=public"</span> \</span><br><span class="line">--username admin \</span><br><span class="line">--password admin@1 \</span><br><span class="line">--table test_tab \</span><br><span class="line">--hcatalog-database tmp \</span><br><span class="line">--hcatalog-table test_tab_hive \</span><br><span class="line">--hcatalog-partition-<span class="keyword">keys</span> date \</span><br><span class="line">--hcatalog-partition-<span class="keyword">values</span> ${date} \</span><br><span class="line">--columns <span class="string">"col1,col2,col3"</span> \</span><br><span class="line">--batch \</span><br><span class="line">--num-mappers <span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
 <script>
@@ -519,14 +520,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="ShaoHui 微信支付">
+        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="wao 微信支付">
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="ShaoHui 支付宝">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="wao 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -544,7 +545,7 @@
         <ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者：</strong>
-    ShaoHui
+    wao
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
@@ -584,8 +585,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/淘宝会员通疑问总结/" rel="next" title="淘宝会员通疑问总结">
-                <i class="fa fa-chevron-left"></i> 淘宝会员通疑问总结
+              <a href="/Mac下python安装/" rel="next" title="Mac Intel/M1安装python">
+                <i class="fa fa-chevron-left"></i> Mac Intel/M1安装python
               </a>
             
           </div>
@@ -665,9 +666,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpeg" alt="ShaoHui">
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpeg" alt="wao">
             
-              <p class="site-author-name" itemprop="name">ShaoHui</p>
+              <p class="site-author-name" itemprop="name">wao</p>
               <p class="site-description motion-element" itemprop="description">君若不学，则何以成？</p>
           </div>
 
@@ -678,7 +679,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -691,7 +692,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -752,7 +753,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制"><span class="nav-number">2.</span> <span class="nav-text">版本控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#支持的版本"><span class="nav-number">3.</span> <span class="nav-text">支持的版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容数据库"><span class="nav-number">4.</span> <span class="nav-text">兼容数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性说明"><span class="nav-number">4.1.</span> <span class="nav-text">兼容性说明</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MySQL"><span class="nav-number">4.1.1.</span> <span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PostgreSQL"><span class="nav-number">4.1.2.</span> <span class="nav-text">PostgreSQL</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hive"><span class="nav-number">4.1.3.</span> <span class="nav-text">Hive</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法结构"><span class="nav-number">5.</span> <span class="nav-text">语法结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本语法结构"><span class="nav-number">5.1.</span> <span class="nav-text">基本语法结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导入语法结构"><span class="nav-number">5.2.</span> <span class="nav-text">导入语法结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导出语法结构"><span class="nav-number">5.3.</span> <span class="nav-text">导出语法结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用数据模型转换"><span class="nav-number">6.</span> <span class="nav-text">常用数据模型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用样例"><span class="nav-number">7.</span> <span class="nav-text">常用样例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#导入样例"><span class="nav-number">7.1.</span> <span class="nav-text">导入样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导出样例"><span class="nav-number">7.2.</span> <span class="nav-text">导出样例</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制"><span class="nav-number">2.</span> <span class="nav-text">版本控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#支持的版本"><span class="nav-number">3.</span> <span class="nav-text">支持的版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容数据库"><span class="nav-number">4.</span> <span class="nav-text">兼容数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性说明"><span class="nav-number">4.1.</span> <span class="nav-text">兼容性说明</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MySQL"><span class="nav-number">4.1.1.</span> <span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PostgreSQL"><span class="nav-number">4.1.2.</span> <span class="nav-text">PostgreSQL</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hive"><span class="nav-number">4.1.3.</span> <span class="nav-text">Hive</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法结构"><span class="nav-number">5.</span> <span class="nav-text">语法结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本语法结构"><span class="nav-number">5.1.</span> <span class="nav-text">基本语法结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导入语法结构"><span class="nav-number">5.2.</span> <span class="nav-text">导入语法结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导出语法结构"><span class="nav-number">5.3.</span> <span class="nav-text">导出语法结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用数据模型转换"><span class="nav-number">6.</span> <span class="nav-text">常用数据模型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用内存配置项"><span class="nav-number">7.</span> <span class="nav-text">常用内存配置项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用样例"><span class="nav-number">8.</span> <span class="nav-text">常用样例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#导入样例"><span class="nav-number">8.1.</span> <span class="nav-text">导入样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导出样例"><span class="nav-number">8.2.</span> <span class="nav-text">导出样例</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -786,7 +787,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">ShaoHui</span>
+  <span class="author" itemprop="copyrightHolder">wao</span>
 
   
     <span class="post-meta-divider">|</span>
@@ -796,7 +797,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19k</span>
+    <span title="Site words total count">19.9k</span>
   
 </div>
 

@@ -4,6 +4,7 @@ http://www.hushaohui.site/Azkaban任务维护归纳/
 http://www.hushaohui.site/SQL优化：Left join 技巧/
 http://www.hushaohui.site/Hive、Spark常用配置项/
 http://www.hushaohui.site/Sqoop数据传输工具/
+http://www.hushaohui.site/Mac下python安装/
 http://www.hushaohui.site/淘宝会员通疑问总结/
 http://www.hushaohui.site/Excel VBA生成目录列表/
 http://www.hushaohui.site/SQL优化：inner join、left join/
