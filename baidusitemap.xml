@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.hushaohui.site/SQL%E7%BC%96%E8%AF%91%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</loc>
+    <lastmod>2022-11-24</lastmod>
+  </url>
+  <url>
+    <loc>http://www.hushaohui.site/Hive%E3%80%81Spark%E5%B8%B8%E8%A7%81%E5%B0%8F%E5%9D%91/</loc>
+    <lastmod>2022-11-24</lastmod>
+  </url>
+  <url>
+    <loc>http://www.hushaohui.site/SQL%E4%BC%98%E5%8C%96%EF%BC%9Ainner%20join%E3%80%81left%20join/</loc>
+    <lastmod>2022-11-07</lastmod>
+  </url>
+  <url>
     <loc>http://www.hushaohui.site/Mac%E4%B8%8Bpython%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2022-11-02</lastmod>
   </url>
@@ -38,10 +50,6 @@
   </url>
   <url>
     <loc>http://www.hushaohui.site/SQL%E4%BC%98%E5%8C%96%EF%BC%9ALeft%20join%20%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2022-06-13</lastmod>
-  </url>
-  <url>
-    <loc>http://www.hushaohui.site/SQL%E4%BC%98%E5%8C%96%EF%BC%9Ainner%20join%E3%80%81left%20join/</loc>
     <lastmod>2022-06-13</lastmod>
   </url>
   <url>
